@@ -11,3 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/src/fonts/Montserrat-Light.ttf');
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'JeffScript';
+  src: url('/src/fonts/jeff_script.ttf');
+}
+
+@font-face {
+  font-family: 'Moniqa';
+  src: url('/src/fonts/Moniqa-BlackDisplay.ttf');
+}

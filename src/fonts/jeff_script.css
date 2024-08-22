@@ -1,0 +1,9 @@
+@font-face {
+	font-family: 'Jeff Script';
+	src: url('../fonts/jeff_script.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/jeff_script.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/jeff_script.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/jeff_script.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/jeff_script.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/jeff_script.svg#jeff_script') format('svg'); /* Chrome < 4, Legacy iOS */
+}

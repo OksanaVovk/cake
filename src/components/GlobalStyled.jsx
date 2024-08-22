@@ -9,23 +9,30 @@ export const GlobalStyles = css`
   }
 
   @font-face {
-    font-family: Verdana;
-    src: url('../fonts/verdana-font-family/Verdana.ttf'), format('truetype');
-    font-weight: normal;
+    font-family: Montserrat, sans-serif;
+    src: url('../fonts/Montserrat-Light.ttf'), format('ttf');
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
   }
 
   @font-face {
-    font-family: Verdana;
-    src: url('../fonts/verdana-font-family/Verdana-bold.ttf'),
-      format('truetype');
-    font-weight: bold;
+    font-family: JeffScript;
+    src: url('../fonts/jeff_script.woff2'), format('woff2');
+    src: url('../fonts/jeff_script.ttf'), format('ttf');
+  }
+
+  @font-face {
+    font-family: Moniqa;
+    src: url('../fonts/Moniqa-BlackDisplay.ttf'), format('ttf');
+    src: url('../fonts/Moniqa-BlackDisplay.otf'), format('otf');
   }
 
   body {
     margin: 0;
     font-size: 14px;
     line-height: 17px;
-    font-family: 'Verdana', sans-serif;
+    font-family: Montserrat, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
