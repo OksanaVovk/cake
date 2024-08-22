@@ -1,15 +1,34 @@
 {
   "files": {
-    "main.css": "/cake/static/css/main.2d709f4f.css",
-    "main.js": "/cake/static/js/main.7b1395f9.js",
-    "static/js/419.1811a38a.chunk.js": "/cake/static/js/419.1811a38a.chunk.js",
+    "main.css": "/cake/static/css/main.e2f11007.css",
+    "main.js": "/cake/static/js/main.b6f3a065.js",
+    "static/js/321.64c8d326.chunk.js": "/cake/static/js/321.64c8d326.chunk.js",
+    "static/media/Montserrat-Light.ttf": "/cake/static/media/Montserrat-Light.7179b7d2ac9b599db5f9.ttf",
+    "static/media/Moniqa-BlackDisplay.ttf": "/cake/static/media/Moniqa-BlackDisplay.d683c02e133cf99e1d35.ttf",
+    "static/media/jeff_script.ttf": "/cake/static/media/jeff_script.243dfc1d2cf6535767c7.ttf",
+    "static/media/Cream2x.webp": "/cake/static/media/Cream2x.e0c7c8d890c7a48940ee.webp",
+    "static/media/2fon2x.webp": "/cake/static/media/2fon2x.dd00ac0599b3a0059412.webp",
+    "static/media/Cream1x.webp": "/cake/static/media/Cream1x.463e20d649052e339153.webp",
+    "static/media/Fon2x.webp": "/cake/static/media/Fon2x.a312ff9dc53f6553ed46.webp",
+    "static/media/Tart.webp": "/cake/static/media/Tart.d876c9cdccce3c9a236a.webp",
+    "static/media/2fon1x.webp": "/cake/static/media/2fon1x.f2f0e0be9e7ac6ac40ac.webp",
+    "static/media/Mousse.webp": "/cake/static/media/Mousse.16d129f2e2768f9ee2e3.webp",
+    "static/media/Eclair.webp": "/cake/static/media/Eclair.712946d35a4eea82e4f0.webp",
+    "static/media/logoGrannBig_2x.webp": "/cake/static/media/logoGrannBig_2x.1301bdc681dbac68ca8d.webp",
+    "static/media/icons.svg": "/cake/static/media/icons.7e71d3f7fefdd839eb3df27a8df4c7cd.svg",
+    "static/media/Fon1x.webp": "/cake/static/media/Fon1x.167ed62e143f08a56f5d.webp",
+    "static/media/logoGrannBig_1x.webp": "/cake/static/media/logoGrannBig_1x.cc7b7a7f0652854e49d7.webp",
+    "static/media/logoGrann_2x.webp": "/cake/static/media/logoGrann_2x.b9c6390b45522af97bdd.webp",
+    "static/media/logoGrannMob_2x.webp": "/cake/static/media/logoGrannMob_2x.4b10f5eadf3ad80f0a8c.webp",
+    "static/media/logoGrann_1x.webp": "/cake/static/media/logoGrann_1x.867e5e8953fc3156cc84.webp",
+    "static/media/logoGrannMob_1x.webp": "/cake/static/media/logoGrannMob_1x.6f85f1400ec86a910c19.webp",
     "index.html": "/cake/index.html",
-    "main.2d709f4f.css.map": "/cake/static/css/main.2d709f4f.css.map",
-    "main.7b1395f9.js.map": "/cake/static/js/main.7b1395f9.js.map",
-    "419.1811a38a.chunk.js.map": "/cake/static/js/419.1811a38a.chunk.js.map"
+    "main.e2f11007.css.map": "/cake/static/css/main.e2f11007.css.map",
+    "main.b6f3a065.js.map": "/cake/static/js/main.b6f3a065.js.map",
+    "321.64c8d326.chunk.js.map": "/cake/static/js/321.64c8d326.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2d709f4f.css",
-    "static/js/main.7b1395f9.js"
+    "static/css/main.e2f11007.css",
+    "static/js/main.b6f3a065.js"
   ]
 }
