@@ -31,6 +31,7 @@ export const CreamSvg1 = styled('svg')`
   right: 0;
   width: 71.01px;
   height: 117.55px;
+  fill: ${p => p.theme.mainColors.brown};
 `;
 export const CreamSvg2 = styled('svg')`
   position: absolute;
@@ -38,6 +39,7 @@ export const CreamSvg2 = styled('svg')`
   left: 0;
   width: 57.45px;
   height: 124.6px;
+  fill: ${p => p.theme.mainColors.brown};
 `;
 
 export const EclairBox = styled('div')`
@@ -58,6 +60,7 @@ export const EclairText = styled('p')`
   font-size: 37.69px;
   line-height: 33.54px;
   text-align: center;
+  color: ${p => p.theme.mainColors.brown};
   width: 140.6px;
   height: 68px;
   transform: rotate(-18.66deg);
@@ -79,6 +82,7 @@ export const EclairSvg1 = styled('svg')`
   left: 230.67px;
   width: 17.5px;
   height: 26.25px;
+  fill: ${p => p.theme.mainColors.brown};
 `;
 
 export const EclairSvg2 = styled('svg')`
@@ -87,6 +91,7 @@ export const EclairSvg2 = styled('svg')`
   left: 141.72px;
   width: 62.71px;
   height: 20.37px;
+  fill: ${p => p.theme.mainColors.brown};
 `;
 
 export const MousseBox = styled('div')`
@@ -106,6 +111,7 @@ export const MousseText = styled('p')`
   font-size: 37.69px;
   line-height: 45.23px;
   text-align: center;
+  color: ${p => p.theme.mainColors.brown};
   width: 198px;
   height: 45px;
   transform: rotate(-18.66deg);
@@ -140,6 +146,7 @@ export const TartText = styled('p')`
   font-size: 37.69px;
   line-height: 33.54px;
   text-align: center;
+  color: ${p => p.theme.mainColors.brown};
   width: 140.6px;
   height: 68px;
   transform: rotate(21.73deg);
@@ -161,6 +168,7 @@ export const TartSvg1 = styled('svg')`
   left: 265.54px;
   width: 9.25px;
   height: 32.36px;
+  fill: ${p => p.theme.mainColors.brown};
 `;
 export const TartSvg2 = styled('svg')`
   position: absolute;
@@ -168,6 +176,7 @@ export const TartSvg2 = styled('svg')`
   left: 96.05px;
   width: 13.08px;
   height: 15.41px;
+  fill: ${p => p.theme.mainColors.brown};
 `;
 export const TartSvg3 = styled('svg')`
   position: absolute;
@@ -175,6 +184,7 @@ export const TartSvg3 = styled('svg')`
   left: 69.86px;
   width: 15.41px;
   height: 18.49px;
+  fill: ${p => p.theme.mainColors.brown};
 `;
 export const TartSvg4 = styled('svg')`
   position: absolute;
@@ -182,6 +192,7 @@ export const TartSvg4 = styled('svg')`
   left: 30.12px;
   width: 25.34px;
   height: 75.55px;
+  fill: ${p => p.theme.mainColors.brown};
 `;
 export const TextBox = styled('div')`
   position: absolute;
@@ -205,7 +216,7 @@ export const Text = styled('p')`
 
 export const TitleBox = styled('div')`
   position: absolute;
-  top: 5px;
+  top: 0;
   left: 371.5px;
   width: 595px;
   height: 104px;

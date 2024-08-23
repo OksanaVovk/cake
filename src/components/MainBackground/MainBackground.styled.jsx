@@ -15,15 +15,6 @@ export const BackgroundStyled = styled.div`
   }
 `;
 
-// export const Img1Box = styled.div`
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   z-index: -1;
-//   height: 1098px;
-// `;
-
 export const Img1 = styled.img`
   position: absolute;
   z-index: -1;
