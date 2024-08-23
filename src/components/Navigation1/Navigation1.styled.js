@@ -39,5 +39,5 @@ export const Link = styled(NavLink)`
   font-size: 16px;
   text-transform: uppercase;
 
-  color: #705a66;
+  color: ${p => p.theme.mainColors.brown};
 `;

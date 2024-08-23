@@ -1,9 +1,12 @@
 import styled from '@emotion/styled';
 
 export const BannerBox = styled('div')`
-  position: relative;
+  position: absolute;
+  top: 40px;
+  left: -49px;
   width: 1199px;
-  height: 986px;
+  height: 850px; //986
+  overflow: hidden;
 `;
 
 export const CreamBox = styled('div')`
@@ -87,9 +90,10 @@ export const EclairSvg2 = styled('svg')`
 `;
 
 export const MousseBox = styled('div')`
-  position: absolute,
+  position: absolute;
   width: 781px;
-  height: 986px;
+  height: 850px;
+  overflow: hidden;
   // border: 4px solid black;
 `;
 
@@ -113,7 +117,7 @@ export const MousseImg = styled('img')`
   top: 57px;
   left: 97px;
   width: 584.13px;
-  height: 876.09px;
+  height: 876.09px; //876.09
   transform: rotate(-14.88deg);
   // border: 4px solid black;
 `;
