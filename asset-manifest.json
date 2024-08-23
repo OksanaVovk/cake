@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/cake/static/css/main.e2f11007.css",
-    "main.js": "/cake/static/js/main.02c52967.js",
-    "static/js/321.4bd79547.chunk.js": "/cake/static/js/321.4bd79547.chunk.js",
+    "main.js": "/cake/static/js/main.8a2e8b89.js",
+    "static/js/508.ad9f2072.chunk.js": "/cake/static/js/508.ad9f2072.chunk.js",
     "static/media/Montserrat-Light.ttf": "/cake/static/media/Montserrat-Light.7179b7d2ac9b599db5f9.ttf",
     "static/media/Moniqa-BlackDisplay.ttf": "/cake/static/media/Moniqa-BlackDisplay.d683c02e133cf99e1d35.ttf",
     "static/media/jeff_script.ttf": "/cake/static/media/jeff_script.243dfc1d2cf6535767c7.ttf",
@@ -24,11 +24,11 @@
     "static/media/logoGrannMob_1x.webp": "/cake/static/media/logoGrannMob_1x.6f85f1400ec86a910c19.webp",
     "index.html": "/cake/index.html",
     "main.e2f11007.css.map": "/cake/static/css/main.e2f11007.css.map",
-    "main.02c52967.js.map": "/cake/static/js/main.02c52967.js.map",
-    "321.4bd79547.chunk.js.map": "/cake/static/js/321.4bd79547.chunk.js.map"
+    "main.8a2e8b89.js.map": "/cake/static/js/main.8a2e8b89.js.map",
+    "508.ad9f2072.chunk.js.map": "/cake/static/js/508.ad9f2072.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e2f11007.css",
-    "static/js/main.02c52967.js"
+    "static/js/main.8a2e8b89.js"
   ]
 }
