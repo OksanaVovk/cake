@@ -1,7 +1,15 @@
 import styled from '@emotion/styled';
 
-export const CreamBox = styled('div')`
+export const BannerBox = styled('div')`
   position: relative;
+  width: 1199px;
+  height: 986px;
+`;
+
+export const CreamBox = styled('div')`
+  position: absolute;
+  top: 136px;
+  left: 456px;
   width: 384px;
   height: 594px;
 `;
@@ -30,7 +38,9 @@ export const CreamSvg2 = styled('svg')`
 `;
 
 export const EclairBox = styled('div')`
-  position: relative;
+  position: absolute;
+  top: 111px;
+  left: 192px;
   width: 280px;
   height: 238px;
   // border: 4px solid black;
@@ -77,7 +87,7 @@ export const EclairSvg2 = styled('svg')`
 `;
 
 export const MousseBox = styled('div')`
-  position: relative;
+  position: absolute,
   width: 781px;
   height: 986px;
   // border: 4px solid black;
@@ -109,7 +119,9 @@ export const MousseImg = styled('img')`
 `;
 
 export const TartBox = styled('div')`
-  position: relative;
+  position: absolute;
+  top: 123px;
+  right: 0;
   width: 358px;
   height: 442px;
   // border: 4px solid black;
@@ -117,8 +129,8 @@ export const TartBox = styled('div')`
 
 export const TartText = styled('p')`
   position: absolute;
-  top: 112px;
-  left: 179.17px;
+  top: 130px;
+  left: 165px;
   font-family: JeffScript;
   font-weight: 400;
   font-size: 37.69px;
@@ -131,8 +143,8 @@ export const TartText = styled('p')`
 `;
 export const TartImg = styled('img')`
   position: absolute;
-  top: 1px;
-  left: 102.95px;
+  top: 25px;
+  left: 50px;
   width: 264.74px;
   height: 397.06px;
   transform: rotate(15.03deg);
@@ -166,4 +178,43 @@ export const TartSvg4 = styled('svg')`
   left: 30.12px;
   width: 25.34px;
   height: 75.55px;
+`;
+export const TextBox = styled('div')`
+  position: absolute;
+  top: 576px;
+  right: 16.5px;
+  width: 287px;
+  height: 40px;
+  // border: 4px solid black;
+`;
+
+export const Text = styled('p')`
+  font-family: Montserrat, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19.5px;
+  text-align: left;
+  color: ${p => p.theme.mainColors.brown};
+
+  // border: 0.5px solid black;
+`;
+
+export const TitleBox = styled('div')`
+  position: absolute;
+  top: 5px;
+  left: 371.5px;
+  width: 595px;
+  height: 104px;
+  // border: 4px solid black;
+`;
+
+export const Title = styled('h1')`
+  font-family: Moniqa;
+  font-weight: 900;
+  font-size: 100px;
+  line-height: 104.1px;
+  text-align: center;
+  color: ${p => p.theme.mainColors.brown};
+
+  // border: 0.5px solid black;
 `;

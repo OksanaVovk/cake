@@ -10,6 +10,7 @@ import tart from '../../images/Tart.webp';
 
 import sprite from '../../images/icons.svg';
 import {
+  BannerBox,
   CreamBox,
   CreamImg,
   CreamSvg1,
@@ -29,11 +30,18 @@ import {
   TartSvg2,
   TartSvg3,
   TartSvg4,
+  TextBox,
+  Text,
+  TitleBox,
+  Title,
 } from './Banner.Styled';
 
 export const Banner = () => {
   return (
-    <div>
+    <BannerBox>
+      <TitleBox>
+        <Title>Авторські десерти</Title>
+      </TitleBox>
       <CreamBox>
         <CreamImg
           src={cream1x}
@@ -93,6 +101,9 @@ export const Banner = () => {
           <use href={sprite + '#icon-tart4'}></use>
         </TartSvg4>
       </TartBox>
-    </div>
+      <TextBox>
+        <Text>Виготовляємо десерти під замовлення з любов’ю та користю</Text>
+      </TextBox>
+    </BannerBox>
   );
 };
