@@ -7,6 +7,8 @@ export const GlobalContainerStyled = styled.div`
 
   @media screen and (min-width: 375px) {
     width: 375px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   @media screen and (min-width: 1440px) {

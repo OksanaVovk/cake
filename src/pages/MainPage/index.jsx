@@ -1,5 +1,6 @@
 import { MainBackground } from 'components/MainBackground';
 import { MainBanner } from 'components/MainBanner';
+import { Prodacts } from 'components/Prodacts';
 
 const MainPage = () => {
   return (
@@ -15,6 +16,7 @@ const MainPage = () => {
     >
       <MainBackground />
       <MainBanner />
+      <Prodacts />
       <h1>HELLO UKRAINE</h1>
     </div>
   );
