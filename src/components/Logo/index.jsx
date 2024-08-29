@@ -1,4 +1,4 @@
-import { Box } from './LogoStyled';
+import { LogoBox } from './LogoStyled';
 import { Link } from 'react-router-dom';
 
 import logoGrann_1x from '../../images/logoGrann_1x.webp';
@@ -11,7 +11,7 @@ import logoGrannMob_2x from '../../images/logoGrannMob_2x.webp';
 export const Logo = () => {
   return (
     <Link to="/">
-      <Box>
+      <LogoBox>
         <picture>
           <source
             srcSet={`${logoGrann_1x} 1x, ${logoGrann_2x} 2x`}
@@ -20,26 +20,26 @@ export const Logo = () => {
 
           <source
             srcSet={`${logoGrannMob_1x} 1x, ${logoGrannMob_2x} 2x`}
-            media="(min-width: 355px)"
+            media="(min-width: 375px)"
           />
           <img src={logoGrannMob_1x} alt="Logotype" />
         </picture>
-      </Box>
+      </LogoBox>
     </Link>
   );
 };
 
 export const LogoBig = () => {
   return (
-    <Box>
+    <LogoBox>
       <picture>
         <source
           srcSet={`${logoGrannBig_1x} 1x, ${logoGrannBig_2x} 2x`}
-          media="(min-width: 355px)"
+          media="(min-width: 375px)"
         />
 
         <img src={logoGrannBig_1x} alt="Logotype" />
       </picture>
-    </Box>
+    </LogoBox>
   );
 };

@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-export const Box = styled('div')`
+export const LogoBox = styled('div')`
   display: flex;
   align-items: center;
 `;

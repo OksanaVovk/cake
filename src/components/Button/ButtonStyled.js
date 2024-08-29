@@ -63,12 +63,13 @@ export const StyledButton2 = styled('button')`
   height: ${({ height }) => height || '67px'};
   line-height: 29.26px;
   letter-spacing: 0.04em;
+  font-family: Montserrat, sans-serif;
   font-weight: 300;
   border-radius: ${({ radius }) => radius || '10px'};
   color: ${({ color }) => color || '#705A66'};
   font-size: ${({ font }) => font || '24px'};
   background: ${({ bg }) => bg || '#F5EEE0'};
-  box-shadow: ${({ shadow }) => shadow || '0px 4px 10px 0px #fc842d80'};
+  // box-shadow: ${({ shadow }) => shadow || '0px 4px 10px 0px #fc842d80'};
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
 

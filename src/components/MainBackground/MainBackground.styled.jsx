@@ -7,9 +7,7 @@ export const BackgroundStyled = styled.div`
   top: 0;
   left: 0;
   pointer-events: none;
-  //     @media screen and (min-width: 768px) {
-  //   min-height: 1024px;
-  // }
+
   @media screen and (min-width: 1440px) {
     min-height: 8050px;
   }

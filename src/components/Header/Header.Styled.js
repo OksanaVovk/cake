@@ -6,21 +6,22 @@ export const HeaderBox = styled('div')`
 `;
 
 export const HeaderTextBox = styled('div')`
-  padding-right: 10px;
-  padding-left: 10px;
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  padding: 20px 10px 20px 10px;
+  justify-content: flex-end;
+  margin-left: auto;
+  margin-right: auto;
 
   @media screen and (min-width: 375px) {
     width: 375px;
-    margin-left: auto;
-    margin-right: auto;
   }
 
   @media screen and (min-width: 1440px) {
     width: 1440px;
     padding: 59px 100px 51px 100px;
+    justify-content: space-between;
   }
 `;
