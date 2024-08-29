@@ -1,20 +1,30 @@
 {
   "files": {
     "main.css": "/cake/static/css/main.e2f11007.css",
-    "main.js": "/cake/static/js/main.a85a1f46.js",
-    "static/js/892.e98a981e.chunk.js": "/cake/static/js/892.e98a981e.chunk.js",
+    "main.js": "/cake/static/js/main.b79f72c1.js",
+    "static/js/654.5d00d69d.chunk.js": "/cake/static/js/654.5d00d69d.chunk.js",
     "static/media/Montserrat-Light.ttf": "/cake/static/media/Montserrat-Light.7179b7d2ac9b599db5f9.ttf",
     "static/media/Moniqa-BlackDisplay.ttf": "/cake/static/media/Moniqa-BlackDisplay.d683c02e133cf99e1d35.ttf",
+    "static/media/mbanner2x.webp": "/cake/static/media/mbanner2x.4f1645fba6e354eb0350.webp",
     "static/media/jeff_script.ttf": "/cake/static/media/jeff_script.243dfc1d2cf6535767c7.ttf",
+    "static/media/1Catalog2x.webp": "/cake/static/media/1Catalog2x.957048da150db604e9d2.webp",
     "static/media/Cream2x.webp": "/cake/static/media/Cream2x.e0c7c8d890c7a48940ee.webp",
     "static/media/2fon2x.webp": "/cake/static/media/2fon2x.dd00ac0599b3a0059412.webp",
+    "static/media/4Catalog2x.webp": "/cake/static/media/4Catalog2x.390bb42c8b1473981fc8.webp",
+    "static/media/2Catalog2x.webp": "/cake/static/media/2Catalog2x.e9f3e20b116df8906b56.webp",
+    "static/media/3Catalog2x.webp": "/cake/static/media/3Catalog2x.1cd72f590ff500a03387.webp",
+    "static/media/mbanner1x.webp": "/cake/static/media/mbanner1x.7ca5d28d212e864650d6.webp",
     "static/media/Cream1x.webp": "/cake/static/media/Cream1x.463e20d649052e339153.webp",
     "static/media/Fon2x.webp": "/cake/static/media/Fon2x.a312ff9dc53f6553ed46.webp",
+    "static/media/1Catalog1x.webp": "/cake/static/media/1Catalog1x.73fdf23555eba96ad6ef.webp",
     "static/media/Tart.webp": "/cake/static/media/Tart.d876c9cdccce3c9a236a.webp",
     "static/media/2fon1x.webp": "/cake/static/media/2fon1x.f2f0e0be9e7ac6ac40ac.webp",
+    "static/media/2Catalog1x.webp": "/cake/static/media/2Catalog1x.59fe57cec11d14da93af.webp",
     "static/media/Mousse.webp": "/cake/static/media/Mousse.16d129f2e2768f9ee2e3.webp",
+    "static/media/4Catalog1x.webp": "/cake/static/media/4Catalog1x.08da40b8cfd0480bd318.webp",
     "static/media/Eclair.webp": "/cake/static/media/Eclair.712946d35a4eea82e4f0.webp",
     "static/media/logoGrannBig_2x.webp": "/cake/static/media/logoGrannBig_2x.1301bdc681dbac68ca8d.webp",
+    "static/media/3Catalog1x.webp": "/cake/static/media/3Catalog1x.49fc77776a802f9147ae.webp",
     "static/media/icons.svg": "/cake/static/media/icons.7e71d3f7fefdd839eb3df27a8df4c7cd.svg",
     "static/media/Fon1x.webp": "/cake/static/media/Fon1x.167ed62e143f08a56f5d.webp",
     "static/media/logoGrannBig_1x.webp": "/cake/static/media/logoGrannBig_1x.cc7b7a7f0652854e49d7.webp",
@@ -24,11 +34,11 @@
     "static/media/logoGrannMob_1x.webp": "/cake/static/media/logoGrannMob_1x.6f85f1400ec86a910c19.webp",
     "index.html": "/cake/index.html",
     "main.e2f11007.css.map": "/cake/static/css/main.e2f11007.css.map",
-    "main.a85a1f46.js.map": "/cake/static/js/main.a85a1f46.js.map",
-    "892.e98a981e.chunk.js.map": "/cake/static/js/892.e98a981e.chunk.js.map"
+    "main.b79f72c1.js.map": "/cake/static/js/main.b79f72c1.js.map",
+    "654.5d00d69d.chunk.js.map": "/cake/static/js/654.5d00d69d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e2f11007.css",
-    "static/js/main.a85a1f46.js"
+    "static/js/main.b79f72c1.js"
   ]
 }
