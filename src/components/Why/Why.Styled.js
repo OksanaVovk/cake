@@ -1,9 +1,12 @@
 import styled from '@emotion/styled';
 
+export const Box = styled('div')`
+  padding-left: 106px;
+  padding-right: 66px;
+`;
+
 export const WhyBox = styled('div')`
   position: relative;
-  //   top: 69.87px;
-  //   left: 230.67px;
   width: 1068px;
   height: 681px;
 `;

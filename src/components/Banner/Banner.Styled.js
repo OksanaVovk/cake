@@ -204,15 +204,12 @@ export const TextBox = styled('div')`
 `;
 
 export const Text = styled('p')`
-  font-family: Montserrat, sans-serif;
+font - family: Montserrat, sans - serif;
   font-weight: 300;
   font-size: 16px;
   line-height: 19.5px;
   text-align: left;
-  color: ${p => p.theme.mainColors.brown};
-
-  // border: 0.5px solid black;
-`;
+color: ${p => p.theme.mainColors.brown};`;
 
 export const TitleBox = styled('div')`
   position: absolute;
