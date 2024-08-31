@@ -3,12 +3,12 @@ import styled from '@emotion/styled';
 export const BackgroundStyled = styled.div`
   width: 100%;
   overflow: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
   pointer-events: none;
 
   @media screen and (min-width: 1440px) {
+    position: absolute;
+    top: 0;
+    left: 0;
     min-height: 8050px;
   }
 `;
@@ -35,5 +35,17 @@ export const Img2 = styled.img`
   display: none;
   @media screen and (min-width: 1440px) {
     display: block;
+  }
+`;
+
+export const Img3 = styled.img`
+  position: absolute;
+  left: 0;
+  top: 1730px;
+  z-index: -1;
+  min-width: 100%;
+  display: block;
+  @media screen and (min-width: 1440px) {
+    display: none;
   }
 `;

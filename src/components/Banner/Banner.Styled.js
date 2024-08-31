@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 export const BannerBox = styled('div')`
-  position: absolute;
+  position: relative;
   top: 40px;
   left: -49px;
   width: 1199px;
