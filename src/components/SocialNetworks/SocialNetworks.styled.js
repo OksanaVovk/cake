@@ -1,9 +1,6 @@
 import styled from '@emotion/styled';
 import { NavLink } from 'react-router-dom';
 export const NetworksBox = styled('nav')`
-  // position: absolute;
-  // top: 632px;
-  // right: 0;
   display: inline-flex;
   flex-direction: column;
 `;

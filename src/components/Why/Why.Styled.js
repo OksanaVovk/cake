@@ -1,9 +1,11 @@
 import styled from '@emotion/styled';
 
 export const Box = styled('div')`
+  margin-bottom: 48px;
   @media screen and (min-width: 1440px) {
     padding-left: 106px;
     padding-right: 66px;
+    margin-bottom: 120px;
   }
 `;
 
