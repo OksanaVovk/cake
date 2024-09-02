@@ -23,7 +23,7 @@ export const Why = () => {
         <Title>Чому саме Grann?</Title>
         <WhyImg
           src={why1x}
-          alt="cream"
+          alt="cake"
           srcSet={`${why2x} 2x`}
           media="(min-width: 1440px)"
         />

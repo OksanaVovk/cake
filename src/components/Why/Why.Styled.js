@@ -23,6 +23,7 @@ export const Title = styled('h1')`
   font-size: 80px;
   line-height: 83.28px;
   text-align: center;
+  color: ${p => p.theme.mainColors.brown};
   margin-bottom: 48px;
   @media screen and (min-width: 1440px) {
     position: absolute;
@@ -31,7 +32,6 @@ export const Title = styled('h1')`
     font-size: 100px;
     line-height: 104.1px;
     text-align: center;
-    color: ${p => p.theme.mainColors.brown};
     margin-bottom: 0;
   }
 `;

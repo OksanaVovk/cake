@@ -5,6 +5,7 @@ import { MobileBanner } from 'components/MobileBanner';
 import { Why } from 'components/Why';
 import { BannerCake } from 'components/BannerCake';
 import { Delivery } from 'components/Delivery';
+import { AboutMe } from 'components/AboutMe';
 
 const MainPage = () => {
   return (
@@ -16,6 +17,7 @@ const MainPage = () => {
       <Why />
       <BannerCake />
       <Delivery />
+      <AboutMe />
     </>
   );
 };
