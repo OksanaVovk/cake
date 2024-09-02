@@ -25,6 +25,10 @@ export const Title = styled('h1')`
   }
 `;
 
+export const LinePositionBox = styled('div')`
+  position: relative;
+`;
+
 export const DeliveryBoxSvg = styled('ul')`
   @media screen and (min-width: 1440px) {
     display: grid;
@@ -72,12 +76,34 @@ export const DeliverySvg2 = styled('svg')`
 `;
 
 export const DeliverySvg3 = styled('svg')`
-  width: 80pxpx;
+  width: 80px;
   height: 80px;
   @media screen and (min-width: 1440px) {
     width: 80px;
     height: 77.04px;
     fill: ${p => p.theme.secondaryColors.darkBeige};
+  }
+`;
+
+export const Line1 = styled('div')`
+  @media screen and (min-width: 1440px) {
+    position: absolute;
+    top: 0;
+    left: 339px;
+    border-right: 1px solid ${p => p.theme.secondaryColors.darkBeige};
+    width: 1px;
+    height: 242px;
+  }
+`;
+
+export const Line2 = styled('div')`
+  @media screen and (min-width: 1440px) {
+    position: absolute;
+    top: 0;
+    left: 710px;
+    border-right: 1px solid ${p => p.theme.secondaryColors.darkBeige};
+    width: 1px;
+    height: 242px;
   }
 `;
 
