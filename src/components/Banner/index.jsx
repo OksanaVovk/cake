@@ -1,9 +1,6 @@
 import cream1x from '../../images/Cream1x.webp';
 import cream2x from '../../images/Cream2x.webp';
 import eclair from '../../images/Eclair.webp';
-// import eclair1x from '../../images/Eclair1x.webp';
-// import eclair2x from '../../images/Eclair2x.webp';
-
 import mousse from '../../images/Mousse.webp';
 
 import tart from '../../images/Tart.webp';
