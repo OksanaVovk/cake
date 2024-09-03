@@ -96,6 +96,7 @@ export const ButtonForm = styled(Button)`
     font-size: 24px;
   }
 `;
+
 export const BoxText = styled('div')`
   width: 355px;
   height: 224px;
