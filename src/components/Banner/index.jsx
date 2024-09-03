@@ -7,30 +7,30 @@ import tart from '../../images/Tart.webp';
 
 import sprite from '../../images/icons.svg';
 import {
-  BannerBox,
   CreamBox,
+  BannerBox,
+  TitleBox,
+  Title,
   CreamImg,
   CreamSvg1,
   CreamSvg2,
   EclairBox,
-  EclairImg,
   EclairSvg1,
+  EclairImg,
   EclairSvg2,
   EclairText,
   MousseBox,
-  MousseText,
   MousseImg,
+  MousseText,
   TartBox,
-  TartText,
   TartImg,
   TartSvg1,
   TartSvg2,
   TartSvg3,
   TartSvg4,
+  TartText,
   TextBox,
   Text,
-  TitleBox,
-  Title,
 } from './Banner.styled';
 
 export const Banner = () => {

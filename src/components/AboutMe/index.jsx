@@ -3,16 +3,17 @@ import about1x from '../../images/about1x.webp';
 import about2x from '../../images/about2x.webp';
 import mAbout1x from '../../images/mabout1x.webp';
 import mAbout2x from '../../images/mabout2x.webp';
+
 import {
   AboutMeBox,
-  AboutMeSvg,
   AboutMeImg1,
   AboutMeImg2,
-  Text,
-  TextBox,
-  Title,
-  LittleText,
+  AboutMeSvg,
   TextTitle,
+  Title,
+  TextBox,
+  LittleText,
+  Text,
 } from './AboutMe.styled';
 
 export const AboutMe = () => {
