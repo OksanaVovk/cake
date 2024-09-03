@@ -31,7 +31,7 @@ import {
   TartText,
   TextBox,
   Text,
-} from './Banner.styled';
+} from './BannerStyled';
 
 export const Banner = () => {
   return (

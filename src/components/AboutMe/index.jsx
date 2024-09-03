@@ -14,7 +14,7 @@ import {
   TextBox,
   LittleText,
   Text,
-} from './AboutMe.styled';
+} from './AboutMeStyled';
 
 export const AboutMe = () => {
   return (
