@@ -1,4 +1,3 @@
-// import sprite from '../../images/icons.svg';
 import {
   StyledButton,
   SvgMore,
@@ -7,14 +6,6 @@ import {
   ButtonMoreB,
 } from './Button.styled';
 import sprite from '../../images/icons.svg';
-
-// export const Button = () => {
-//   return (
-//     <>
-//       <button type="button">Кнопка</button>;
-//     </>
-//   );
-// };
 
 export const Button = ({
   className,
