@@ -25,7 +25,6 @@ export const App = () => {
     // >
     //   React homework template
     // </div>
-
     <>
       <Global styles={GlobalStyles} />
       <Routes>
