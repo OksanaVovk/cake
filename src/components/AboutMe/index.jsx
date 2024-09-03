@@ -5,14 +5,14 @@ import mAbout1x from '../../images/mabout1x.webp';
 import mAbout2x from '../../images/mabout2x.webp';
 import {
   AboutMeBox,
+  AboutMeSvg,
   AboutMeImg1,
   AboutMeImg2,
-  AboutMeSvg,
   Text,
   TextBox,
   Title,
-  TextTitle,
   LittleText,
+  TextTitle,
 } from './AboutMe.styled';
 
 export const AboutMe = () => {
