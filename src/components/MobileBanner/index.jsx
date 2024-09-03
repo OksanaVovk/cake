@@ -9,7 +9,7 @@ import {
   SocialBox,
   Title,
   Text,
-} from './MobileBanner.Styled';
+} from './MobileBanner.styled';
 
 export const MobileBanner = () => {
   return (

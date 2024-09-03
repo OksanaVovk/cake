@@ -3,7 +3,7 @@ import { Menu } from 'components/Menu';
 import { Basket } from '../Basket/index';
 import { Navigation1 } from '../Navigation1/index';
 import { Navigation2 } from '../Navigation2/index';
-import { HeaderBox, HeaderTextBox } from './Header.Styled';
+import { HeaderBox, HeaderTextBox } from './Header.styled';
 
 export const Header = () => {
   return (

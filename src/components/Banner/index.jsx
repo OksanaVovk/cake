@@ -31,7 +31,7 @@ import {
   Text,
   TitleBox,
   Title,
-} from './Banner.Styled';
+} from './Banner.styled';
 
 export const Banner = () => {
   return (

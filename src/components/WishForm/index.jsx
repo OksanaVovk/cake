@@ -8,7 +8,7 @@ import {
   Title,
   Text,
   BoxText,
-} from './WishForm.Styled';
+} from './WishForm.styled';
 
 export const WishForm = () => {
   return (

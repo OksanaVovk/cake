@@ -3,7 +3,7 @@ import { Suspense } from 'react';
 import { Header } from 'components/Header';
 import { Footer } from 'components/Footer';
 // import Loader from 'components/Loader/Loader';
-import { GlobalContainerStyled } from './GlobalContainer.Styled';
+import { GlobalContainerStyled } from './GlobalContainer.styled';
 
 export const SharedLayout = () => {
   return (

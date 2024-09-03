@@ -14,7 +14,7 @@ import {
   BoxText1,
   BoxText2,
   BoxText3,
-} from '../../components/Why/Why.Styled';
+} from './Why.styled';
 
 export const Why = () => {
   return (

@@ -1,4 +1,4 @@
-import { LogoBox } from './Logo.Styled';
+import { LogoBox } from './Logo.styled';
 import { Link } from 'react-router-dom';
 
 import logoGrann_1x from '../../images/logoGrann_1x.webp';

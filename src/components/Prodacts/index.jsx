@@ -1,7 +1,7 @@
 // import { ButtonMore } from 'components/Button';
 // import { Button } from 'components/Button';
 import { ButtonMore } from 'components/Button';
-import { ProdactsBox, ProdactBox, ButtonBox } from './Prodacts.Styled';
+import { ProdactsBox, ProdactBox, ButtonBox } from './Prodacts.styled';
 import Catalog1_1x from '../../images/1Catalog1x.webp';
 import Catalog1_2x from '../../images/1Catalog2x.webp';
 import Catalog2_1x from '../../images/2Catalog1x.webp';

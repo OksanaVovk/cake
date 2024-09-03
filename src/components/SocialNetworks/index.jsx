@@ -5,7 +5,7 @@ import {
   FacebookSvg,
   InstagramSvg,
   NetworksBox,
-} from './SocialNetworks.Styled';
+} from './SocialNetworks.styled';
 
 export const SocialNetworks = () => {
   return (

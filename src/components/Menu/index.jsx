@@ -1,5 +1,5 @@
 import sprite from '../../images/icons.svg';
-import { MenuButton, MenuSvg } from './Menu.Styled';
+import { MenuButton, MenuSvg } from './Menu.styled';
 
 export const Menu = () => {
   return (

@@ -1,6 +1,6 @@
 import { Banner } from 'components/Banner';
 import { SocialNetworks } from 'components/SocialNetworks';
-import { MainBannerBox, SocialBox } from './MainBanner.Styled';
+import { MainBannerBox, SocialBox } from './MainBanner.styled';
 
 export const MainBanner = () => {
   return (

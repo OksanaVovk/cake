@@ -12,7 +12,7 @@ import {
   Line1,
   Line2,
   LinePositionBox,
-} from './Delivery.Styled';
+} from './Delivery.styled';
 export const Delivery = () => {
   return (
     <DeliveryBox>

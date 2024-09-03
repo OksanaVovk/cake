@@ -1,6 +1,6 @@
 import { Backdrop } from 'components/Modal/Modal.styled';
 import { Oval } from 'react-loader-spinner';
-import { Wrapper } from './Loader.Styled';
+import { Wrapper } from './Loader.styled';
 
 export default function Loader() {
   return (

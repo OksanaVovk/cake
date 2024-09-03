@@ -5,7 +5,7 @@ import {
   SvgBox,
   ButtonTextBox,
   ButtonMoreB,
-} from './ButtonStyled';
+} from './Button.styled';
 import sprite from '../../images/icons.svg';
 
 // export const Button = () => {

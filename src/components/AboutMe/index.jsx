@@ -13,7 +13,7 @@ import {
   Title,
   TextTitle,
   LittleText,
-} from './AboutMe.Styled';
+} from './AboutMe.styled';
 
 export const AboutMe = () => {
   return (

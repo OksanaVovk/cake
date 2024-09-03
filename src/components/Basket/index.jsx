@@ -1,6 +1,6 @@
 import sprite from '../../images/icons.svg';
 import { Link } from 'react-router-dom';
-import { BasketSvg } from './Basket.Styled';
+import { BasketSvg } from './Basket.styled';
 
 export const Basket = () => {
   return (

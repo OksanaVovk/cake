@@ -4,7 +4,7 @@ import { ToastContainer } from 'react-toastify';
 import { SharedLayout } from './components/SharedLayout';
 
 import { Global } from '@emotion/react';
-import { GlobalStyles } from './components/Global.Styled';
+import { GlobalStyles } from './components/Global.styled';
 import NotFound from './pages/NotFound';
 
 const MainPage = lazy(() => import('./pages/MainPage/index'));
