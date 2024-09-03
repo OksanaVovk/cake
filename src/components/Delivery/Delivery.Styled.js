@@ -130,7 +130,7 @@ export const Text = styled('p')`
   line-height: 19.5px;
   color: ${p => p.theme.mainColors.brown};
   @media screen and (min-width: 1440px) {
-    font-size: ${({ font }) => font || '18px'};
+    font-size: 18px;
     line-height: 21.94px;
     margin-bottom: 0;
   }

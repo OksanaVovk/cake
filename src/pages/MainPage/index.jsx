@@ -6,6 +6,7 @@ import { Why } from 'components/Why';
 import { BannerCake } from 'components/BannerCake';
 import { Delivery } from 'components/Delivery';
 import { AboutMe } from 'components/AboutMe';
+import { WishForm } from 'components/WishForm';
 
 const MainPage = () => {
   return (
@@ -18,6 +19,7 @@ const MainPage = () => {
       <BannerCake />
       <Delivery />
       <AboutMe />
+      <WishForm />
     </>
   );
 };

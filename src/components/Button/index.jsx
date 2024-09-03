@@ -1,5 +1,11 @@
 // import sprite from '../../images/icons.svg';
-import { StyledButton2, SvgMore, SvgBox, ButtonTextBox } from './ButtonStyled';
+import {
+  StyledButton,
+  SvgMore,
+  SvgBox,
+  ButtonTextBox,
+  ButtonMoreB,
+} from './ButtonStyled';
 import sprite from '../../images/icons.svg';
 
 // export const Button = () => {
@@ -11,6 +17,7 @@ import sprite from '../../images/icons.svg';
 // };
 
 export const Button = ({
+  className,
   text,
   type,
   color,
@@ -23,7 +30,8 @@ export const Button = ({
   shHov,
   hoverCange,
 }) => (
-  <StyledButton2
+  <StyledButton
+    className={className}
     type={type || 'button'}
     color={color}
     bg={bg}
@@ -38,11 +46,11 @@ export const Button = ({
     hoverCange={hoverCange}
   >
     {text}
-  </StyledButton2>
+  </StyledButton>
 );
 
 export const ButtonMore = ({ text }) => (
-  <StyledButton2>
+  <ButtonMoreB className="buttonmore">
     <ButtonTextBox>
       {text}
       <SvgBox>
@@ -51,5 +59,5 @@ export const ButtonMore = ({ text }) => (
         </SvgMore>
       </SvgBox>
     </ButtonTextBox>
-  </StyledButton2>
+  </ButtonMoreB>
 );

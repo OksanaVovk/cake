@@ -108,10 +108,6 @@ export const Text = styled('p')`
   font-size: 16px;
   line-height: 19.5px;
   color: ${p => p.theme.mainColors.brown};
-  @media screen and (min-width: 1440px) {
-    font-size: ${({ font }) => font || '16px'};
-    line-height: 21.94px;
-  }
 `;
 
 export const BoxText1 = styled('div')`
