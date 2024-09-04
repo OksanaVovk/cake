@@ -5,7 +5,8 @@ export const MobileBannerBox = styled('div')`
   min-height: 592px;
   position: relative;
   margin-bottom: 100px;
-  margin-left: -10px;
+  // margin-left: -10px;
+  // margin-right: -10px;
   //   border: 4px solid black;
 
   @media screen and (min-width: 1440px) {
@@ -16,7 +17,7 @@ export const MobileBannerBox = styled('div')`
 export const MobileBannerImg = styled('img')`
   position: absolute;
   bottom: 20px;
-  left: 0;
+  left: -10px;
   max-width: 100%;
 `;
 
@@ -25,14 +26,13 @@ export const ButtonBox = styled('div')`
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 0);
-  margin-left: 10px;
+  // margin-left: 10px;
 `;
 
 export const SocialBox = styled('div')`
   position: absolute;
   right: 0px;
   top: 50%;
-  transform: translate(-50%, 0);
 `;
 
 export const Title = styled('h1')`

@@ -23,7 +23,7 @@ export const MobileBanner = () => {
         media="(min-width: 375px)"
       />
       <ButtonBox>
-        <Button text="ДО КАТАЛОГУ" w="355px" />
+        <Button text="ДО КАТАЛОГУ" w="355px" font="18px" />
       </ButtonBox>
       <SocialBox>
         <SocialNetworks />

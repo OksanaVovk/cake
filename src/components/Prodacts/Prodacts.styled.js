@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 export const ProdactsBox = styled('ul')`
   display: grid;
-  grid-template-columns: repeat(1, 375px);
+  grid-template-columns: repeat(1, 355px);
   grid-auto-rows: minmax(182px, auto);
   grid-row-gap: 30px;
   margin-bottom: 100px;
@@ -18,6 +18,8 @@ export const ProdactsBox = styled('ul')`
 
 export const ProdactBox = styled('li')`
   position: relative;
+  // width: 355px;
+  // height: 182px;
 `;
 
 export const ButtonBox = styled('div')`
