@@ -1,10 +1,35 @@
 import { LogoBig } from 'components/Logo';
+import { SocialNetworksFooter } from 'components/SocialNetworks';
+import {
+  FooterBox,
+  TextBox,
+  Text,
+  TextBox1,
+  LogoBox,
+  NavBox,
+  FooterBoxP,
+} from './Footer.styled';
 
 export const Footer = () => {
   return (
-    <>
-      <h1>Тут буде футер</h1>
-      <LogoBig />
-    </>
+    <FooterBox>
+      <FooterBoxP>
+        <TextBox1 className="boxfooter">
+          <Text>с. Хотів, вул. Партизанська </Text>
+          <Text>Email: grannstady@gmail.com</Text>
+          <p>Tel: +38(050)7777777</p>
+        </TextBox1>
+        <LogoBox>
+          <LogoBig />
+        </LogoBox>
+        <NavBox>
+          <SocialNetworksFooter />
+        </NavBox>
+        <TextBox>
+          <Text>Політика конфіденційності</Text>
+          <p>Договір оферти</p>
+        </TextBox>
+      </FooterBoxP>
+    </FooterBox>
   );
 };

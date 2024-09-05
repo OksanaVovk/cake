@@ -5,9 +5,6 @@ export const MobileBannerBox = styled('div')`
   min-height: 592px;
   position: relative;
   margin-bottom: 100px;
-  // margin-left: -10px;
-  // margin-right: -10px;
-  //   border: 4px solid black;
 
   @media screen and (min-width: 1440px) {
     display: none;
@@ -26,7 +23,6 @@ export const ButtonBox = styled('div')`
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 0);
-  // margin-left: 10px;
 `;
 
 export const SocialBox = styled('div')`

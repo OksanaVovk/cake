@@ -5,7 +5,7 @@ export const BannerBox = styled('div')`
   top: 40px;
   left: -49px;
   width: 1199px;
-  height: 850px; //986
+  height: 850px;
   overflow: hidden;
 `;
 
@@ -227,6 +227,4 @@ export const Title = styled('h1')`
   line-height: 104.1px;
   text-align: center;
   color: ${p => p.theme.mainColors.brown};
-
-  // border: 0.5px solid black;
 `;

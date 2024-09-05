@@ -9,16 +9,18 @@ export const BackgroundStyled = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    min-height: 8050px;
+    min-height: 5998.15px;
   }
 `;
 
 export const Img1 = styled.img`
   position: absolute;
+  top: 0;
+  left: 0;
   z-index: -1;
-  height: 1098px;
+  // height: 1098px;
   min-width: 100%;
-  object-position: 0px 0px;
+  object-fit: cover;
   display: none;
   @media screen and (min-width: 1440px) {
     display: block;
@@ -28,7 +30,7 @@ export const Img1 = styled.img`
 export const Img2 = styled.img`
   position: absolute;
   min-width: 100%;
-  height: 2242px;
+  // height: 2242px;
   left: 0;
   top: 1930px;
   z-index: -1;
