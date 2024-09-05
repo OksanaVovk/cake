@@ -10,13 +10,6 @@ export const QuestionBox = styled('div')`
   }
 `;
 
-export const QuestionSvg = styled('svg')`
-  width: 25px;
-  height: 25px;
-`;
-
-export const QuestionButton = styled('button')``;
-
 export const Title = styled('h1')`
   font-family: Moniqa;
   font-weight: 900;
@@ -47,8 +40,9 @@ export const TextBox = styled('li')`
 export const QuestionTextBox = styled('div')`
   display: flex;
   justify-content: space-between;
-  padding-bottom: 8px;
+  align-items: flex-start;
   width: 355px;
+  padding-bottom: 8px;
   border-bottom: 1px solid ${p => p.theme.mainColors.brown};
 
   @media screen and (min-width: 1440px) {
@@ -71,6 +65,13 @@ export const QuestionText = styled('p')`
     line-height: 29.26px;
   }
 `;
+
+export const QuestionSvg = styled('svg')`
+  width: 25px;
+  height: 25px;
+`;
+
+export const QuestionButton = styled('button')``;
 
 export const AnswerText = styled('p')`
   font-family: Montserrat, sans-serif;
