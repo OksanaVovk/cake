@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/cake/static/css/main.e2f11007.css",
-    "main.js": "/cake/static/js/main.970b3cd2.js",
-    "static/js/464.3247899e.chunk.js": "/cake/static/js/464.3247899e.chunk.js",
+    "main.js": "/cake/static/js/main.65577189.js",
+    "static/js/740.0b40c89c.chunk.js": "/cake/static/js/740.0b40c89c.chunk.js",
     "static/media/Montserrat-Light.ttf": "/cake/static/media/Montserrat-Light.7179b7d2ac9b599db5f9.ttf",
     "static/media/Moniqa-BlackDisplay.ttf": "/cake/static/media/Moniqa-BlackDisplay.d683c02e133cf99e1d35.ttf",
     "static/media/cake2x.webp": "/cake/static/media/cake2x.ad1ee41fb99ef789bbf5.webp",
@@ -25,7 +25,7 @@
     "static/media/mbanner1x.webp": "/cake/static/media/mbanner1x.7ca5d28d212e864650d6.webp",
     "static/media/Why1x.webp": "/cake/static/media/Why1x.6b9a8fe61a22a4468a52.webp",
     "static/media/Cream1x.webp": "/cake/static/media/Cream1x.463e20d649052e339153.webp",
-    "static/media/icons.svg": "/cake/static/media/icons.e4d3b40c4b7337f3848b06b0af7b0d40.svg",
+    "static/media/icons.svg": "/cake/static/media/icons.3748bde5ed5e7c08fe5820ca520859dd.svg",
     "static/media/Fon2x.webp": "/cake/static/media/Fon2x.a312ff9dc53f6553ed46.webp",
     "static/media/1Catalog1x.webp": "/cake/static/media/1Catalog1x.73fdf23555eba96ad6ef.webp",
     "static/media/mabout1x.webp": "/cake/static/media/mabout1x.ead2f19f44804c5bb577.webp",
@@ -50,11 +50,11 @@
     "static/media/logoGrannMob_1x.webp": "/cake/static/media/logoGrannMob_1x.6f85f1400ec86a910c19.webp",
     "index.html": "/cake/index.html",
     "main.e2f11007.css.map": "/cake/static/css/main.e2f11007.css.map",
-    "main.970b3cd2.js.map": "/cake/static/js/main.970b3cd2.js.map",
-    "464.3247899e.chunk.js.map": "/cake/static/js/464.3247899e.chunk.js.map"
+    "main.65577189.js.map": "/cake/static/js/main.65577189.js.map",
+    "740.0b40c89c.chunk.js.map": "/cake/static/js/740.0b40c89c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e2f11007.css",
-    "static/js/main.970b3cd2.js"
+    "static/js/main.65577189.js"
   ]
 }
