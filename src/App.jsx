@@ -8,6 +8,7 @@ import { GlobalStyles } from 'components/GlobalSyled';
 import NotFound from './pages/NotFound';
 
 const MainPage = lazy(() => import('./pages/MainPage/index'));
+const CatalogPage = lazy(() => import('./pages/CatalogPage/index'));
 
 // import { Header } from 'components/Header';
 
@@ -30,6 +31,7 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route path="/" element={<MainPage />} />
+          <Route path="catalog" element={<CatalogPage />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
