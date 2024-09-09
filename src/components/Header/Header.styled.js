@@ -21,7 +21,7 @@ export const HeaderTextBox = styled('div')`
 
   @media screen and (min-width: 1440px) {
     width: 1440px;
-    padding: 59px 100px 51px 100px;
+    padding: 24px 100px 24px 100px;
     justify-content: space-between;
   }
 `;

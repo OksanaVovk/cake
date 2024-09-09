@@ -14,7 +14,6 @@ export const SvgBox = styled('div')`
   top: 0;
   left: 233px;
   display: none;
-  // display: flex;
   width: 67px;
   height: 67px;
   align-items: center;

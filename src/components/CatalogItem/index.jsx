@@ -1,5 +1,15 @@
+import sprite from '../../images/icons.svg';
+import {
+  BasketSvg,
+  ItemsName,
+  ItemsText,
+  BoxText,
+  BoxGText,
+  BoxImg,
+  Img,
+  BoxItem,
+} from './CatalogItem.styled';
 export const CatalogItem = ({
-  id,
   picture1x,
   category,
   picture2x,
@@ -9,12 +19,27 @@ export const CatalogItem = ({
   unit,
 }) => {
   return (
-    <li key={id}>
-      <img src={picture1x} alt={category} srcSet={`${picture2x} 2x`} />
-      <h2>{name}</h2>
-      <p>
-        {number > 1 ? `${price}грн/${number}${unit}` : `${price}грн/${unit}`}
-      </p>
-    </li>
+    <BoxItem>
+      <BoxImg>
+        <Img src={picture1x} alt={category} srcSet={`${picture2x} 2x`} />
+      </BoxImg>
+      {/* <ButtonItem className="buttonItem" text="Детальніше" /> */}
+
+      <BoxGText>
+        <BoxText>
+          <ItemsName>{name}</ItemsName>
+          <ItemsText>
+            {number > 1
+              ? `${price}грн/${number}${unit}`
+              : `${price}грн/${unit}`}
+          </ItemsText>
+        </BoxText>
+        <button>
+          <BasketSvg>
+            <use href={sprite + '#icon-Shopping-cart'}></use>
+          </BasketSvg>
+        </button>
+      </BoxGText>
+    </BoxItem>
   );
 };

@@ -1,10 +1,15 @@
 import { CatalogList } from 'components/CatalogList';
+import { NavCatalog } from 'components/NavCatalog';
+import { FilterButtons } from 'components/FilterButtons';
+import { CatalogPageBox, CatalogPageTitle } from './CatalogPage.styled';
 const CatalogPage = () => {
   return (
-    <>
-      <p>ТУТ КАТАЛОГ</p>
+    <CatalogPageBox>
+      <NavCatalog />
+      <CatalogPageTitle>Кaталог</CatalogPageTitle>
+      <FilterButtons />
       <CatalogList />
-    </>
+    </CatalogPageBox>
   );
 };
 

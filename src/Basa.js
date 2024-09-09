@@ -48,7 +48,7 @@ export const Basa = [
   {
     picture1x: pict2xs,
     picture2x: pict2xl,
-    name: 'Шоколадний торт з малиною”',
+    name: 'Шоколадний торт з малиною',
     price: 600,
     number: 1,
     weight: 1000,
@@ -137,7 +137,7 @@ export const Basa = [
     desctiption:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. dolore magna aliqua facilisis.',
     category: 'Торти',
-    id: 1823,
+    id: 1839,
   },
 
   {

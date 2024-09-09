@@ -1,4 +1,4 @@
-import { MainBackground } from 'components/MainBackground';
+// import { MainBackground } from 'components/MainBackground';
 import { MainBanner } from 'components/MainBanner';
 import { Prodacts } from 'components/Prodacts';
 import { MobileBanner } from 'components/MobileBanner';
@@ -8,11 +8,12 @@ import { Delivery } from 'components/Delivery';
 import { AboutMe } from 'components/AboutMe';
 import { WishForm } from 'components/WishForm';
 import { Question } from 'components/Question';
+// import { MainBackground } from 'components/MainBackground';
 
 const MainPage = () => {
   return (
     <>
-      <MainBackground />
+      {/* <MainBackground /> */}
       <MobileBanner />
       <MainBanner />
       <Prodacts />

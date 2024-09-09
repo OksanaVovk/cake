@@ -18,7 +18,7 @@ export const Img1 = styled.img`
   top: 0;
   left: 0;
   z-index: -1;
-  // height: 1098px;
+  height: 1098px;
   min-width: 100%;
   object-fit: cover;
   display: none;
@@ -30,9 +30,9 @@ export const Img1 = styled.img`
 export const Img2 = styled.img`
   position: absolute;
   min-width: 100%;
-  // height: 2242px;
+  height: 2242px;
   left: 0;
-  top: 1930px;
+  top: 1865px;
   z-index: -1;
   display: none;
   @media screen and (min-width: 1440px) {
@@ -49,5 +49,21 @@ export const Img3 = styled.img`
   display: block;
   @media screen and (min-width: 1440px) {
     display: none;
+  }
+`;
+
+export const BackgroundStyled2 = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  background-color: ${p => p.theme.mainColors.grey};
+  min-height: 3000px;
+
+  @media screen and (min-width: 1440px) {
+    min-height: 4000px;
   }
 `;
