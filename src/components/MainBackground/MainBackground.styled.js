@@ -18,9 +18,9 @@ export const Img1 = styled.img`
   top: 0;
   left: 0;
   z-index: -1;
-  height: 1098px;
-  min-width: 100%;
-  object-fit: cover;
+  height: 1112px;
+  width: 100%;
+  // object-fit: cover;
   display: none;
   @media screen and (min-width: 1440px) {
     display: block;
@@ -29,7 +29,7 @@ export const Img1 = styled.img`
 
 export const Img2 = styled.img`
   position: absolute;
-  min-width: 100%;
+  width: 100%;
   height: 2242px;
   left: 0;
   top: 1865px;
