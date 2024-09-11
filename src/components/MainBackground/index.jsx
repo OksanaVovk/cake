@@ -56,7 +56,7 @@ export const MainBackgroundGrey = ({ children }) => {
 
 export const MainBackground = ({ children }) => {
   const location = useLocation();
-  console.log(location);
+
   return (
     <>
       {location.pathname === '/' ? (

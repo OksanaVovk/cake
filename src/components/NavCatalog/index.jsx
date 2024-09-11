@@ -17,7 +17,7 @@ export const NavCatalog = ({ name, id }) => {
       {name ? (
         <NavCatalogItemBox>
           <NavCatalogText>/</NavCatalogText>
-          <Link to={`/catalog/${id}`}>{name}</Link>
+          <NavCatalogText>{name}</NavCatalogText>
         </NavCatalogItemBox>
       ) : (
         ''
