@@ -1,4 +1,5 @@
 import sprite from '../../images/icons.svg';
+import { Link } from 'react-router-dom';
 import {
   BasketSvg,
   ItemsName,
@@ -17,11 +18,14 @@ export const CatalogItem = ({
   number,
   price,
   unit,
+  id,
 }) => {
   return (
     <BoxItem>
       <BoxImg>
-        <Img src={picture1x} alt={category} srcSet={`${picture2x} 2x`} />
+        <Link to={`${id}`}>
+          <Img src={picture1x} alt={category} srcSet={`${picture2x} 2x`} />
+        </Link>
       </BoxImg>
       {/* <ButtonItem className="buttonItem" text="Детальніше" /> */}
 

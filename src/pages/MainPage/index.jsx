@@ -1,6 +1,6 @@
 // import { MainBackground } from 'components/MainBackground';
 import { MainBanner } from 'components/MainBanner';
-import { Prodacts } from 'components/Prodacts';
+import { Products } from 'components/Products';
 import { MobileBanner } from 'components/MobileBanner';
 import { Why } from 'components/Why';
 import { BannerCake } from 'components/BannerCake';
@@ -16,7 +16,7 @@ const MainPage = () => {
       {/* <MainBackground /> */}
       <MobileBanner />
       <MainBanner />
-      <Prodacts />
+      <Products />
       <Why />
       <BannerCake />
       <Delivery />

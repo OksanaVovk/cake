@@ -1,14 +1,16 @@
+import { useSelector } from 'react-redux';
+import { selectors } from '../../redux/selectors';
 import { CatalogItem } from 'components/CatalogItem';
-import { Basa } from '../../Basa.js';
 import { CatalogListBox } from './CatalogList.styled.js';
 
 export const CatalogList = () => {
-  const CatalogBase = Basa;
+  const CatalogBase = useSelector(selectors.selectProductsBase);
 
   return (
     <CatalogListBox>
       {CatalogBase.map(image => (
         <CatalogItem
+          id={image.id}
           key={image.id}
           picture1x={image.picture1x}
           picture2x={image.picture2x}

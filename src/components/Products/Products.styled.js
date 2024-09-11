@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-export const ProdactsBox = styled('ul')`
+export const ProductsBox = styled('ul')`
   display: grid;
   grid-template-columns: repeat(1, 355px);
   grid-auto-rows: minmax(182px, auto);
@@ -16,7 +16,7 @@ export const ProdactsBox = styled('ul')`
   }
 `;
 
-export const ProdactBox = styled('li')`
+export const ProductBox = styled('li')`
   position: relative;
   // width: 355px;
   // height: 182px;
