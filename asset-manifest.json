@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/cake/static/css/main.e2f11007.css",
-    "main.js": "/cake/static/js/main.bb13008d.js",
-    "static/js/665.3adafdd8.chunk.js": "/cake/static/js/665.3adafdd8.chunk.js",
-    "static/js/190.e2555d69.chunk.js": "/cake/static/js/190.e2555d69.chunk.js",
-    "static/js/556.fc8c3f9e.chunk.js": "/cake/static/js/556.fc8c3f9e.chunk.js",
+    "main.js": "/cake/static/js/main.66527f26.js",
+    "static/js/140.84c74b13.chunk.js": "/cake/static/js/140.84c74b13.chunk.js",
+    "static/js/978.5b91fa1f.chunk.js": "/cake/static/js/978.5b91fa1f.chunk.js",
+    "static/js/254.f5ebb00c.chunk.js": "/cake/static/js/254.f5ebb00c.chunk.js",
     "static/media/3pizza2x.webp": "/cake/static/media/3pizza2x.375f1057d3eb9a8e251f.webp",
     "static/media/2pizza2x.webp": "/cake/static/media/2pizza2x.baf8c48ba6949fbfd2ff.webp",
     "static/media/4pizza2x.webp": "/cake/static/media/4pizza2x.ba788a2944400191f13e.webp",
@@ -82,13 +82,13 @@
     "static/media/logoGrannMob_1x.webp": "/cake/static/media/logoGrannMob_1x.6f85f1400ec86a910c19.webp",
     "index.html": "/cake/index.html",
     "main.e2f11007.css.map": "/cake/static/css/main.e2f11007.css.map",
-    "main.bb13008d.js.map": "/cake/static/js/main.bb13008d.js.map",
-    "665.3adafdd8.chunk.js.map": "/cake/static/js/665.3adafdd8.chunk.js.map",
-    "190.e2555d69.chunk.js.map": "/cake/static/js/190.e2555d69.chunk.js.map",
-    "556.fc8c3f9e.chunk.js.map": "/cake/static/js/556.fc8c3f9e.chunk.js.map"
+    "main.66527f26.js.map": "/cake/static/js/main.66527f26.js.map",
+    "140.84c74b13.chunk.js.map": "/cake/static/js/140.84c74b13.chunk.js.map",
+    "978.5b91fa1f.chunk.js.map": "/cake/static/js/978.5b91fa1f.chunk.js.map",
+    "254.f5ebb00c.chunk.js.map": "/cake/static/js/254.f5ebb00c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e2f11007.css",
-    "static/js/main.bb13008d.js"
+    "static/js/main.66527f26.js"
   ]
 }
