@@ -3,6 +3,8 @@ import { useSelector } from 'react-redux';
 import { selectors } from '../../redux/selectors';
 import { NavCatalog } from 'components/NavCatalog';
 import { ProductCard } from 'components/ProductCard';
+import { ProductPageBox } from './ProductPage.styled';
+import { AboutProduct } from 'components/AboutProduct';
 
 const ProductPage = () => {
   const { id } = useParams();
@@ -10,7 +12,7 @@ const ProductPage = () => {
   const product = products.find(product => product.id === Number(id));
   console.log(product);
   return (
-    <>
+    <ProductPageBox>
       <NavCatalog id={product.id} name={product.name} />
       <ProductCard
         name={product.name}
@@ -21,7 +23,8 @@ const ProductPage = () => {
         price={product.price}
         number={product.number}
       />
-    </>
+      <AboutProduct desctiption={product.desctiption} />
+    </ProductPageBox>
   );
 };
 

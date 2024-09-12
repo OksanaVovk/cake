@@ -1,4 +1,5 @@
 import {
+  GeneralDiv,
   ProductCardDiv,
   Img,
   Title,
@@ -28,7 +29,7 @@ export const ProductCard = ({
   category,
 }) => {
   return (
-    <>
+    <GeneralDiv>
       <ProductCardDiv>
         <Title>{name}</Title>
         <Img src={picture1x} alt={category} srcSet={`${picture2x} 2x`} />
@@ -46,11 +47,9 @@ export const ProductCard = ({
           {unit === 'кг' ? (
             <SelectDiv>
               Вага готового виробу
-              <Select name="weight">
+              <Select name="weight" defaultValue="1">
                 <option value="0.5">0.5 кг</option>
-                <option value="1" selected>
-                  1 кг
-                </option>
+                <option value="1">1 кг</option>
                 <option value="1.5">1,5 кг</option>
                 <option value="2">2 кг</option>
                 <option value="2.5">2.5 кг</option>
@@ -79,6 +78,6 @@ export const ProductCard = ({
           <ButtonOrder className="order" text="ЗАМОВИТИ" />
         </Form>
       </ProductCardDiv>
-    </>
+    </GeneralDiv>
   );
 };

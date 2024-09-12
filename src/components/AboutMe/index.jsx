@@ -18,7 +18,7 @@ import {
 
 export const AboutMe = () => {
   return (
-    <AboutMeBox>
+    <AboutMeBox id="aboutme">
       <Title>Про мене</Title>
       <AboutMeImg1
         src={about1x}

@@ -1,12 +1,19 @@
 import styled from '@emotion/styled';
 import { Button } from 'components/Button';
 
+export const GeneralDiv = styled('div')`
+  width: 100%;
+  margin-bottom: 100px;
+  @media screen and (min-width: 1440px) {
+    padding-right: 100px;
+  }
+`;
+
 export const ProductCardDiv = styled('div')`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  //   margin-bottom: 100px;
   @media screen and (min-width: 1440px) {
     position: relative;
     width: 1140px;
