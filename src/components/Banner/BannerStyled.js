@@ -134,7 +134,6 @@ export const TartBox = styled('div')`
   right: 0;
   width: 358px;
   height: 442px;
-  // border: 4px solid black;
 `;
 
 export const TartText = styled('p')`
@@ -150,7 +149,6 @@ export const TartText = styled('p')`
   width: 140.6px;
   height: 68px;
   transform: rotate(21.73deg);
-  // border: 0.5px solid black;
 `;
 export const TartImg = styled('img')`
   position: absolute;
@@ -159,7 +157,6 @@ export const TartImg = styled('img')`
   width: 264.74px;
   height: 397.06px;
   transform: rotate(15.03deg);
-  // border: 4px solid black;
 `;
 
 export const TartSvg1 = styled('svg')`
@@ -200,7 +197,6 @@ export const TextBox = styled('div')`
   right: 16.5px;
   width: 287px;
   height: 40px;
-  // border: 4px solid black;
 `;
 
 export const Text = styled('p')`
@@ -217,7 +213,6 @@ export const TitleBox = styled('div')`
   left: 371.5px;
   width: 595px;
   height: 104px;
-  // border: 4px solid black;
 `;
 
 export const Title = styled('h1')`

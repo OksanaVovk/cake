@@ -19,6 +19,7 @@ const ProductPage = () => {
         category={product.category}
         unit={product.unit}
         price={product.price}
+        number={product.number}
       />
     </>
   );
