@@ -5,6 +5,7 @@ import { NavCatalog } from 'components/NavCatalog';
 import { ProductCard } from 'components/ProductCard';
 import { ProductPageBox } from './ProductPage.styled';
 import { AboutProduct } from 'components/AboutProduct';
+import { Random } from 'components/Random';
 
 const ProductPage = () => {
   const { id } = useParams();
@@ -24,6 +25,7 @@ const ProductPage = () => {
         number={product.number}
       />
       <AboutProduct desctiption={product.desctiption} />
+      <Random />
     </ProductPageBox>
   );
 };

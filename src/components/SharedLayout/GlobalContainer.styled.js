@@ -7,6 +7,7 @@ export const GlobalContainerStyled = styled.div`
   padding-left: 10px;
   margin-left: auto;
   margin-right: auto;
+  overflow: hidden;
 
   @media screen and (min-width: 375px) {
     width: 375px;

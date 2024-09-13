@@ -57,13 +57,8 @@ export const BackgroundStyled2 = styled.div`
   top: 0;
   left: 0;
   z-index: -1;
-  width: 100%;
+  min-width: 100%;
   overflow: hidden;
   pointer-events: none;
   background-color: ${p => p.theme.mainColors.grey};
-  min-height: 3000px;
-
-  @media screen and (min-width: 1440px) {
-    min-height: 4000px;
-  }
 `;
