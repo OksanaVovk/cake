@@ -23,7 +23,7 @@ export const CatalogItem = ({
   return (
     <BoxItem>
       <BoxImg>
-        <Link to={`${id}`}>
+        <Link to={`/catalog/${id}`}>
           <Img src={picture1x} alt={category} srcSet={`${picture2x} 2x`} />
         </Link>
       </BoxImg>

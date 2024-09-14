@@ -4,28 +4,13 @@ import secondFon1x from '../../images/2fon1x.webp';
 import secondFon2x from '../../images/2fon2x.webp';
 import mFon1x from '../../images/mFon1x.webp';
 import mFon2x from '../../images/mFon2x.webp';
-import { useLocation } from 'react-router-dom';
-import { useRef } from 'react';
-import {
-  BackgroundStyled,
-  Img1,
-  Img2,
-  Img3,
-  BackgroundStyled2,
-} from './MainBackground.styled';
 
-export const MainBackgroundImage = ({ children }) => {
-  // const location = useLocation();
-  const divRef = useRef();
-  console.log(divRef);
+import { BackgroundStyled, Img1, Img2, Img3 } from './MainBackground.styled';
 
-  // location.pathname !== '/'
-  //   ? (divRef.style.display = 'none')
-  //   : (divRef.style.display = 'block');
-
+export const MainBackgroundImage = () => {
   return (
     <BackgroundStyled>
-      <div ref={divRef}>
+      <div>
         <Img1
           alt="im"
           src={fon1x}
@@ -45,25 +30,6 @@ export const MainBackgroundImage = ({ children }) => {
           media="(min-width: 375px)"
         />
       </div>
-      {children}
     </BackgroundStyled>
-  );
-};
-
-export const MainBackgroundGrey = ({ children }) => {
-  return <BackgroundStyled2>{children}</BackgroundStyled2>;
-};
-
-export const MainBackground = ({ children }) => {
-  const location = useLocation();
-
-  return (
-    <>
-      {location.pathname === '/' ? (
-        <MainBackgroundImage />
-      ) : (
-        <MainBackgroundGrey />
-      )}
-    </>
   );
 };

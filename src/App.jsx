@@ -25,7 +25,7 @@ export const App = () => {
       <Global styles={GlobalStyles} />
       <Routes>
         <Route path="/" element={<SharedLayout />}>
-          <Route path="/" element={<MainPage />} />
+          <Route index element={<MainPage />} />
           <Route path="/catalog" element={<CatalogPage />} />
           <Route path="/catalog/:id" element={<ProductPage />} />
           <Route path="*" element={<NotFound />} />

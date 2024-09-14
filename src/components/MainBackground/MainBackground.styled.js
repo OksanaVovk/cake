@@ -52,13 +52,6 @@ export const Img3 = styled.img`
   }
 `;
 
-export const BackgroundStyled2 = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  min-width: 100%;
-  overflow: hidden;
-  pointer-events: none;
+export const MainBackgroundGrey = styled.div`
   background-color: ${p => p.theme.mainColors.grey};
 `;

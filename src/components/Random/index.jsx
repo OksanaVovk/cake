@@ -1,5 +1,6 @@
 import { useSelector } from 'react-redux';
 import { selectors } from '../../redux/selectors';
+// import { Navigate } from 'react-router-dom';
 
 import { CatalogItem } from 'components/CatalogItem';
 import { RandomDiv, Title, CardList } from './Random.styled';
@@ -19,6 +20,10 @@ export const Random = () => {
     //   i -= 1;
     // }
   }
+
+  // const onCardClick = () => {
+  //   return <Navigate to="/catalog/:id" replace />;
+  // };
 
   return (
     <RandomDiv>

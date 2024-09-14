@@ -12,7 +12,7 @@ export const theme = {
   },
   secondaryColors: {
     white: '#FFFFFF',
-    darkBeige: '#DDD5C6',
+    darkBeige: '#D5D0E0',
   },
   fontSizes: {
     xs: '12px',
