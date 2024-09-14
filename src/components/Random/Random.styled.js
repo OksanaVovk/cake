@@ -30,5 +30,9 @@ export const CardList = styled('ul')`
   @media screen and (min-width: 1440px) {
     grid-template-columns: repeat(3, 393px);
     grid-column-gap: 30px;
+
+    & li:last-child {
+      display: none;
+    }
   }
 `;

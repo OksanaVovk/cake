@@ -25,7 +25,7 @@ const ProductPage = () => {
         number={product.number}
       />
       <AboutProduct desctiption={product.desctiption} />
-      <Random />
+      <Random _id={product.id} />
     </ProductPageBox>
   );
 };

@@ -1,29 +1,20 @@
 import { useSelector } from 'react-redux';
 import { selectors } from '../../redux/selectors';
-// import { Navigate } from 'react-router-dom';
 
 import { CatalogItem } from 'components/CatalogItem';
 import { RandomDiv, Title, CardList } from './Random.styled';
 
-export const Random = () => {
+export const Random = ({ _id }) => {
   const data = useSelector(selectors.selectProductsBase);
   const randomData = [];
 
-  for (let i = 0; i < 3; i += 1) {
+  for (let i = 0; i < 4; i += 1) {
     let randomItem = data[Math.floor(Math.random() * data.length)];
 
-    !randomData.includes(randomItem) ? randomData.push(randomItem) : (i -= 1);
-
-    // if (!randomdata.includes(randomItem)) {
-    //   randomdata.push(randomItem);
-    // } else {
-    //   i -= 1;
-    // }
+    !randomData.includes(randomItem) && randomItem.id !== _id
+      ? randomData.push(randomItem)
+      : (i -= 1);
   }
-
-  // const onCardClick = () => {
-  //   return <Navigate to="/catalog/:id" replace />;
-  // };
 
   return (
     <RandomDiv>
@@ -31,6 +22,7 @@ export const Random = () => {
       <CardList>
         {randomData.map(image => (
           <CatalogItem
+            className="randomItem"
             id={image.id}
             key={image.id}
             picture1x={image.picture1x}
