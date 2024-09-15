@@ -11,7 +11,6 @@ const ProductPage = () => {
   const { id } = useParams();
   const products = useSelector(selectors.selectProductsBase);
   const product = products.find(product => product.id === Number(id));
-  console.log(product);
   return (
     <ProductPageBox>
       <NavCatalog id={product.id} name={product.name} />

@@ -141,7 +141,7 @@ export const PieceInputDiv = styled('label')`
   }
 `;
 
-export const Piece = styled('input')`
+export const Input = styled('input')`
   width: 80px;
   height: 60px;
   font-size: 20px;
@@ -222,7 +222,7 @@ export const SumDiv = styled('div')`
 `;
 
 export const Sum = styled('input')`
-  width: 60px;
+  width: 70px;
   font-size: 24px;
   font-weight: 600;
   background-color: transparent;

@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import {
   GeneralDiv,
   ProductCardDiv,
@@ -15,7 +16,7 @@ import {
   Prise,
   SumDiv,
   Sum,
-  Piece,
+  Input,
 } from './ProductCard.styled';
 
 export const ProductCard = ({
@@ -28,6 +29,23 @@ export const ProductCard = ({
   picture2x,
   category,
 }) => {
+  const [weightProduct, setWeightProdact] = useState('1');
+  const [pieceProduct, setPieceProduct] = useState('1');
+  const handleInputChange = event => {
+    const { name, value } = event.currentTarget;
+    switch (name) {
+      case 'weight':
+        setWeightProdact(value);
+        break;
+      case 'pieces':
+        setPieceProduct(value);
+
+        break;
+      default:
+        return;
+    }
+  };
+
   return (
     <GeneralDiv>
       <ProductCardDiv>
@@ -47,7 +65,11 @@ export const ProductCard = ({
           {unit === 'кг' ? (
             <SelectDiv>
               Вага готового виробу
-              <Select name="weight" defaultValue="1">
+              <Select
+                name="weight"
+                value={weightProduct}
+                onChange={handleInputChange}
+              >
                 <option value="0.5">0.5 кг</option>
                 <option value="1">1 кг</option>
                 <option value="1.5">1,5 кг</option>
@@ -59,7 +81,7 @@ export const ProductCard = ({
           ) : (
             <PieceDiv>
               <PieceInputDiv htmlFor="piece">Кількіть </PieceInputDiv>
-              <Piece
+              <Input
                 id="piece"
                 type="number"
                 name="pieces"
@@ -67,12 +89,22 @@ export const ProductCard = ({
                 max="100"
                 step="1"
                 placeholder="1"
+                value={pieceProduct}
+                onChange={handleInputChange}
               />
             </PieceDiv>
           )}
 
           <SumDiv>
-            <Sum type="number" disabled value="1111"></Sum>
+            <Sum
+              type="number"
+              disabled
+              value={
+                unit === 'кг'
+                  ? price * Number(weightProduct)
+                  : price * Number(pieceProduct)
+              }
+            ></Sum>
             <p>грн</p>
           </SumDiv>
           <ButtonOrder className="order" text="ЗАМОВИТИ" />
