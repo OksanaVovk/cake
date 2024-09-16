@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { addProduct } from '../../redux/basketSlice';
 import {
   GeneralDiv,
   ProductCardDiv,
@@ -28,9 +30,13 @@ export const ProductCard = ({
   picture1x,
   picture2x,
   category,
+  id,
 }) => {
   const [weightProduct, setWeightProdact] = useState('1');
   const [pieceProduct, setPieceProduct] = useState('1');
+
+  const dispatch = useDispatch();
+
   const handleInputChange = event => {
     const { name, value } = event.currentTarget;
     switch (name) {
@@ -45,13 +51,54 @@ export const ProductCard = ({
         return;
     }
   };
+  const handelSubmit = event => {
+    event.preventDefault();
+    console.log('klick');
+
+    const choice = {
+      name: name,
+      weight: weightProduct,
+      id: id,
+      src: picture1x,
+      srcSet: picture2x,
+      price: price,
+      unit: unit,
+    };
+    console.log(choice);
+    if (unit === 'кг') {
+      dispatch(
+        addProduct({
+          name: name,
+          weight: weightProduct,
+          id: id,
+          src: picture1x,
+          srcSet: picture2x,
+          price: price,
+          unit: unit,
+        })
+      );
+    } else {
+      dispatch(
+        addProduct({
+          name: name,
+          piece: pieceProduct,
+          id: id,
+          src: picture1x,
+          srcSet: picture2x,
+          price: price,
+          unit: unit,
+          number: number,
+        })
+      );
+    }
+  };
 
   return (
     <GeneralDiv>
       <ProductCardDiv>
         <Title>{name}</Title>
         <Img src={picture1x} alt={category} srcSet={`${picture2x} 2x`} />
-        <Form>
+        <Form onSubmit={handelSubmit}>
           <PriceDiv>
             <LabelDiv2 className="price" htmlFor="price">
               {unit === 'кг' ? `Ціна за кілограм` : `Ціна за ${number} шт`}
@@ -107,7 +154,7 @@ export const ProductCard = ({
             ></Sum>
             <p>грн</p>
           </SumDiv>
-          <ButtonOrder className="order" text="ЗАМОВИТИ" />
+          <ButtonOrder type="submit" className="order" text="ЗАМОВИТИ" />
         </Form>
       </ProductCardDiv>
     </GeneralDiv>

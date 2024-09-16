@@ -22,6 +22,7 @@ const ProductPage = () => {
         unit={product.unit}
         price={product.price}
         number={product.number}
+        id={product.id}
       />
       <AboutProduct desctiption={product.desctiption} />
       <Random _id={product.id} />

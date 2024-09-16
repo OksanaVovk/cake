@@ -4,6 +4,7 @@ const selectFilterProducts = state => state.products.filterProducts;
 const selectBasketModals = state => state.modals.basketModals;
 const selectSuccessfulOrder = state => state.modals.successfulOrder;
 const selectMobileMenu = state => state.modals.mobileMenu;
+const selectBasketProdukts = state => state.basket.basketProdukts;
 
 export const selectors = {
   selectProductsBase,
@@ -12,4 +13,5 @@ export const selectors = {
   selectBasketModals,
   selectMobileMenu,
   selectSuccessfulOrder,
+  selectBasketProdukts,
 };

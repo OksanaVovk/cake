@@ -38,7 +38,7 @@ export const Basa = [
     name: 'Мусовий торт “Манго-маракуйя”',
     price: 800,
     number: 1,
-    weight: 1000,
+    weight: 1,
     unit: 'кг',
     desctiption:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. dolore magna aliqua facilisis.',
@@ -51,7 +51,7 @@ export const Basa = [
     name: 'Шоколадний торт з малиною',
     price: 600,
     number: 1,
-    weight: 1000,
+    weight: 1,
     unit: 'кг',
     desctiption:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. dolore magna aliqua facilisis.',
@@ -65,7 +65,7 @@ export const Basa = [
     name: 'Торт “Ківі-маракуйя””',
     price: 600,
     number: 1,
-    weight: 1000,
+    weight: 1,
     unit: 'кг',
     desctiption:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. dolore magna aliqua facilisis.',
@@ -79,7 +79,7 @@ export const Basa = [
     name: 'Торт “Снікерс”',
     price: 900,
     number: 1,
-    weight: 1000,
+    weight: 1,
     unit: 'кг',
     desctiption:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. dolore magna aliqua facilisis.',
@@ -91,7 +91,7 @@ export const Basa = [
     picture2x: pict5xl,
     name: 'Торт “Наполеон”',
     price: 600,
-    weight: 1000,
+    weight: 1,
     number: 1,
     unit: 'кг',
     desctiption:
@@ -105,7 +105,7 @@ export const Basa = [
     name: 'Торт “Тіраміссу”',
     price: 850,
     number: 1,
-    weight: 1000,
+    weight: 1,
     unit: 'кг',
     desctiption:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. dolore magna aliqua facilisis.',
@@ -119,7 +119,7 @@ export const Basa = [
     name: 'Торт “Медовик”',
     price: 500,
     number: 1,
-    weight: 1000,
+    weight: 1,
     unit: 'кг',
     desctiption:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. dolore magna aliqua facilisis.',
@@ -132,7 +132,7 @@ export const Basa = [
     name: 'Торт “Вафельно-горіховий”',
     price: 550,
     number: 1,
-    weight: 1000,
+    weight: 1,
     unit: 'кг',
     desctiption:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. dolore magna aliqua facilisis.',
@@ -146,7 +146,7 @@ export const Basa = [
     name: 'Торт “Фісташка-малина”',
     price: 850,
     number: 1,
-    weight: 1000,
+    weight: 1,
     unit: 'кг',
     desctiption:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. dolore magna aliqua facilisis.',
@@ -159,7 +159,7 @@ export const Basa = [
     name: 'Тістечка Шу',
     price: 400,
     number: 4,
-    weight: 120,
+    weight: 0.12,
     unit: 'шт',
     desctiption:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. dolore magna aliqua facilisis.',
@@ -172,7 +172,7 @@ export const Basa = [
     name: 'Тістечка Мусові',
     price: 600,
     number: 3,
-    weight: 150,
+    weight: 0.15,
     unit: 'шт',
     desctiption:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. dolore magna aliqua facilisis.',
@@ -185,7 +185,7 @@ export const Basa = [
     name: 'Шоколадне тістечко брауні',
     price: 300,
     number: 3,
-    weight: 130,
+    weight: 0.13,
     unit: 'шт',
     desctiption:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. dolore magna aliqua facilisis.',
@@ -198,7 +198,7 @@ export const Basa = [
     name: 'Піца Тоскана',
     price: 260,
     number: 1,
-    weight: 450,
+    weight: 0.45,
     unit: 'шт',
     desctiption:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. dolore magna aliqua facilisis.',
@@ -211,7 +211,7 @@ export const Basa = [
     name: 'Піца Пепероні',
     price: 240,
     number: 1,
-    weight: 450,
+    weight: 0.45,
     unit: 'шт',
     desctiption:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. dolore magna aliqua facilisis.',
@@ -224,7 +224,7 @@ export const Basa = [
     name: 'Піца Вегетаріанська',
     price: 220,
     number: 1,
-    weight: 450,
+    weight: 0.45,
     unit: 'шт',
     desctiption:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. dolore magna aliqua facilisis.',
@@ -237,7 +237,7 @@ export const Basa = [
     name: 'Піца Італійська',
     price: 280,
     number: 1,
-    weight: 450,
+    weight: 0.45,
     unit: 'шт',
     desctiption:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. dolore magna aliqua facilisis.',
