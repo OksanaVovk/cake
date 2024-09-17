@@ -36,6 +36,7 @@ export const ProductCard = ({
   const [pieceProduct, setPieceProduct] = useState('1');
 
   const dispatch = useDispatch();
+  // dispatch(clearState);
 
   const handleInputChange = event => {
     const { name, value } = event.currentTarget;
@@ -45,7 +46,6 @@ export const ProductCard = ({
         break;
       case 'pieces':
         setPieceProduct(value);
-
         break;
       default:
         return;
@@ -69,7 +69,7 @@ export const ProductCard = ({
       dispatch(
         addProduct({
           name: name,
-          weight: weightProduct,
+          weight: Number(weightProduct),
           id: id,
           src: picture1x,
           srcSet: picture2x,
@@ -81,7 +81,7 @@ export const ProductCard = ({
       dispatch(
         addProduct({
           name: name,
-          piece: pieceProduct,
+          piece: Number(pieceProduct),
           id: id,
           src: picture1x,
           srcSet: picture2x,

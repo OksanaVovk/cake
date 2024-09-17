@@ -9,7 +9,24 @@ const basketSlice = createSlice({
   initialState: basketInitialState,
   reducers: {
     addProduct(state, action) {
-      state.basketProducts.push(action.payload);
+      const index = state.basketProducts.indexOf(
+        product => product.id === action.payload.id
+      );
+      if (action.payload.unit === 'шт' && index) {
+        state.basketProducts.splice(index, 1);
+        state.basketProducts.push(action.payload);
+      } else {
+        state.basketProducts.push(action.payload);
+      }
+
+      // if (action.payload.unit === 'кг') {
+      //   state.basketProducts.push(action.payload);
+      // } else if (index) {
+      //   state.basketProducts.splice(index, 1);
+      //   state.basketProducts.push(action.payload);
+      // } else {
+      //   state.basketProducts.push(action.payload);
+      // }
     },
 
     deleteProduct(state, action) {
@@ -18,8 +35,11 @@ const basketSlice = createSlice({
       );
       state.basketProducts.splice(index, 1);
     },
+    clearState(state, action) {
+      state.basketProducts = [];
+    },
   },
 });
 
-export const { addProduct, deleteProduct } = basketSlice.actions;
+export const { addProduct, deleteProduct, clearState } = basketSlice.actions;
 export const basketReducer = basketSlice.reducer;
