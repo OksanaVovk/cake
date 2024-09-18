@@ -1,12 +1,14 @@
 import { Routes, Route } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
+import { selectors } from './redux/selectors';
 import { fetchProducts } from './redux/productsSlice';
 import { lazy } from 'react';
 import { ToastContainer } from 'react-toastify';
 import { SharedLayout } from './components/SharedLayout';
 import { Global } from '@emotion/react';
 import { GlobalStyles } from 'components/GlobalSyled';
+import { Modal } from 'components/Modal';
 import NotFound from './pages/NotFound';
 
 const MainPage = lazy(() => import('./pages/MainPage/index'));
@@ -15,6 +17,16 @@ const ProductPage = lazy(() => import('./pages/ProductPage/index'));
 
 export const App = () => {
   const dispatch = useDispatch();
+  const showModal = useSelector(selectors.selectShowModal);
+
+  useEffect(() => {
+    if (showModal) {
+      document.body.style.overflow = 'hidden';
+    }
+    return () => {
+      document.body.style.overflow = 'visible';
+    };
+  }, [showModal]);
 
   useEffect(() => {
     dispatch(fetchProducts());
@@ -23,6 +35,7 @@ export const App = () => {
   return (
     <>
       <Global styles={GlobalStyles} />
+      {showModal && <Modal />}
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<MainPage />} />

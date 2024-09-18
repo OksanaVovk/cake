@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addProduct } from '../../redux/basketSlice';
+import { toggleBasket } from '../../redux/modalSlice';
 import {
   GeneralDiv,
   ProductCardDiv,
@@ -91,6 +92,7 @@ export const ProductCard = ({
         })
       );
     }
+    dispatch(toggleBasket(true));
   };
 
   return (

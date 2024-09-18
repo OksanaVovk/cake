@@ -4,6 +4,7 @@ const modalsInitialState = {
   basketModal: false,
   successfulOrder: false,
   mobileMenu: false,
+  showModal: false,
 };
 
 const modalsSlice = createSlice({
@@ -12,12 +13,15 @@ const modalsSlice = createSlice({
   reducers: {
     toggleBasket(state, action) {
       state.basketModal = action.payload;
+      state.showModal = action.payload;
     },
     toggleOrder(state, action) {
       state.successfulOrder = action.payload;
+      state.showModal = action.payload;
     },
     toggleMenu(state, action) {
       state.mobileMenu = action.payload;
+      state.showModal = action.payload;
     },
   },
 });
