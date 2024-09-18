@@ -3,12 +3,7 @@ export const theme = {
     brown: '#705A66',
     grey: '#F5F7F8',
     beige: '#F5EEE0',
-
-    // textFirst: '#9B9FAA',
-    // textSecond: '#212121',
-    // accent: '#FC842D',
-
-    // backdrop: 'rgba(33, 33, 33, 0.12);',
+    accent: '#FC842D',
   },
   secondaryColors: {
     white: '#FFFFFF',
