@@ -59,6 +59,7 @@ export const ProductCard = ({
     const choice = {
       name: name,
       weight: weightProduct,
+      sum: Number(weightProduct) * price,
       id: id,
       src: picture1x,
       srcSet: picture2x,
@@ -71,6 +72,7 @@ export const ProductCard = ({
         addProduct({
           name: name,
           weight: Number(weightProduct),
+          sum: Number(weightProduct) * price,
           id: id,
           src: picture1x,
           srcSet: picture2x,
@@ -83,6 +85,7 @@ export const ProductCard = ({
         addProduct({
           name: name,
           piece: Number(pieceProduct),
+          sum: Number(pieceProduct) * price,
           id: id,
           src: picture1x,
           srcSet: picture2x,
@@ -147,6 +150,7 @@ export const ProductCard = ({
           <SumDiv>
             <Sum
               type="number"
+              name="sum"
               disabled
               value={
                 unit === 'кг'

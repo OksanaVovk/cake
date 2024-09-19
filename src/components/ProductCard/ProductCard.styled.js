@@ -222,7 +222,7 @@ export const SumDiv = styled('div')`
 `;
 
 export const Sum = styled('input')`
-  width: 70px;
+  width: 80px;
   font-size: 24px;
   font-weight: 600;
   background-color: transparent;

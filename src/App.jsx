@@ -21,10 +21,12 @@ export const App = () => {
 
   useEffect(() => {
     if (showModal) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${window.scrollY}px`;
     }
     return () => {
-      document.body.style.overflow = 'visible';
+      document.body.style.position = '';
+      document.body.style.top = '';
     };
   }, [showModal]);
 

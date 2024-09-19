@@ -4,7 +4,7 @@ const selectFilterProducts = state => state.products.filterProducts;
 const selectBasketModal = state => state.modals.basketModal;
 const selectSuccessfulOrder = state => state.modals.successfulOrder;
 const selectMobileMenu = state => state.modals.mobileMenu;
-const selectBasketProdukts = state => state.basket.basketProdukts;
+const selectBasketProdukts = state => state.basket.basketProducts;
 const selectShowModal = state => state.modals.showModal;
 
 export const selectors = {
