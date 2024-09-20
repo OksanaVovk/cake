@@ -1,3 +1,14 @@
+import {
+  TextBoxLarge,
+  ItemBox,
+  BoxImg,
+  Img,
+  ItemsName,
+  ItemsText,
+  TextBox,
+  TextBoxLast,
+} from './BasketItem.styled';
+
 export const BasketItem = ({
   picture1x,
   picture2x,
@@ -11,23 +22,27 @@ export const BasketItem = ({
   id,
 }) => {
   return (
-    <li>
-      <img src={picture1x} alt={name} srcSet={`${picture2x} 2x`} />
-      <div>
-        <h2>{name}</h2>
-        <div>
-          <p>{unit === 'кг' ? 'Вага:' : `Кількість:`}</p>
-          <p>{unit === 'кг' ? weight : piece}</p>
-        </div>
-        <div>
-          <p>{unit === 'кг' ? `Ціна за кілограм:` : `Ціна за ${number} шт:`}</p>
-          <p>{price}</p>
-        </div>
-        <div>
-          <p>Сума:</p>
-          <p>{sum}</p>
-        </div>
-      </div>
-    </li>
+    <ItemBox>
+      <BoxImg>
+        <Img src={picture1x} alt={name} srcSet={`${picture2x} 2x`} />
+      </BoxImg>
+      <TextBoxLarge>
+        <ItemsName>{name}</ItemsName>
+        <TextBox>
+          <ItemsText>{unit === 'кг' ? 'Вага:' : `Кількість:`}</ItemsText>
+          <ItemsText>{unit === 'кг' ? weight + ` кг` : piece}</ItemsText>
+        </TextBox>
+        <TextBox>
+          <ItemsText>
+            {unit === 'кг' ? `Ціна за кг:` : `Ціна за ${number} шт:`}
+          </ItemsText>
+          <ItemsText>{price} грн</ItemsText>
+        </TextBox>
+        <TextBoxLast className="last">
+          <ItemsText>Сума:</ItemsText>
+          <ItemsText>{sum} грн</ItemsText>
+        </TextBoxLast>
+      </TextBoxLarge>
+    </ItemBox>
   );
 };

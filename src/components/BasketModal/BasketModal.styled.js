@@ -1,11 +1,12 @@
 import styled from '@emotion/styled';
+import { Button } from 'components/Button';
 export const ModalWindow = styled.div`
   overflow-y: scroll;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  width: 100%;
+  width: 375px;
   height: 100%;
   background-color: ${p => p.theme.mainColors.grey};
 
@@ -67,8 +68,77 @@ export const ModalTitle = styled('h2')`
 `;
 
 export const ProductDiv = styled('div')`
-  padding: 0 10px 154px 10px;
+  padding: 0 10px 54px 10px;
   @media screen and (min-width: 1440px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     padding: 100px 100px 100px 100px;
+  }
+`;
+
+export const TotalPrDiv = styled('div')`
+  background-color: ${p => p.theme.mainColors.beige};
+  border-radius: 10px;
+  width: 100%;
+  padding: 40px 16px 40px 16px;
+  @media screen and (min-width: 1440px) {
+    width: 319px;
+    height: 256.5px;
+    padding: 32px 16px 32px 16px;
+  }
+`;
+
+export const TextDiv = styled('div')`
+  padding: 0 28px 24px 28px;
+  border-bottom: solid 1px ${p => p.theme.secondaryColors.white};
+  margin-bottom: 24px;
+  @media screen and (min-width: 1440px) {
+    padding: 0 0 24px 0;
+  }
+`;
+
+export const TextBoldDiv = styled('div')`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 28px;
+  margin-bottom: 40px;
+  @media screen and (min-width: 1440px) {
+    padding: 0;
+  }
+`;
+
+export const Text = styled('p')`
+  font-family: Montserrat, sans-serif;
+  font-weight: 300;
+  text-align: left;
+  font-size: 18px;
+  line-height: 19.4px;
+  color: ${p => p.theme.mainColors.brown};
+`;
+
+export const TextBold = styled('p')`
+  font-family: Montserrat, sans-serif;
+  font-weight: 800;
+  text-align: left;
+  font-size: 16px;
+  line-height: 17.3px;
+  color: ${p => p.theme.mainColors.brown};
+`;
+
+export const ButtonOrder = styled(Button)`
+  width: 323px;
+  height: 67px;
+  background-color: ${p => p.theme.mainColors.brown};
+  color: ${p => p.theme.mainColors.beige};
+
+  transition: transform 100ms linear;
+  &:hover,
+  focus {
+    transform: scale(1.1);
+  }
+  @media screen and (min-width: 1440px) {
+    width: 287px;
   }
 `;

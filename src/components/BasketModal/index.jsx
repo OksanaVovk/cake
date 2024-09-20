@@ -7,6 +7,12 @@ import {
   ModalTitle,
   ProductDiv,
   TitleDiv,
+  Text,
+  TextBold,
+  ButtonOrder,
+  TotalPrDiv,
+  TextDiv,
+  TextBoldDiv,
 } from './BasketModal.styled';
 import sprite from '../../images/icons.svg';
 import { BasketItem } from '../BasketItem';
@@ -14,6 +20,9 @@ import { BasketItem } from '../BasketItem';
 export const BasketModal = () => {
   const basketData = useSelector(selectors.selectBasketProdukts);
   console.log(basketData);
+  const totalPr = basketData.reduce((total, prod) => {
+    return total + prod.sum;
+  }, 0);
   return (
     <ModalWindow>
       <TitleDiv>
@@ -42,7 +51,16 @@ export const BasketModal = () => {
             />
           ))}
         </ul>
-        <p>Тут баскет модал</p>
+        <TotalPrDiv>
+          <TextDiv>
+            <Text>Ваше замовлення:</Text>
+          </TextDiv>
+          <TextBoldDiv>
+            <TextBold>Загальна сума:</TextBold>
+            <TextBold>{totalPr} грн</TextBold>
+          </TextBoldDiv>
+          <ButtonOrder className="btmodal" text="ОФОРМИТИ" />
+        </TotalPrDiv>
       </ProductDiv>
     </ModalWindow>
   );
