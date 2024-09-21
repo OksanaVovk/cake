@@ -1,5 +1,8 @@
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { selectors } from '../../redux/selectors';
+import { toggleBasket } from '../../redux/modalSlice';
+import sprite from '../../images/icons.svg';
+import { BasketItem } from '../BasketItem';
 import {
   ModalWindow,
   ModalButton,
@@ -14,8 +17,6 @@ import {
   TextDiv,
   TextBoldDiv,
 } from './BasketModal.styled';
-import sprite from '../../images/icons.svg';
-import { BasketItem } from '../BasketItem';
 
 export const BasketModal = () => {
   const basketData = useSelector(selectors.selectBasketProdukts);
@@ -23,11 +24,19 @@ export const BasketModal = () => {
   const totalPr = basketData.reduce((total, prod) => {
     return total + prod.sum;
   }, 0);
+  const dispatch = useDispatch();
+  const onBtnClick = () => {
+    try {
+      dispatch(toggleBasket(false));
+    } catch {
+      console.log(Error);
+    }
+  };
   return (
     <ModalWindow>
       <TitleDiv>
         <ModalTitle>Ваше замовлення:</ModalTitle>
-        <ModalButton>
+        <ModalButton onClick={onBtnClick}>
           <ModalSvg>
             <use href={sprite + '#icon-close'}></use>
           </ModalSvg>
@@ -51,6 +60,7 @@ export const BasketModal = () => {
             />
           ))}
         </ul>
+
         <TotalPrDiv>
           <TextDiv>
             <Text>Ваше замовлення:</Text>

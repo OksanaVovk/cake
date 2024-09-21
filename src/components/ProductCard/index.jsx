@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addProduct } from '../../redux/basketSlice';
-import { toggleBasket } from '../../redux/modalSlice';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
+
 import {
   GeneralDiv,
   ProductCardDiv,
@@ -54,48 +55,41 @@ export const ProductCard = ({
   };
   const handelSubmit = event => {
     event.preventDefault();
-    console.log('klick');
 
-    const choice = {
-      name: name,
-      weight: weightProduct,
-      sum: Number(weightProduct) * price,
-      id: id,
-      src: picture1x,
-      srcSet: picture2x,
-      price: price,
-      unit: unit,
-    };
-    console.log(choice);
-    if (unit === 'кг') {
-      dispatch(
-        addProduct({
-          name: name,
-          weight: Number(weightProduct),
-          sum: Number(weightProduct) * price,
-          id: id,
-          src: picture1x,
-          srcSet: picture2x,
-          price: price,
-          unit: unit,
-        })
-      );
-    } else {
-      dispatch(
-        addProduct({
-          name: name,
-          piece: Number(pieceProduct),
-          sum: Number(pieceProduct) * price,
-          id: id,
-          src: picture1x,
-          srcSet: picture2x,
-          price: price,
-          unit: unit,
-          number: number,
-        })
-      );
+    try {
+      if (unit === 'кг') {
+        dispatch(
+          addProduct({
+            name: name,
+            weight: Number(weightProduct),
+            sum: Number(weightProduct) * price,
+            id: id,
+            src: picture1x,
+            srcSet: picture2x,
+            price: price,
+            unit: unit,
+          })
+        );
+      } else {
+        dispatch(
+          addProduct({
+            name: name,
+            piece: Number(pieceProduct),
+            sum: Number(pieceProduct) * price,
+            id: id,
+            src: picture1x,
+            srcSet: picture2x,
+            price: price,
+            unit: unit,
+            number: number,
+          })
+        );
+      }
+      Notify.success('Товар додано до корзини');
+    } catch {
+      console.log(Error);
+      Notify.warning('Виникла помилка при додаванні товару в корзину');
     }
-    dispatch(toggleBasket(true));
   };
 
   return (

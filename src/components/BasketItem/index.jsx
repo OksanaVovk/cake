@@ -1,3 +1,6 @@
+import { useDispatch } from 'react-redux';
+import { deleteProduct } from '../../redux/basketSlice';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import {
   TextBoxLarge,
   ItemBox,
@@ -7,7 +10,10 @@ import {
   ItemsText,
   TextBox,
   TextBoxLast,
+  DeleteButton,
+  DeleteSvg,
 } from './BasketItem.styled';
+import sprite from '../../images/icons.svg';
 
 export const BasketItem = ({
   picture1x,
@@ -21,6 +27,19 @@ export const BasketItem = ({
   unit,
   id,
 }) => {
+  const dispatch = useDispatch();
+
+  const onBtnClick = id => {
+    try {
+      console.log(id);
+      dispatch(deleteProduct(id));
+      Notify.success('Товар видалено з корзини');
+    } catch {
+      console.log(Error);
+      Notify.warning('Помилка видалення');
+    }
+  };
+
   return (
     <ItemBox>
       <BoxImg>
@@ -43,6 +62,11 @@ export const BasketItem = ({
           <ItemsText>{sum} грн</ItemsText>
         </TextBoxLast>
       </TextBoxLarge>
+      <DeleteButton type="button" onClick={() => onBtnClick(id)}>
+        <DeleteSvg>
+          <use href={sprite + '#icon-delete'}></use>
+        </DeleteSvg>
+      </DeleteButton>
     </ItemBox>
   );
 };

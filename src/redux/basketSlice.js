@@ -9,10 +9,11 @@ const basketSlice = createSlice({
   initialState: basketInitialState,
   reducers: {
     addProduct(state, action) {
-      const index = state.basketProducts.indexOf(
+      const index = state.basketProducts.findIndex(
         product => product.id === action.payload.id
       );
-      if (action.payload.unit === 'шт' && index) {
+      console.log(index);
+      if (action.payload.unit === 'шт' && index !== -1) {
         state.basketProducts.splice(index, 1);
         state.basketProducts.push(action.payload);
       } else {
@@ -30,9 +31,10 @@ const basketSlice = createSlice({
     },
 
     deleteProduct(state, action) {
-      const index = state.basketProducts.indexOf(
+      const index = state.basketProducts.findIndex(
         product => product.id === action.payload
       );
+      console.log(index);
       state.basketProducts.splice(index, 1);
     },
     clearState(state, action) {

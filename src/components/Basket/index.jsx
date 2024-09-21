@@ -1,15 +1,25 @@
+import { useDispatch } from 'react-redux';
 import sprite from '../../images/icons.svg';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { BasketSvg } from './Basket.styled';
+import { toggleBasket } from '../../redux/modalSlice';
 
 export const Basket = () => {
+  const dispatch = useDispatch();
+  const onBtnClick = () => {
+    try {
+      dispatch(toggleBasket(true));
+    } catch {
+      console.log(Error);
+    }
+  };
   return (
     <nav>
-      <Link to="/basket">
+      <button onClick={onBtnClick}>
         <BasketSvg>
           <use href={sprite + '#icon-Shopping-cart'}></use>
         </BasketSvg>
-      </Link>
+      </button>
     </nav>
   );
 };
