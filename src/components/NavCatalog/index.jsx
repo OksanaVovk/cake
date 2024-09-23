@@ -1,18 +1,18 @@
-import { Link } from 'react-router-dom';
 import {
   NavCatalogItemBox,
   NavCatalogListBox,
   NavCatalogText,
+  LinkNav,
 } from './NavCatalog.styled';
 export const NavCatalog = ({ name, id }) => {
   return (
     <NavCatalogListBox>
       <NavCatalogItemBox>
-        <Link to="/">Головна</Link>
+        <LinkNav to="/">Головна</LinkNav>
       </NavCatalogItemBox>
       <NavCatalogItemBox>
         <NavCatalogText> / </NavCatalogText>
-        <Link to="/catalog">Каталог</Link>
+        <LinkNav to="/catalog">Каталог</LinkNav>
       </NavCatalogItemBox>
       {name ? (
         <NavCatalogItemBox>

@@ -14,6 +14,7 @@ import NotFound from './pages/NotFound';
 const MainPage = lazy(() => import('./pages/MainPage/index'));
 const CatalogPage = lazy(() => import('./pages/CatalogPage/index'));
 const ProductPage = lazy(() => import('./pages/ProductPage/index'));
+const OrderPage = lazy(() => import('./pages/OrderPage/index'));
 
 export const App = () => {
   const dispatch = useDispatch();
@@ -43,6 +44,7 @@ export const App = () => {
           <Route index element={<MainPage />} />
           <Route path="/catalog" element={<CatalogPage />} />
           <Route path="/catalog/:id" element={<ProductPage />} />
+          <Route path="/order" element={<OrderPage />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

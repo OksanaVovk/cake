@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { Link } from 'react-router-dom';
 export const NavCatalogListBox = styled('ul')`
   display: flex;
   flex-direction: row;
@@ -23,3 +24,10 @@ export const NavCatalogText = styled('p')`
   margin-left: 4px;
   margin-right: 4px;
 `;
+
+export const LinkNav = styled(Link)`  
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: ${p => p.theme.mainColors.accent};
+  `;

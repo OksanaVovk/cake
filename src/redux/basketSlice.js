@@ -19,15 +19,6 @@ const basketSlice = createSlice({
       } else {
         state.basketProducts.push(action.payload);
       }
-
-      // if (action.payload.unit === 'кг') {
-      //   state.basketProducts.push(action.payload);
-      // } else if (index) {
-      //   state.basketProducts.splice(index, 1);
-      //   state.basketProducts.push(action.payload);
-      // } else {
-      //   state.basketProducts.push(action.payload);
-      // }
     },
 
     deleteProduct(state, action) {

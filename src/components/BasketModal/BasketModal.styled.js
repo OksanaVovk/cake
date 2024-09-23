@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import { Button } from 'components/Button';
 export const ModalWindow = styled.div`
   overflow-y: scroll;
   position: absolute;
@@ -119,7 +118,7 @@ export const Text = styled('p')`
 `;
 
 export const TextBold = styled('p')`
-  font-family: Montserrat, sans-serif;
+  font-family: Montserrat Bold, sans-serif;
   font-weight: 800;
   text-align: left;
   font-size: 16px;
@@ -127,9 +126,17 @@ export const TextBold = styled('p')`
   color: ${p => p.theme.mainColors.brown};
 `;
 
-export const ButtonOrder = styled(Button)`
+export const ButtonOrder = styled('button')`
+  display: grid;
+  place-content: center;
   width: 323px;
   height: 67px;
+  line-height: 29.26px;
+  letter-spacing: 0;
+  font-family: Montserrat, sans-serif;
+  font-weight: 300;
+  border-radius: 10px;
+  font-size: 18px;
   background-color: ${p => p.theme.mainColors.brown};
   color: ${p => p.theme.mainColors.beige};
 
@@ -140,5 +147,6 @@ export const ButtonOrder = styled(Button)`
   }
   @media screen and (min-width: 1440px) {
     width: 287px;
+    font-size: 24px;
   }
 `;

@@ -52,6 +52,7 @@ export const TextBoxLarge = styled('div')`
 
 //     margin-bottom: 40px;
 // `;
+
 export const ItemsName = styled('h2')`
   font-family: Montserrat, sans-serif;
   font-weight: 300;

@@ -2,6 +2,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { selectors } from '../../redux/selectors';
 import { toggleBasket } from '../../redux/modalSlice';
 import sprite from '../../images/icons.svg';
+import { useNavigate } from 'react-router-dom';
 import { BasketItem } from '../BasketItem';
 import {
   ModalWindow,
@@ -24,7 +25,9 @@ export const BasketModal = () => {
   const totalPr = basketData.reduce((total, prod) => {
     return total + prod.sum;
   }, 0);
+  const navigate = useNavigate();
   const dispatch = useDispatch();
+
   const onBtnClick = () => {
     try {
       dispatch(toggleBasket(false));
@@ -32,6 +35,16 @@ export const BasketModal = () => {
       console.log(Error);
     }
   };
+
+  const onBtnOrderClick = () => {
+    try {
+      dispatch(toggleBasket(false));
+      navigate('/order', { replace: true });
+    } catch {
+      console.log(Error);
+    }
+  };
+
   return (
     <ModalWindow>
       <TitleDiv>
@@ -44,10 +57,10 @@ export const BasketModal = () => {
       </TitleDiv>
       <ProductDiv>
         <ul>
-          {basketData.map(prod => (
+          {basketData.map((prod, index) => (
             <BasketItem
               id={prod.id}
-              key={prod}
+              key={index}
               picture1x={prod.src}
               picture2x={prod.srcSet}
               name={prod.name}
@@ -69,7 +82,9 @@ export const BasketModal = () => {
             <TextBold>Загальна сума:</TextBold>
             <TextBold>{totalPr} грн</TextBold>
           </TextBoldDiv>
-          <ButtonOrder className="btmodal" text="ОФОРМИТИ" />
+          <ButtonOrder type="button" onClick={onBtnOrderClick}>
+            ОФОРМИТИ
+          </ButtonOrder>
         </TotalPrDiv>
       </ProductDiv>
     </ModalWindow>

@@ -18,6 +18,10 @@ export const Link = styled(NavLink)`
   font-weight: 300;
   font-size: 16px;
   text-transform: uppercase;
-
-  color: #705a66;
+  color: ${p => p.theme.mainColors.brown};
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: ${p => p.theme.mainColors.accent};
+  }
 `;

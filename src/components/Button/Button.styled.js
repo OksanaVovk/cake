@@ -29,8 +29,6 @@ export const SvgMore = styled('svg')`
 `;
 
 export const StyledButton = styled('button')`
-  display: grid;
-  place-content: center;
   width: ${({ width }) => width || '276px'};
   height: ${({ height }) => height || '67px'};
   line-height: 29.26px;
