@@ -1,16 +1,18 @@
 {
   "files": {
-    "main.css": "/cake/static/css/main.54205dc5.css",
-    "main.js": "/cake/static/js/main.6e84f901.js",
-    "static/js/140.c5ed8aab.chunk.js": "/cake/static/js/140.c5ed8aab.chunk.js",
-    "static/js/724.2565abbd.chunk.js": "/cake/static/js/724.2565abbd.chunk.js",
-    "static/js/227.7e084dc6.chunk.js": "/cake/static/js/227.7e084dc6.chunk.js",
+    "main.css": "/cake/static/css/main.07ec8bcb.css",
+    "main.js": "/cake/static/js/main.b6880166.js",
+    "static/js/140.73e55f88.chunk.js": "/cake/static/js/140.73e55f88.chunk.js",
+    "static/js/724.987d7389.chunk.js": "/cake/static/js/724.987d7389.chunk.js",
+    "static/js/227.0b278633.chunk.js": "/cake/static/js/227.0b278633.chunk.js",
+    "static/js/430.8e4540ae.chunk.js": "/cake/static/js/430.8e4540ae.chunk.js",
     "static/media/3pizza2x.webp": "/cake/static/media/3pizza2x.375f1057d3eb9a8e251f.webp",
     "static/media/2pizza2x.webp": "/cake/static/media/2pizza2x.baf8c48ba6949fbfd2ff.webp",
     "static/media/4pizza2x.webp": "/cake/static/media/4pizza2x.ba788a2944400191f13e.webp",
     "static/media/3pizza1x.webp": "/cake/static/media/3pizza1x.d4918ec02c6e33f54baa.webp",
     "static/media/2pizza1x.webp": "/cake/static/media/2pizza1x.5591626f7c69c2cb48d4.webp",
     "static/media/4pizza1x.webp": "/cake/static/media/4pizza1x.32f517c352d9d01ebead.webp",
+    "static/media/Montserrat-Bold.ttf": "/cake/static/media/Montserrat-Bold.50f0257aa1e905f4bfaf.ttf",
     "static/media/Montserrat-Light.ttf": "/cake/static/media/Montserrat-Light.7179b7d2ac9b599db5f9.ttf",
     "static/media/1pizza2x.webp": "/cake/static/media/1pizza2x.238353478b1248071a7a.webp",
     "static/media/Moniqa-BlackDisplay.ttf": "/cake/static/media/Moniqa-BlackDisplay.d683c02e133cf99e1d35.ttf",
@@ -81,14 +83,15 @@
     "static/media/logoGrann_1x.webp": "/cake/static/media/logoGrann_1x.867e5e8953fc3156cc84.webp",
     "static/media/logoGrannMob_1x.webp": "/cake/static/media/logoGrannMob_1x.6f85f1400ec86a910c19.webp",
     "index.html": "/cake/index.html",
-    "main.54205dc5.css.map": "/cake/static/css/main.54205dc5.css.map",
-    "main.6e84f901.js.map": "/cake/static/js/main.6e84f901.js.map",
-    "140.c5ed8aab.chunk.js.map": "/cake/static/js/140.c5ed8aab.chunk.js.map",
-    "724.2565abbd.chunk.js.map": "/cake/static/js/724.2565abbd.chunk.js.map",
-    "227.7e084dc6.chunk.js.map": "/cake/static/js/227.7e084dc6.chunk.js.map"
+    "main.07ec8bcb.css.map": "/cake/static/css/main.07ec8bcb.css.map",
+    "main.b6880166.js.map": "/cake/static/js/main.b6880166.js.map",
+    "140.73e55f88.chunk.js.map": "/cake/static/js/140.73e55f88.chunk.js.map",
+    "724.987d7389.chunk.js.map": "/cake/static/js/724.987d7389.chunk.js.map",
+    "227.0b278633.chunk.js.map": "/cake/static/js/227.0b278633.chunk.js.map",
+    "430.8e4540ae.chunk.js.map": "/cake/static/js/430.8e4540ae.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.54205dc5.css",
-    "static/js/main.6e84f901.js"
+    "static/css/main.07ec8bcb.css",
+    "static/js/main.b6880166.js"
   ]
 }
