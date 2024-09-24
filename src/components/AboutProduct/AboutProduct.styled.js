@@ -34,7 +34,7 @@ display: flex;
   color: ${p => p.theme.mainColors.brown};
     transition: border-bottom 100ms linear;
   &:hover,
-  focus {
+  &:focus {
     border-bottom: 4px solid ${p => p.theme.mainColors.brown};
   }
   &.active{

@@ -72,7 +72,7 @@ export const ButtonOrder = styled(Button)`
 
   transition: transform 100ms linear;
   &:hover,
-  focus {
+  &:focus {
     transform: scale(1.1);
   }
   @media screen and (min-width: 1440px) {
@@ -148,19 +148,11 @@ export const Input = styled('input')`
   text-align: center;
   background-color: transparent;
   border-radius: 10px;
-  @media screen and (min-width: 1440px) {
-    // position: absolute;
-    // top: 0;
-    // left: 350px;
-  }
 `;
 
 export const LabelDiv2 = styled(PieceInputDiv)`
   margin-bottom: 10px;
   @media screen and (min-width: 1440px) {
-    // position: absolute;
-    // top: 0;
-    // left: 0;
     margin-bottom: 0;
     margin-right: 60px;
   }
@@ -190,9 +182,6 @@ export const PriceLittleDiv = styled('div')`
   @media screen and (min-width: 1440px) {
     width: 100px;
     height: 60px;
-    // position: absolute;
-    // top: 0px;
-    // left: 350px;
   }
 `;
 export const Prise = styled('input')`

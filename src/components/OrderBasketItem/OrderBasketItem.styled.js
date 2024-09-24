@@ -29,10 +29,6 @@ export const DeleteSvg = styled('svg')`
   &:focus {
     fill: ${p => p.theme.mainColors.accent};
   }
-  //   @media screen and (min-width: 1440px) {
-  //     width: 25px;
-  //     height: 30px;
-  //   }
 `;
 
 export const DeleteButton = styled('button')`
@@ -40,9 +36,4 @@ export const DeleteButton = styled('button')`
   height: 20px;
   border: none;
   cursor: pointer;
-
-  //   @media screen and (min-width: 1440px) {
-  //     width: 25px;
-  //     height: 30px;
-  //   }
 `;

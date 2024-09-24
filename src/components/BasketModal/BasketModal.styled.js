@@ -36,10 +36,10 @@ export const ModalSvg = styled('svg')`
   width: 20.07px;
   height: 20px;
   fill: ${p => p.theme.mainColors.brown};
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 100ms linear;
   &:hover,
   &:focus {
-    fill: ${p => p.theme.mainColors.accent};
+    transform: scale(1.3);
   }
 `;
 
@@ -48,9 +48,6 @@ export const ModalButton = styled('button')`
   height: 32px;
   border: none;
   cursor: pointer;
-  &:hover {
-    color: red;
-  }
 `;
 
 export const ModalTitle = styled('h2')`
@@ -142,8 +139,8 @@ export const ButtonOrder = styled('button')`
 
   transition: transform 100ms linear;
   &:hover,
-  focus {
-    transform: scale(1.1);
+  &:focus {
+    transform: scale(1.05);
   }
   @media screen and (min-width: 1440px) {
     width: 287px;

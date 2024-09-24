@@ -4,9 +4,6 @@ export const ItemBox = styled('li')`
   display: grid;
   grid-template-columns: 158px 147px 20px;
   grid-column-gap: 15px;
-  // display: flex;
-  // flex-direction: row;
-  // justify-content: space-between;
   width: 100%;
   margin-bottom: 30px;
 
@@ -32,13 +29,11 @@ export const Img = styled('img')`
   display: block;
   min-width: 100%;
   height: 100%;
-
   object-fit: cover;
 `;
 
 export const TextBoxLarge = styled('div')`
   width: 168px;
-
   @media screen and (min-width: 1440px) {
     width: 253px;
   }

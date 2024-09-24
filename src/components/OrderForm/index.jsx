@@ -2,7 +2,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { toggleOrder } from '../../redux/modalSlice';
 import { selectors } from '../../redux/selectors';
 import {
-  Form,
   OrderFormLargeText,
   OrderFormLargeText1,
   OrderFormLargeText2,
@@ -40,7 +39,7 @@ export const OrderForm = () => {
 
   return (
     <>
-      <Form onSubmit={onBtnClick}>
+      <form onSubmit={onBtnClick}>
         <ContactBox>
           <OrderFormLargeText1 className="text1">Контакти:</OrderFormLargeText1>
           <Input type="text" placeholder="Ім'я" />
@@ -102,7 +101,7 @@ export const OrderForm = () => {
           <OrderFormBoldText>{totalPr} грн</OrderFormBoldText>
         </ResultBox>
         <ButtonOrder type="submit" text="Оформити замовлення" />
-      </Form>
+      </form>
     </>
   );
 };

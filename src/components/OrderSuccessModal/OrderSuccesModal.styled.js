@@ -2,7 +2,6 @@ import styled from '@emotion/styled';
 import { StyledButton } from 'components/Button/Button.styled';
 
 export const ModalWindow = styled.div`
-  overflow-y: scroll;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -33,10 +32,10 @@ export const ModalSvg = styled('svg')`
   width: 20.07px;
   height: 20px;
   fill: ${p => p.theme.mainColors.brown};
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 100ms linear;
   &:hover,
   &:focus {
-    fill: ${p => p.theme.mainColors.accent};
+    transform: scale(1.3);
   }
 `;
 
@@ -48,9 +47,7 @@ export const ModalButton = styled('button')`
   height: 32px;
   border: none;
   cursor: pointer;
-  &:hover {
-    color: red;
-  }
+
   @media screen and (min-width: 1440px) {
     top: 64px;
     right: 100px;
@@ -72,7 +69,7 @@ export const ButtonLight = styled(StyledButton)`
   transition: transform 100ms linear;
   margin-bottom: 24px;
   &:hover,
-  focus {
+  &:focus {
     transform: scale(1.05);
   }
   @media screen and (min-width: 1440px) {
@@ -91,7 +88,7 @@ export const ButtonDark = styled(StyledButton)`
   color: ${p => p.theme.mainColors.beige};
   transition: transform 100ms linear;
   &:hover,
-  focus {
+  &:focus {
     transform: scale(1.05);
   }
   @media screen and (min-width: 1440px) {

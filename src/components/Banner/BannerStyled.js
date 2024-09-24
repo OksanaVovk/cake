@@ -99,7 +99,6 @@ export const MousseBox = styled('div')`
   width: 781px;
   height: 850px;
   overflow: hidden;
-  // border: 4px solid black;
 `;
 
 export const MousseText = styled('p')`
@@ -115,7 +114,6 @@ export const MousseText = styled('p')`
   width: 198px;
   height: 45px;
   transform: rotate(-18.66deg);
-  // border: 0.5px solid black;
 `;
 export const MousseImg = styled('img')`
   filter: blur(2px);
@@ -125,7 +123,6 @@ export const MousseImg = styled('img')`
   width: 584.13px;
   height: 876.09px; //876.09
   transform: rotate(-14.88deg);
-  // border: 4px solid black;
 `;
 
 export const TartBox = styled('div')`
@@ -200,12 +197,13 @@ export const TextBox = styled('div')`
 `;
 
 export const Text = styled('p')`
-font - family: Montserrat, sans - serif;
+  font-family: Montserrat;
   font-weight: 300;
   font-size: 16px;
   line-height: 19.5px;
   text-align: left;
-color: ${p => p.theme.mainColors.brown};`;
+  color: ${p => p.theme.mainColors.brown};
+`;
 
 export const TitleBox = styled('div')`
   position: absolute;

@@ -20,7 +20,6 @@ export const WishFormBanner = styled('div')`
   width: 375px;
   height: 807px;
   background-image: url(${mfonQw1x});
-  // margin: 0px -10px 100px -10px;
 
   @media (min-resolution: 192dpi) {
     & {
@@ -41,8 +40,6 @@ export const WishFormBanner = styled('div')`
         background-image: url(${fonQw2x});
       }
     }
-    // margin: 0px 0px 100px -100px;
-  }
 `;
 
 export const WishFormBox = styled('div')`

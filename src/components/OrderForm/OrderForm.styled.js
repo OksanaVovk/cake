@@ -1,8 +1,6 @@
 import styled from '@emotion/styled';
 import { Button } from 'components/Button';
 
-export const Form = styled('form')``;
-
 export const OrderFormLargeText = styled('p')`
   font-family: Montserrat, sans-serif;
   font-weight: 300;
@@ -232,7 +230,7 @@ export const ButtonOrder = styled(Button)`
 
   transition: transform 100ms linear;
   &:hover,
-  focus {
+  &:focus {
     transform: scale(1.05);
   }
   @media screen and (min-width: 1440px) {

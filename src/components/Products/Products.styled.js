@@ -18,8 +18,6 @@ export const ProductsBox = styled('ul')`
 
 export const ProductBox = styled('li')`
   position: relative;
-  // width: 355px;
-  // height: 182px;
 `;
 
 export const ButtonBox = styled('div')`

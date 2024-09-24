@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 export const NavCatalogListBox = styled('ul')`
   display: flex;
   flex-direction: row;
-
   margin-bottom: 32px;
 
   @media screen and (min-width: 1440px) {
