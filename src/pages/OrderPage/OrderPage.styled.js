@@ -9,6 +9,20 @@ export const OrderPageBox = styled('div')`
   }
 `;
 
+export const OrderFormBox = styled('div')`
+  @media screen and (min-width: 1440px) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+`;
+
+export const OrderBasketBox = styled('div')`
+  @media screen and (min-width: 1440px) {
+    padding-top: 61px;
+  }
+`;
+
 export const LinkToCatalog = styled(Link)`
   font-family: Montserrat, sans-serif;
   font-weight: 300;

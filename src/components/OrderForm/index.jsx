@@ -30,18 +30,20 @@ export const OrderForm = () => {
     event.preventDefault();
     console.log('click');
   };
+
   return (
     <>
-      <Form onClick={onBtnClick}>
+      <Form onSubmit={onBtnClick}>
         <ContactBox>
           <OrderFormLargeText1 className="text1">Контакти:</OrderFormLargeText1>
           <Input type="text" placeholder="Ім'я" />
           <Input type="tel" placeholder="Номер телефону" />
           <Input type="email" placeholder="E-mail" />
           <Input
-            type="date"
-            // onfocus={(this.type = 'date')}
-            // onBlur={(this.type = 'text')}
+            id="date"
+            type="text"
+            onFocus={e => (e.target.type = 'date')}
+            onBlur={e => (e.target.type = 'text')}
             placeholder="Дата доставки"
           />
         </ContactBox>

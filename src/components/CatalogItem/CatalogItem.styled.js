@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-// import { Button } from 'components/Button';
 
 export const BasketSvg = styled.svg`
   width: 20px;
@@ -11,10 +10,6 @@ export const BasketSvg = styled.svg`
     height: 25px;
   }
 `;
-
-// export const BoxForHover = styled('div')`
-//   position: relative;
-// `;
 
 export const ItemsName = styled('h2')`
   font-family: Montserrat, sans-serif;
@@ -71,11 +66,11 @@ export const BoxGText = styled('div')`
 export const BoxImg = styled('div')`
   width: 167px;
   height: 185px;
-  
 
   @media screen and (min-width: 1440px) {
     width: 393px;
-     height: 393px;
+    height: 393px;
+  }
 `;
 export const Img = styled('img')`
   display: block;
@@ -83,18 +78,6 @@ export const Img = styled('img')`
   width: 100%;
   object-fit: cover;
 `;
-
-// export const ButtonItem = styled(Button)`
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   margin-right: -50%;
-//   transform: translate(-50%, -50%);
-//   display: none;
-//   &:hover {
-//     display: block;
-//   }
-// `;
 
 export const BoxItem = styled('li')`
   transition-property: transform 100ms linear;

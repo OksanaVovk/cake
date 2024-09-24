@@ -233,7 +233,7 @@ export const ButtonOrder = styled(Button)`
   transition: transform 100ms linear;
   &:hover,
   focus {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
   @media screen and (min-width: 1440px) {
     width: 499px;
