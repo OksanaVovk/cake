@@ -1,4 +1,5 @@
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { toggleOrder } from '../../redux/modalSlice';
 import { selectors } from '../../redux/selectors';
 import {
   Form,
@@ -22,6 +23,7 @@ import {
 } from './OrderForm.styled';
 export const OrderForm = () => {
   const basketData = useSelector(selectors.selectBasketProdukts);
+  const dispatch = useDispatch();
   const totalPr = basketData.reduce((total, prod) => {
     return total + prod.sum;
   }, 0);
@@ -29,6 +31,11 @@ export const OrderForm = () => {
   const onBtnClick = event => {
     event.preventDefault();
     console.log('click');
+    try {
+      dispatch(toggleOrder(true));
+    } catch {
+      console.log(Error);
+    }
   };
 
   return (

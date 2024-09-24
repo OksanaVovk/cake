@@ -6,6 +6,7 @@ import { clearState } from '../../redux/basketSlice';
 import { selectors } from '../../redux/selectors';
 import { Backdrop } from './Modal.styled';
 import { BasketModal } from 'components/BasketModal';
+import { OrderSuccessModal } from 'components/OrderSuccessModal';
 // import { NotFoundBlock } from 'components/NotFoundBlock';
 
 const modalRoot = document.querySelector('#modal-root');
@@ -14,7 +15,6 @@ export const Modal = () => {
   const dispatch = useDispatch();
   //   const error = useSelector(bloodSelectors.selectBloodError);
   const basketModal = useSelector(selectors.selectBasketModal);
-  console.log(basketModal);
   const successfulOrder = useSelector(selectors.selectSuccessfulOrder);
   const mobileMenu = useSelector(selectors.selectMobileMenu);
 
@@ -72,6 +72,7 @@ export const Modal = () => {
   return createPortal(
     <Backdrop onClick={onBackdropClick}>
       {basketModal && <BasketModal />}
+      {successfulOrder && <OrderSuccessModal />}
     </Backdrop>,
     modalRoot
   );
