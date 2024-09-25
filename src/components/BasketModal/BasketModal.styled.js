@@ -33,8 +33,8 @@ export const TitleDiv = styled('div')`
 `;
 
 export const ModalSvg = styled('svg')`
-  width: 20.07px;
-  height: 20px;
+  width: 32px;
+  height: 32px;
   fill: ${p => p.theme.mainColors.brown};
   transition: transform 100ms linear;
   &:hover,

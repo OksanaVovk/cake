@@ -29,8 +29,8 @@ export const ModalWindow = styled.div`
 `;
 
 export const ModalSvg = styled('svg')`
-  width: 20.07px;
-  height: 20px;
+  width: 32px;
+  height: 32px;
   fill: ${p => p.theme.mainColors.brown};
   transition: transform 100ms linear;
   &:hover,
@@ -131,7 +131,9 @@ export const Text = styled('p')`
 export const ButtonBox = styled('div')`
   display: flex;
   flex-direction: column;
+  width: 100%;
   @media screen and (min-width: 1440px) {
     flex-direction: row;
+    width: 818px;
   }
 `;

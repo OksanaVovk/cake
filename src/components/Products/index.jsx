@@ -11,10 +11,6 @@ import Catalog3_2x from '../../images/3Catalog2x.webp';
 import Catalog4_1x from '../../images/4Catalog1x.webp';
 import Catalog4_2x from '../../images/4Catalog2x.webp';
 
-// const Button = () => {
-//   return <button type="button">Кнопка</button>;
-// };
-
 export const Products = () => {
   return (
     <>

@@ -4,9 +4,10 @@ export const BasketSvg = styled.svg`
   width: 25px;
   height: 25px;
   fill: ${p => p.theme.mainColors.brown};
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 100ms linear;
   &:hover,
   &:focus {
-    fill: ${p => p.theme.mainColors.accent};
+    transform: scale(1.3);
+  }
   }
 `;

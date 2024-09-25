@@ -53,7 +53,7 @@ export const OrderSuccessModal = () => {
         src={mCake1x}
         alt="cake"
         srcSet={`${mCake2x} 2x`}
-        media="(min-width: 1440px)"
+        media="(min-width: 375px)"
       />
       <Title>Дякую за замовлення!</Title>
       <Text>

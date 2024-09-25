@@ -20,14 +20,23 @@ export const App = () => {
   const dispatch = useDispatch();
   const showModal = useSelector(selectors.selectShowModal);
 
+  // useEffect(() => {
+  //   if (showModal) {
+  //     document.body.style.position = 'fixed';
+  //     document.body.style.top = `-${window.scrollY}px`;
+  //   }
+  //   return () => {
+  //     document.body.style.position = '';
+  //     document.body.style.top = '';
+  //   };
+  // }, [showModal]);
+
   useEffect(() => {
     if (showModal) {
-      document.body.style.position = 'fixed';
-      document.body.style.top = `-${window.scrollY}px`;
+      document.body.style.overflow = 'hidden';
     }
     return () => {
-      document.body.style.position = '';
-      document.body.style.top = '';
+      document.body.style.overflow = 'visible';
     };
   }, [showModal]);
 

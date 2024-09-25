@@ -1,6 +1,5 @@
 import { useDispatch } from 'react-redux';
 import sprite from '../../images/icons.svg';
-// import { Link } from 'react-router-dom';
 import { BasketSvg } from './Basket.styled';
 import { toggleBasket } from '../../redux/modalSlice';
 

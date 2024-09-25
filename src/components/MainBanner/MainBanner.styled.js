@@ -15,5 +15,5 @@ export const MainBannerBox = styled('div')`
 export const SocialBox = styled('div')`
   position: absolute;
   top: 632px;
-  right: 0;
+  right: 4px;
 `;

@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { NavLink } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 export const NavStyled = styled('nav')`
   display: none;
@@ -13,7 +13,7 @@ export const NavStyled = styled('nav')`
   }
 `;
 
-export const Link = styled(NavLink)`
+export const Link = styled(HashLink)`
   font-family: Montserrat, sans-serif;
   font-weight: 300;
   font-size: 16px;

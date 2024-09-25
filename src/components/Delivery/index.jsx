@@ -15,7 +15,7 @@ import {
 } from './Delivery.styled';
 export const Delivery = () => {
   return (
-    <DeliveryBox>
+    <DeliveryBox id="delivery">
       <Title>Доставка і оплата</Title>
       <LinePositionBox>
         <DeliveryBoxSvg>

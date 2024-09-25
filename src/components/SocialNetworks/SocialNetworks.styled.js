@@ -26,34 +26,64 @@ export const TelegramSvg = styled('svg')`
   width: 24px;
   height: 21px;
   fill: ${p => p.theme.mainColors.brown};
+  transition: transform 100ms linear;
+  &:hover,
+  &:focus {
+    transform: scale(1.3);
+  }
 `;
 
 export const InstagramSvg = styled('svg')`
   width: 24px;
   height: 24px;
   fill: ${p => p.theme.mainColors.brown};
+  transition: transform 100ms linear;
+  &:hover,
+  &:focus {
+    transform: scale(1.3);
+  }
 `;
 
 export const FacebookSvg = styled('svg')`
   width: 24px;
   height: 34px;
   fill: ${p => p.theme.mainColors.brown};
+  transition: transform 100ms linear;
+  &:hover,
+  &:focus {
+    transform: scale(1.3);
+  }
 `;
 
 export const ViberSvg = styled('svg')`
   width: 34px;
   height: 34px;
   stoke: ${p => p.theme.mainColors.grey};
+  transition: transform 100ms linear;
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
+  }
 `;
 
 export const TelegramFSvg = styled('svg')`
   width: 34px;
   height: 34px;
   fill: ${p => p.theme.mainColors.grey};
+  transition: transform 100ms linear;
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
+  }
 `;
 
 export const InstagramFSvg = styled('svg')`
   width: 34px;
   height: 34px;
   fill: ${p => p.theme.mainColors.grey};
+  transition: transform 100ms linear;
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
+  }
 `;
