@@ -104,6 +104,11 @@ export const Textarea = styled('textarea')`
 `;
 
 export const ButtonForm = styled(Button)`
+  transition: transform 100ms linear;
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+  }
   width: 355px;
   font-size: 18px;
 
