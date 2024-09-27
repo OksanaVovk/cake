@@ -4,7 +4,10 @@ const wishSchema = yup.object().shape({
   username: yup
     .string()
     .required()
-    .matches(/^[A-Za-z ]*$/, "Будь ласка, введіть дійсне ім'я"),
+    .matches(
+      /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/,
+      "Будь ласка, введіть валідне ім'я"
+    ),
   phone: yup
     .string()
     .required()

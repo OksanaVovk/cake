@@ -22,11 +22,19 @@ export const WishForm = () => {
     text: '',
   });
   const [error, setError] = useState([]);
-  // const [error, setError] = useState({
-  //   username: '',
-  //   phone: '',
-  //   text: '',
-  // });
+
+  // switch (значення) {
+  //   case значення:
+  //     інструкції;
+  //     break;
+
+  //   case значення:
+  //     інструкції;
+  //     break;
+
+  //   default:
+  //     інструкції;
+  // }
 
   const handleChange = event => {
     const { name, value } = event.target;
@@ -51,45 +59,18 @@ export const WishForm = () => {
         });
       }
     } catch (err) {
-      setError(err.errors);
-      console.log(err);
+      const errorAr = err.inner.reduce((newAr, item) => {
+        newAr.push({ name: item.params.path, message: item.errors });
+        return newAr;
+      }, []);
+      console.log(errorAr);
+
+      setError(errorAr);
+      console.log(err.inner);
       console.log(err.errors);
     }
-    // const errors = await wishSchema.validate(formData);
-
-    // if (errors) {
-    //   console.log(errors);
-    //   setError({
-    //     ...error,
-    //     [name]: error,
-    //   });
-    //   // Handle validation errors
-    // } else {
-    //   sentEmail(event);
-    //   // Submit the form data to your backend
-    // }
   };
 
-  // async function onSubmitForm(e) {
-  //   e.preventDefault();
-  //   let form = e.target;
-  //   let formData = new FormData(form);
-  //   let formObj = Object.fromEntries(formData.entries());
-  //   console.log(formObj);
-  //   try {
-  //     let validForm = await wishSchema.isValid(formObj);
-  //     if (validForm) {
-  //       sentEmail(e);
-  //       // submit the form
-  //     } else {
-  //       await wishSchema.validate(formObj, { abortEarly: false });
-  //     }
-  //   } catch (err) {
-  //     setError(err.errors);
-  //     console.log(err);
-  //     console.log(err.errors);
-  //   }
-  // }
   return (
     <WishFormGBox>
       <WishFormBanner>
@@ -110,8 +91,12 @@ export const WishForm = () => {
               required
               onChange={handleChange}
             ></Input>
-            {error?.[0] && <div className="error">{error?.[0]}</div>}
-            {/* n className="error">{errors.username}</span> */}
+            {error.map(
+              er =>
+                er.name === 'username' && (
+                  <div className="error">{er.message[0]}</div>
+                )
+            )}
             <Input
               type="tel"
               name="phone"
@@ -119,8 +104,12 @@ export const WishForm = () => {
               required
               onChange={handleChange}
             ></Input>
-            {error?.[1] && <div className="error">{error?.[1]}</div>}
-            {/* <span className="error">{errors.phone}</span> */}
+            {error.map(
+              er =>
+                er.name === 'phone' && (
+                  <div className="error">{er.message[0]}</div>
+                )
+            )}
             <Textarea
               name="text"
               rows="5"
@@ -128,8 +117,12 @@ export const WishForm = () => {
               onChange={handleChange}
               required
             ></Textarea>
-            {error?.[2] && <div className="error">{error?.[2]}</div>}
-            {/* <span className="error">{errors.text}</span> */}
+            {error.map(
+              er =>
+                er.name === 'text' && (
+                  <div className="error">{er.message[0]}</div>
+                )
+            )}
             <ButtonForm type="submit" className="buttonform" text="НАДІСЛАТИ" />
           </Form>
         </WishFormBox>
@@ -137,3 +130,58 @@ export const WishForm = () => {
     </WishFormGBox>
   );
 };
+
+// [
+//   {
+//     value: 'Oksana_VD',
+//     path: ["Будь ласка, введіть валідне ім'я"],
+//     type: 'matches',
+//     params: {
+//       value: 'Oksana_VD',
+//       originalValue: 'Oksana_VD',
+//       path: 'username',
+//       spec: {
+//         strip: false,
+//         strict: false,
+//         abortEarly: true,
+//         recursive: true,
+//         disableStackTrace: false,
+//         nullable: false,
+//         optional: false,
+//         coerce: true,
+//       },
+//       disableStackTrace: false,
+//       regex: {},
+//     },
+//     errors: ["Будь ласка, введіть валідне ім'я"],
+//     inner: [],
+//     name: 'ValidationError',
+//     message: "Будь ласка, введіть валідне ім'я",
+//   },
+//   {
+//     value: '+380507113318',
+//     path: ['Номер телефону недійсний'],
+//     type: 'matches',
+//     params: {
+//       value: '+380507113318',
+//       originalValue: '+380507113318',
+//       path: 'phone',
+//       spec: {
+//         strip: false,
+//         strict: false,
+//         abortEarly: true,
+//         recursive: true,
+//         disableStackTrace: false,
+//         nullable: false,
+//         optional: false,
+//         coerce: true,
+//       },
+//       disableStackTrace: false,
+//       regex: {},
+//     },
+//     errors: ['Номер телефону недійсний'],
+//     inner: [],
+//     name: 'ValidationError',
+//     message: 'Номер телефону недійсний',
+//   },
+// ];
