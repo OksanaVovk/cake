@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleBasket, toggleOrder, toggleMenu } from '../../redux/modalSlice';
-import { clearState } from '../../redux/basketSlice';
 import { selectors } from '../../redux/selectors';
 import { Backdrop } from './Modal.styled';
 import { BasketModal } from 'components/BasketModal';
@@ -26,7 +25,6 @@ export const Modal = () => {
             break;
           case successfulOrder:
             dispatch(toggleOrder(false));
-            dispatch(clearState());
             break;
           case mobileMenu:
             dispatch(toggleMenu(false));
@@ -52,7 +50,6 @@ export const Modal = () => {
           break;
         case successfulOrder:
           dispatch(toggleOrder(false));
-          dispatch(clearState());
           break;
         case mobileMenu:
           dispatch(toggleMenu(false));

@@ -178,3 +178,20 @@ export const Text = styled('p')`
     line-height: 23.4px;
   }
 `;
+
+export const ErrorText = styled('p')`
+  font-family: Montserrat, sans-serif;
+  font-weight: 300;
+  text-align: left;
+  font-size: 16px;
+  line-height: 20.8px;
+  color: red;
+  margin-top: -20px;
+  margin-bottom: 10px;
+  @media screen and (min-width: 1440px) {
+    width: 393px;
+
+    font-size: 18px;
+    line-height: 23.4px;
+  }
+`;

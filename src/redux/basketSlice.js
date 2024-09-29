@@ -28,11 +28,12 @@ const basketSlice = createSlice({
       console.log(index);
       state.basketProducts.splice(index, 1);
     },
-    clearState(state, action) {
+    clearBasketState(state, ___) {
       state.basketProducts = [];
     },
   },
 });
 
-export const { addProduct, deleteProduct, clearState } = basketSlice.actions;
+export const { addProduct, deleteProduct, clearBasketState } =
+  basketSlice.actions;
 export const basketReducer = basketSlice.reducer;

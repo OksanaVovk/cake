@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { sentEmail } from 'components/utils/sendForm';
-import wishSchema from 'components/utils/schemas';
+import { wishSchema } from 'components/utils/schemas';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 import {
   WishFormBox,
@@ -13,28 +14,13 @@ import {
   Text,
   BoxText,
   WishFormGBox,
+  ErrorText,
 } from './WishForm.styled';
+const formDataInitialState = { username: '', phone: '', text: '' };
 
 export const WishForm = () => {
-  const [formData, setFormData] = useState({
-    username: '',
-    phone: '',
-    text: '',
-  });
+  const [formData, setFormData] = useState(formDataInitialState);
   const [error, setError] = useState([]);
-
-  // switch (значення) {
-  //   case значення:
-  //     інструкції;
-  //     break;
-
-  //   case значення:
-  //     інструкції;
-  //     break;
-
-  //   default:
-  //     інструкції;
-  // }
 
   const handleChange = event => {
     const { name, value } = event.target;
@@ -45,14 +31,24 @@ export const WishForm = () => {
     });
   };
 
+  const reset = () => {
+    setFormData(formDataInitialState);
+  };
+
   const handleSubmit = async event => {
     event.preventDefault();
     console.log(formData);
     try {
       let validForm = await wishSchema.isValid(formData);
       if (validForm) {
-        sentEmail(event);
-        // submit the form
+        try {
+          sentEmail(event);
+          setError([]);
+          Notify.success('Ваша заявка успішно надіслана');
+          // submit the form
+        } catch (err) {
+          Notify.warning('Виникла помилка, спробуйте написати листа пізніше');
+        }
       } else {
         await wishSchema.validate(formData, {
           abortEarly: false,
@@ -63,14 +59,13 @@ export const WishForm = () => {
         newAr.push({ name: item.params.path, message: item.errors });
         return newAr;
       }, []);
-      console.log(errorAr);
-
       setError(errorAr);
-      console.log(err.inner);
-      console.log(err.errors);
+      // console.log(errorAr);
+      // console.log(err.inner);
+      // console.log(err.errors);
     }
+    reset();
   };
-
   return (
     <WishFormGBox>
       <WishFormBanner>
@@ -87,40 +82,43 @@ export const WishForm = () => {
             <Input
               type="text"
               name="username"
-              placeholder="Ім'я"
+              placeholder="Ім'я*"
+              value={formData.username}
               required
               onChange={handleChange}
             ></Input>
             {error.map(
               er =>
                 er.name === 'username' && (
-                  <div className="error">{er.message[0]}</div>
+                  <ErrorText className="error">{er.message[0]}</ErrorText>
                 )
             )}
             <Input
               type="tel"
               name="phone"
-              placeholder="Номер телефону"
+              placeholder="Номер телефону*"
               required
               onChange={handleChange}
+              value={formData.phone}
             ></Input>
             {error.map(
               er =>
                 er.name === 'phone' && (
-                  <div className="error">{er.message[0]}</div>
+                  <ErrorText className="error">{er.message[0]}</ErrorText>
                 )
             )}
             <Textarea
               name="text"
               rows="5"
-              placeholder="Опишіть ваші побажання:"
+              placeholder="Опишіть ваші побажання:*"
               onChange={handleChange}
+              value={formData.text}
               required
             ></Textarea>
             {error.map(
               er =>
                 er.name === 'text' && (
-                  <div className="error">{er.message[0]}</div>
+                  <ErrorText className="error">{er.message[0]}</ErrorText>
                 )
             )}
             <ButtonForm type="submit" className="buttonform" text="НАДІСЛАТИ" />
@@ -130,58 +128,3 @@ export const WishForm = () => {
     </WishFormGBox>
   );
 };
-
-// [
-//   {
-//     value: 'Oksana_VD',
-//     path: ["Будь ласка, введіть валідне ім'я"],
-//     type: 'matches',
-//     params: {
-//       value: 'Oksana_VD',
-//       originalValue: 'Oksana_VD',
-//       path: 'username',
-//       spec: {
-//         strip: false,
-//         strict: false,
-//         abortEarly: true,
-//         recursive: true,
-//         disableStackTrace: false,
-//         nullable: false,
-//         optional: false,
-//         coerce: true,
-//       },
-//       disableStackTrace: false,
-//       regex: {},
-//     },
-//     errors: ["Будь ласка, введіть валідне ім'я"],
-//     inner: [],
-//     name: 'ValidationError',
-//     message: "Будь ласка, введіть валідне ім'я",
-//   },
-//   {
-//     value: '+380507113318',
-//     path: ['Номер телефону недійсний'],
-//     type: 'matches',
-//     params: {
-//       value: '+380507113318',
-//       originalValue: '+380507113318',
-//       path: 'phone',
-//       spec: {
-//         strip: false,
-//         strict: false,
-//         abortEarly: true,
-//         recursive: true,
-//         disableStackTrace: false,
-//         nullable: false,
-//         optional: false,
-//         coerce: true,
-//       },
-//       disableStackTrace: false,
-//       regex: {},
-//     },
-//     errors: ['Номер телефону недійсний'],
-//     inner: [],
-//     name: 'ValidationError',
-//     message: 'Номер телефону недійсний',
-//   },
-// ];

@@ -38,7 +38,6 @@ export const ProductCard = ({
   const [pieceProduct, setPieceProduct] = useState('1');
 
   const dispatch = useDispatch();
-  // dispatch(clearState);
 
   const handleInputChange = event => {
     const { name, value } = event.currentTarget;
