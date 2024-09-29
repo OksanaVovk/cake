@@ -1,3 +1,5 @@
+import { useDispatch } from 'react-redux';
+import { filterProd } from '../../redux/productsSlice';
 import {
   NavCatalogItemBox,
   NavCatalogListBox,
@@ -5,6 +7,10 @@ import {
   LinkNav,
 } from './NavCatalog.styled';
 export const NavCatalog = ({ name, id }) => {
+  const dispatch = useDispatch();
+  const onLinkClick = () => {
+    dispatch(filterProd('Торти'));
+  };
   return (
     <NavCatalogListBox>
       <NavCatalogItemBox>
@@ -12,7 +18,9 @@ export const NavCatalog = ({ name, id }) => {
       </NavCatalogItemBox>
       <NavCatalogItemBox>
         <NavCatalogText> / </NavCatalogText>
-        <LinkNav to="/catalog">Каталог</LinkNav>
+        <LinkNav to="/catalog" onClick={onLinkClick()}>
+          Каталог
+        </LinkNav>
       </NavCatalogItemBox>
       {name ? (
         <NavCatalogItemBox>

@@ -17,6 +17,9 @@ import {
   TotalPrDiv,
   TextDiv,
   TextBoldDiv,
+  TextBoldEmpty,
+  ButtonDark,
+  EmptyBox,
 } from './BasketModal.styled';
 
 export const BasketModal = () => {
@@ -45,6 +48,15 @@ export const BasketModal = () => {
     }
   };
 
+  const onBtnDarkClick = () => {
+    try {
+      dispatch(toggleBasket(false));
+      navigate('/catalog', { replace: true });
+    } catch {
+      console.log(Error);
+    }
+  };
+
   return (
     <ModalWindow>
       <TitleDiv>
@@ -55,38 +67,47 @@ export const BasketModal = () => {
           </ModalSvg>
         </ModalButton>
       </TitleDiv>
-      <ProductDiv>
-        <ul>
-          {basketData.map((prod, index) => (
-            <BasketItem
-              id={prod.id}
-              key={index}
-              picture1x={prod.src}
-              picture2x={prod.srcSet}
-              name={prod.name}
-              number={prod.number}
-              piece={prod.piece}
-              price={prod.price}
-              weight={prod.weight}
-              unit={prod.unit}
-              sum={prod.sum}
-            />
-          ))}
-        </ul>
+      {basketData.length === 0 ? (
+        <EmptyBox>
+          <TextBoldEmpty>Ваш кошик порожній</TextBoldEmpty>
+          <ButtonDark className="dark" onClick={onBtnDarkClick}>
+            Почати покупки
+          </ButtonDark>
+        </EmptyBox>
+      ) : (
+        <ProductDiv>
+          <ul>
+            {basketData.map((prod, index) => (
+              <BasketItem
+                id={prod.id}
+                key={index}
+                picture1x={prod.src}
+                picture2x={prod.srcSet}
+                name={prod.name}
+                number={prod.number}
+                piece={prod.piece}
+                price={prod.price}
+                weight={prod.weight}
+                unit={prod.unit}
+                sum={prod.sum}
+              />
+            ))}
+          </ul>
 
-        <TotalPrDiv>
-          <TextDiv>
-            <Text>Ваше замовлення:</Text>
-          </TextDiv>
-          <TextBoldDiv>
-            <TextBold>Загальна сума:</TextBold>
-            <TextBold>{totalPr} грн</TextBold>
-          </TextBoldDiv>
-          <ButtonOrder type="button" onClick={onBtnOrderClick}>
-            ОФОРМИТИ
-          </ButtonOrder>
-        </TotalPrDiv>
-      </ProductDiv>
+          <TotalPrDiv>
+            <TextDiv>
+              <Text>Ваше замовлення:</Text>
+            </TextDiv>
+            <TextBoldDiv>
+              <TextBold>Загальна сума:</TextBold>
+              <TextBold>{totalPr} грн</TextBold>
+            </TextBoldDiv>
+            <ButtonOrder type="button" onClick={onBtnOrderClick}>
+              ОФОРМИТИ
+            </ButtonOrder>
+          </TotalPrDiv>
+        </ProductDiv>
+      )}
     </ModalWindow>
   );
 };

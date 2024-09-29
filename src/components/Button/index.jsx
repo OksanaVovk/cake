@@ -40,8 +40,13 @@ export const Button = ({
   </StyledButton>
 );
 
-export const ButtonMore = ({ text }) => (
-  <ButtonMoreB className="buttonmore">
+export const ButtonMore = ({ text, name, onClick }) => (
+  <ButtonMoreB
+    className="buttonmore"
+    type="button"
+    name={name}
+    onClick={onClick}
+  >
     <ButtonTextBox>
       {text}
       <SvgBox>

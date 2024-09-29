@@ -14,7 +14,8 @@ export const ButtonFilter = styled('button')`
   padding: 10px 30px 10px 30px;
   transition: background-color 100ms linear, color 100ms linear;
   &:hover,
-  focus {
+  &:focus,
+  &.active {
     background-color: ${p => p.theme.mainColors.brown};
     color: ${p => p.theme.mainColors.grey};
   }

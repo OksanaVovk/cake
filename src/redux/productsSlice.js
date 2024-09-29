@@ -3,7 +3,7 @@ import { Basa } from 'Basa';
 
 const productsInitialState = {
   productsBase: [],
-  filter: '',
+  filterWord: 'Торти',
   filterProducts: [],
 };
 
@@ -15,8 +15,8 @@ const productsSlice = createSlice({
       state.productsBase = Basa;
     },
 
-    filter(state, action) {
-      state.filter = action.payload;
+    filterProd(state, action) {
+      state.filterWord = action.payload;
       state.filterProducts = state.productsBase.filter(
         product => product.category === action.payload
       );
@@ -24,5 +24,5 @@ const productsSlice = createSlice({
   },
 });
 
-export const { fetchProducts, filter } = productsSlice.actions;
+export const { fetchProducts, filterProd } = productsSlice.actions;
 export const productsReducer = productsSlice.reducer;

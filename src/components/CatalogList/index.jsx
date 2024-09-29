@@ -4,11 +4,11 @@ import { CatalogItem } from 'components/CatalogItem';
 import { CatalogListBox } from './CatalogList.styled.js';
 
 export const CatalogList = () => {
-  const catalogBase = useSelector(selectors.selectProductsBase);
+  const filterProducts = useSelector(selectors.selectFilterProducts);
 
   return (
     <CatalogListBox>
-      {catalogBase.map(image => (
+      {filterProducts.map(image => (
         <CatalogItem
           id={image.id}
           key={image.id}

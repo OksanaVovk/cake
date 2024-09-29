@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { StyledButton } from 'components/Button/Button.styled';
 export const ModalWindow = styled.div`
   overflow-y: scroll;
   position: absolute;
@@ -15,7 +16,7 @@ export const ModalWindow = styled.div`
     transform: translate(-50%, -50%) scale(1);
     opacity: 1;
     width: 1236px;
-    min-height: 613px;
+    height: 800px;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
       opaсity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -144,6 +145,48 @@ export const ButtonOrder = styled('button')`
   }
   @media screen and (min-width: 1440px) {
     width: 287px;
+    font-size: 24px;
+  }
+`;
+
+export const EmptyBox = styled('div')`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 150px 10px 0 10px;
+  @media screen and (min-width: 1440px) {
+    padding: 150px 0 0 0;
+  }
+`;
+
+export const TextBoldEmpty = styled('p')`
+  font-family: Montserrat Bold, sans-serif;
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 32.4px;
+  text-align: center;
+  text-transform: uppercase;
+  color: ${p => p.theme.mainColors.brown};
+  margin-bottom: 80px;
+  @media screen and (min-width: 1440px) {
+    font-size: 30px;
+  }
+`;
+
+export const ButtonDark = styled(StyledButton)`
+  width: 100%;
+  font-size: 18px;
+  text-transform: uppercase;
+  background-color: ${p => p.theme.mainColors.brown};
+  color: ${p => p.theme.mainColors.beige};
+  transition: transform 100ms linear;
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+  }
+  @media screen and (min-width: 1440px) {
+    width: 393px;
     font-size: 24px;
   }
 `;
