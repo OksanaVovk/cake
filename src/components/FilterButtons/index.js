@@ -1,22 +1,27 @@
-import { useDispatch } from 'react-redux';
-// import { useEffect } from 'react';
-// import { selectors } from '../../redux/selectors';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { selectors } from '../../redux/selectors';
 import { filterProd } from '../../redux/productsSlice';
 import { ButtonFilter, FilterBox, FilterItem } from './FilterButtons.styled';
 export const FilterButtons = () => {
-  // const filterWord = useSelector(selectors.selectFilterWord);
+  const filterWord = useSelector(selectors.selectFilterWord);
 
   const dispatch = useDispatch();
 
-  // useEffect(() => {
-  //   document.querySelector(`[name="${filterWord}"]`).classList.add('active');
+  useEffect(() => {
+    const buttons = document.querySelectorAll('button');
 
-  //   return () => {
-  //     document
-  //       .querySelector(`[name="${filterWord}"]`)
-  //       .classList.remove('active');
-  //   };
-  // }, [filterWord]);
+    for (let i = 0; i < buttons.length; i++) {
+      buttons[i].classList.remove('active');
+    }
+    document.querySelector(`[name="${filterWord}"]`).classList.add('active');
+
+    // return () => {
+    //   document
+    //     .querySelector(`[name="${filterWord}"]`)
+    //     .classList.remove('active');
+    // };
+  }, [filterWord]);
 
   const onBtnClick = event => {
     dispatch(filterProd(event.currentTarget.name));
