@@ -1,7 +1,5 @@
-import { useDispatch, useSelector } from 'react-redux';
-// import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { selectors } from '../../redux/selectors';
 import { filterProd } from '../../redux/productsSlice';
 import { ButtonMore } from 'components/Button';
 import { ProductsBox, ProductBox, ButtonBox } from './Products.styled';
@@ -15,25 +13,12 @@ import Catalog4_1x from '../../images/4Catalog1x.webp';
 import Catalog4_2x from '../../images/4Catalog2x.webp';
 
 export const Products = () => {
-  const filterWord = useSelector(selectors.selectFilterWord);
-  console.log(filterWord);
-  const buttonsItems = document.querySelectorAll('button');
-  console.log(buttonsItems);
-
-  // useEffect(() => {
-  //   const index = buttonsItems.findIndex(b => b.name === filterWord);
-  //   buttonsItems[index].classList.add('active');
-  // });
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
   const onBtnClick = event => {
-    console.log(event.currentTarget.name);
     dispatch(filterProd(event.currentTarget.name));
-    navigate(
-      '/catalog',
-      { replace: true },
-      dispatch(filterProd(event.currentTarget.name))
-    );
+    navigate('/catalog', { replace: true });
   };
 
   return (

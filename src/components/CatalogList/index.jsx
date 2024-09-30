@@ -4,8 +4,12 @@ import { CatalogItem } from 'components/CatalogItem';
 import { CatalogListBox } from './CatalogList.styled.js';
 
 export const CatalogList = () => {
-  const filterProducts = useSelector(selectors.selectFilterProducts);
+  const filterWord = useSelector(selectors.selectFilterWord);
+  const allProducts = useSelector(selectors.selectProductsBase);
 
+  const filterProducts = allProducts.filter(
+    prod => prod.category === filterWord
+  );
   return (
     <CatalogListBox>
       {filterProducts.map(image => (

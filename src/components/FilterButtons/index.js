@@ -1,11 +1,26 @@
 import { useDispatch } from 'react-redux';
+// import { useEffect } from 'react';
+// import { selectors } from '../../redux/selectors';
 import { filterProd } from '../../redux/productsSlice';
 import { ButtonFilter, FilterBox, FilterItem } from './FilterButtons.styled';
 export const FilterButtons = () => {
+  // const filterWord = useSelector(selectors.selectFilterWord);
+
   const dispatch = useDispatch();
+
+  // useEffect(() => {
+  //   document.querySelector(`[name="${filterWord}"]`).classList.add('active');
+
+  //   return () => {
+  //     document
+  //       .querySelector(`[name="${filterWord}"]`)
+  //       .classList.remove('active');
+  //   };
+  // }, [filterWord]);
+
   const onBtnClick = event => {
-    console.log(event.currentTarget.name);
     dispatch(filterProd(event.currentTarget.name));
+    console.log(event.currentTarget);
   };
   return (
     <FilterBox>
