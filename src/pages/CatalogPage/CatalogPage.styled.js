@@ -2,7 +2,9 @@ import styled from '@emotion/styled';
 
 export const CatalogPageBox = styled('div')`
   padding-top: 24px;
-  min-minheight: 800px;
+  @media screen and (min-width: 1440px) {
+    min-height: 800px;
+  }
 `;
 
 export const CatalogPageTitle = styled('h1')`

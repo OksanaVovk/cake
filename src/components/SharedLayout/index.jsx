@@ -5,7 +5,7 @@ import { Header } from 'components/Header';
 import { Footer } from 'components/Footer';
 import { MainBackgroundImage } from 'components/MainBackground';
 import { MainBackgroundGrey } from 'components/MainBackground/MainBackground.styled';
-// import Loader from 'components/Loader/Loader';
+import Loader from 'components/Loader/Loader';
 import { GlobalContainerStyled } from './GlobalContainer.styled';
 
 export const SharedLayout = () => {
@@ -16,7 +16,7 @@ export const SharedLayout = () => {
         <>
           <MainBackgroundImage />
           <Header />
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<Loader />}>
             <GlobalContainerStyled>
               <Outlet />
             </GlobalContainerStyled>
@@ -26,7 +26,7 @@ export const SharedLayout = () => {
       ) : (
         <MainBackgroundGrey>
           <Header />
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<Loader />}>
             <GlobalContainerStyled>
               <Outlet />
             </GlobalContainerStyled>
