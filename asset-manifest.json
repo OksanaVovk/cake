@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/cake/static/css/main.07ec8bcb.css",
-    "main.js": "/cake/static/js/main.c48daf4d.js",
-    "static/js/733.32b5de5d.chunk.js": "/cake/static/js/733.32b5de5d.chunk.js",
-    "static/js/724.aabf68cf.chunk.js": "/cake/static/js/724.aabf68cf.chunk.js",
+    "main.js": "/cake/static/js/main.655c93f8.js",
+    "static/js/380.b21a8a9b.chunk.js": "/cake/static/js/380.b21a8a9b.chunk.js",
+    "static/js/724.d05f6af3.chunk.js": "/cake/static/js/724.d05f6af3.chunk.js",
     "static/js/227.a2852b53.chunk.js": "/cake/static/js/227.a2852b53.chunk.js",
     "static/js/235.4f273302.chunk.js": "/cake/static/js/235.4f273302.chunk.js",
     "static/js/186.3742fb8e.chunk.js": "/cake/static/js/186.3742fb8e.chunk.js",
@@ -87,15 +87,15 @@
     "static/media/logoGrannMob_1x.webp": "/cake/static/media/logoGrannMob_1x.6f85f1400ec86a910c19.webp",
     "index.html": "/cake/index.html",
     "main.07ec8bcb.css.map": "/cake/static/css/main.07ec8bcb.css.map",
-    "main.c48daf4d.js.map": "/cake/static/js/main.c48daf4d.js.map",
-    "733.32b5de5d.chunk.js.map": "/cake/static/js/733.32b5de5d.chunk.js.map",
-    "724.aabf68cf.chunk.js.map": "/cake/static/js/724.aabf68cf.chunk.js.map",
+    "main.655c93f8.js.map": "/cake/static/js/main.655c93f8.js.map",
+    "380.b21a8a9b.chunk.js.map": "/cake/static/js/380.b21a8a9b.chunk.js.map",
+    "724.d05f6af3.chunk.js.map": "/cake/static/js/724.d05f6af3.chunk.js.map",
     "227.a2852b53.chunk.js.map": "/cake/static/js/227.a2852b53.chunk.js.map",
     "235.4f273302.chunk.js.map": "/cake/static/js/235.4f273302.chunk.js.map",
     "186.3742fb8e.chunk.js.map": "/cake/static/js/186.3742fb8e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.07ec8bcb.css",
-    "static/js/main.c48daf4d.js"
+    "static/js/main.655c93f8.js"
   ]
 }
