@@ -16,6 +16,7 @@ const MainPage = () => {
   useEffect(() => {
     setIsLoading(false);
   }, []);
+
   return (
     <>
       {isLoading && <Loader />}
