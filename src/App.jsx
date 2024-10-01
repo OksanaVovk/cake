@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { selectors } from './redux/selectors';
 import { fetchProducts } from './redux/productsSlice';
 import { lazy } from 'react';
@@ -9,6 +9,7 @@ import { SharedLayout } from './components/SharedLayout';
 import { Global } from '@emotion/react';
 import { GlobalStyles } from 'components/GlobalSyled';
 import { Modal } from 'components/Modal';
+import Loader from '../src/components/Loader/Loader';
 import NotFound from './pages/NotFound';
 
 const MainPage = lazy(() => import('./pages/MainPage/index'));
@@ -17,19 +18,13 @@ const ProductPage = lazy(() => import('./pages/ProductPage/index'));
 const OrderPage = lazy(() => import('./pages/OrderPage/index'));
 
 export const App = () => {
+  const [isLoading, setIsLoading] = useState(true);
   const dispatch = useDispatch();
   const showModal = useSelector(selectors.selectShowModal);
 
-  // useEffect(() => {
-  //   if (showModal) {
-  //     document.body.style.position = 'fixed';
-  //     document.body.style.top = `-${window.scrollY}px`;
-  //   }
-  //   return () => {
-  //     document.body.style.position = '';
-  //     document.body.style.top = '';
-  //   };
-  // }, [showModal]);
+  useEffect(() => {
+    setIsLoading(false);
+  }, []);
 
   useEffect(() => {
     if (showModal) {
@@ -48,6 +43,7 @@ export const App = () => {
     <>
       <Global styles={GlobalStyles} />
       {showModal && <Modal />}
+      {isLoading && <Loader />}
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<MainPage />} />
