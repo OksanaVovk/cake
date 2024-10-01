@@ -59,6 +59,7 @@ export const QuestionText = styled('p')`
   line-height: 21.94px;
   text-align: left;
   color: ${p => p.theme.mainColors.brown};
+
   @media screen and (min-width: 1440px) {
     width: auto;
     font-size: 24px;
@@ -69,11 +70,18 @@ export const QuestionText = styled('p')`
 export const QuestionSvg = styled('svg')`
   width: 25px;
   height: 25px;
+  fill: ${p => p.theme.mainColors.brown};
+  transition: fill 100ms linear;
+  &:hover,
+  &:focus {
+    fill: ${p => p.theme.mainColors.accent};
+  }
 `;
 
 export const QuestionButton = styled('button')``;
 
 export const AnswerText = styled('p')`
+  display: none;
   font-family: Montserrat, sans-serif;
   font-weight: 300;
   font-size: 16px;
@@ -81,6 +89,9 @@ export const AnswerText = styled('p')`
   text-align: left;
   color: ${p => p.theme.mainColors.brown};
   margin-top: 16px;
+  &.active {
+    display: block;
+  }
   @media screen and (min-width: 1440px) {
     font-size: 18px;
     line-height: 21.94px;
