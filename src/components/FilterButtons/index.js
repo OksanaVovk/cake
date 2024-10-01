@@ -25,7 +25,6 @@ export const FilterButtons = () => {
 
   const onBtnClick = event => {
     dispatch(filterProd(event.currentTarget.name));
-    console.log(event.currentTarget);
   };
   return (
     <FilterBox>

@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectors } from '../../redux/selectors';
 import { addProduct } from '../../redux/basketSlice';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
@@ -34,10 +35,18 @@ export const ProductCard = ({
   category,
   id,
 }) => {
+  const basketProd = useSelector(selectors.selectBasketProdukts);
+  const prod = basketProd.find(pr => pr.id === id);
   const [weightProduct, setWeightProdact] = useState('1');
-  const [pieceProduct, setPieceProduct] = useState('1');
+  const [pieceProduct, setPieceProduct] = useState(
+    prod && prod.unit === 'шт' ? prod.piece : '1'
+  );
 
   const dispatch = useDispatch();
+  const reset = () => {
+    setWeightProdact(weightProduct);
+    setPieceProduct(pieceProduct);
+  };
 
   const handleInputChange = event => {
     const { name, value } = event.currentTarget;
@@ -89,6 +98,7 @@ export const ProductCard = ({
       console.log(Error);
       Notify.warning('Виникла помилка при додаванні товару в корзину');
     }
+    reset();
   };
 
   return (

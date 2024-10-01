@@ -1,4 +1,4 @@
-// import { MainBackground } from 'components/MainBackground';
+import { useEffect, useState } from 'react';
 import { MainBanner } from 'components/MainBanner';
 import { Products } from 'components/Products';
 import { MobileBanner } from 'components/MobileBanner';
@@ -8,12 +8,16 @@ import { Delivery } from 'components/Delivery';
 import { AboutMe } from 'components/AboutMe';
 import { WishForm } from 'components/WishForm';
 import { Question } from 'components/Question';
-// import { MainBackground } from 'components/MainBackground';
+import Loader from 'components/Loader/Loader';
 
 const MainPage = () => {
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    setIsLoading(false);
+  }, []);
   return (
     <>
-      {/* <MainBackground /> */}
+      {isLoading && <Loader />}
       <MobileBanner />
       <MainBanner />
       <Products />
