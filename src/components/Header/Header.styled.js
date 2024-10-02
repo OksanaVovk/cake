@@ -25,3 +25,14 @@ export const HeaderTextBox = styled('div')`
     justify-content: space-between;
   }
 `;
+
+export const HeaderTextBoxSmall = styled('div')`
+  display: flex;
+  flex-direction: row;
+  @media screen and (min-width: 1440px) {
+    width: 563px;
+
+    align-items: center;
+    justify-content: flex-end;
+  }
+`;

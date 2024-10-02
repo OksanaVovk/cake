@@ -19,7 +19,6 @@ const ProductPage = () => {
   const product = products.find(product => product.id === Number(id));
   return (
     <>
-      {' '}
       {isLoading && <Loader />}
       <ProductPageBox>
         <NavCatalog id={product.id} name={product.name} />

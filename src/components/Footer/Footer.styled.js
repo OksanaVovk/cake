@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 export const FooterBox = styled('div')`
-  width: 100%;
+  width: 100vw;
   background-color: ${p => p.theme.mainColors.brown};
 `;
 

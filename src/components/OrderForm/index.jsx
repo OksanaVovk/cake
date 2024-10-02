@@ -4,6 +4,7 @@ import { sentEmail } from 'components/utils/sendForm';
 import { toggleOrder } from '../../redux/modalSlice';
 import { selectors } from '../../redux/selectors';
 import { clearBasketState } from '../../redux/basketSlice';
+import { useNavigate } from 'react-router-dom';
 
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { orderSchema } from '../../components/utils/schemas';
@@ -44,6 +45,7 @@ const formDataInitialState = {
 export const OrderForm = () => {
   const [formData, setFormData] = useState(formDataInitialState);
   const [error, setError] = useState([]);
+  const navigate = useNavigate();
 
   const handleChange = event => {
     const { name, value } = event.target;
@@ -86,9 +88,6 @@ export const OrderForm = () => {
         return newAr;
       }, []);
       setError(errorAr);
-      // console.log(errorAr);
-      // console.log(err.inner);
-      // console.log(err.errors);
     }
     reset();
   };
@@ -97,6 +96,7 @@ export const OrderForm = () => {
   const totalPr = basketData.reduce((total, prod) => {
     return total + prod.sum;
   }, 0);
+  totalPr === 0 && navigate('/catalog', { replace: true });
 
   return (
     <>

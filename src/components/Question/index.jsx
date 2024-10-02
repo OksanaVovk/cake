@@ -11,7 +11,6 @@ import {
 } from './Question.styled';
 export const Question = () => {
   const onBtnClick = event => {
-    console.log(event.currentTarget.parentNode.nextSibling);
     event.currentTarget.parentNode.nextSibling.classList.toggle('active');
   };
   return (

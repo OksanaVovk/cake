@@ -8,7 +8,6 @@ export const NavStyled = styled('nav')`
     flex-direction: row;
     width: 287px;
     justify-content: space-between;
-    margin-left: 170px;
     margin-right: 76px;
   }
 `;

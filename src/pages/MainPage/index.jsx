@@ -9,7 +9,6 @@ import { AboutMe } from 'components/AboutMe';
 import { WishForm } from 'components/WishForm';
 import { Question } from 'components/Question';
 import Loader from 'components/Loader/Loader';
-import { MainPageBox } from './MainPage.styled';
 
 const MainPage = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -22,15 +21,13 @@ const MainPage = () => {
       {isLoading && <Loader />}
       <MobileBanner />
       <MainBanner />
-      <MainPageBox>
-        <Products />
-        <Why />
-        <BannerCake />
-        <Delivery />
-        <AboutMe />
-        <WishForm />
-        <Question />
-      </MainPageBox>
+      <Products />
+      <Why />
+      <BannerCake />
+      <Delivery />
+      <AboutMe />
+      <WishForm />
+      <Question />
     </>
   );
 };

@@ -9,16 +9,18 @@ import {
 } from './OrderPage.styled';
 const OrderPage = () => {
   return (
-    <OrderPageBox>
-      <LinkToCatalog to="/catalog">Продовжити покупки</LinkToCatalog>
-      <Title>Оформлення замовлення</Title>
-      <OrderFormBox>
-        <OrderBasketBox>
-          <OrderBasket />
-        </OrderBasketBox>
-        <OrderForm />
-      </OrderFormBox>
-    </OrderPageBox>
+    <>
+      <OrderPageBox>
+        <LinkToCatalog to="/catalog">Продовжити покупки</LinkToCatalog>
+        <Title>Оформлення замовлення</Title>
+        <OrderFormBox>
+          <OrderBasketBox>
+            <OrderBasket />
+          </OrderBasketBox>
+          <OrderForm />
+        </OrderFormBox>
+      </OrderPageBox>
+    </>
   );
 };
 export default OrderPage;

@@ -1,8 +1,8 @@
 import { Outlet } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import { Suspense } from 'react';
-import { Header } from 'components/Header';
 import { Footer } from 'components/Footer';
+import { Header } from 'components/Header';
 import { MainBackgroundImage } from 'components/MainBackground';
 import { MainBackgroundGrey } from 'components/MainBackground/MainBackground.styled';
 import Loader from 'components/Loader/Loader';
@@ -20,8 +20,8 @@ export const SharedLayout = () => {
             <GlobalContainerStyled>
               <Outlet />
             </GlobalContainerStyled>
+            <Footer />
           </Suspense>
-          <Footer />
         </>
       ) : (
         <MainBackgroundGrey>
@@ -30,8 +30,8 @@ export const SharedLayout = () => {
             <GlobalContainerStyled>
               <Outlet />
             </GlobalContainerStyled>
+            <Footer />
           </Suspense>
-          <Footer />
         </MainBackgroundGrey>
       )}
     </>

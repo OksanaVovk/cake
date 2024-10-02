@@ -44,8 +44,8 @@ export const ProductCard = ({
 
   const dispatch = useDispatch();
   const reset = () => {
-    setWeightProdact(weightProduct);
-    setPieceProduct(pieceProduct);
+    setWeightProdact('1');
+    setPieceProduct('1');
   };
 
   const handleInputChange = event => {
