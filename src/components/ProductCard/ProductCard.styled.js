@@ -201,7 +201,8 @@ export const SumDiv = styled('div')`
   font-weight: 600;
   margin-bottom: 40px;
   @media screen and (min-width: 1440px) {
-    width: 100px;
+    justify-content: flex-start;
+    width: 150px;
     height: 60px;
     position: absolute;
     top: 398px;
@@ -210,8 +211,8 @@ export const SumDiv = styled('div')`
   }
 `;
 
-export const Sum = styled('input')`
-  width: 80px;
+export const Sum = styled('p')`
+  min-width: 80px;
   font-size: 24px;
   font-weight: 600;
   background-color: transparent;

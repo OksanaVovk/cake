@@ -149,19 +149,13 @@ export const ProductCard = ({
               />
             </PieceDiv>
           )}
-
           <SumDiv>
-            <Sum
-              type="number"
-              name="sum"
-              disabled
-              value={
-                unit === 'кг'
-                  ? price * Number(weightProduct)
-                  : price * Number(pieceProduct)
-              }
-            ></Sum>
-            <p>грн</p>
+            <Sum>
+              {unit === 'кг'
+                ? price * Number(weightProduct)
+                : price * Number(pieceProduct)}{' '}
+              грн
+            </Sum>
           </SumDiv>
           <ButtonOrder type="submit" className="order" text="ЗАМОВИТИ" />
         </Form>

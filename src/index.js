@@ -8,6 +8,8 @@ import { PersistGate } from 'redux-persist/integration/react';
 import { theme } from 'components/Theme';
 import './index.css';
 import { store, persistor } from './redux/store';
+import ScrollToTop from 'react-scroll-to-top';
+import { Scroll } from './components/Scroll';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -15,6 +17,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
           <BrowserRouter basename="/cake">
+            <Scroll />
+            <ScrollToTop />
             <App />
           </BrowserRouter>
         </PersistGate>
