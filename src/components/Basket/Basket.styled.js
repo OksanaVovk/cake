@@ -47,6 +47,7 @@ export const CircleBox = styled('div')`
   position: absolute;
   top: -6px;
   right: 0;
+  z-index: 10;
   display: flex;
   justify-content: center;
   align-items: center;

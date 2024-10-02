@@ -31,15 +31,17 @@ export const MenuModal = () => {
       </ModalButton>
       <List>
         <LinkItem>
-          <Link to="/catalog">Каталог</Link>
+          <Link to="/catalog" onClick={onBtnClick}>
+            Каталог
+          </Link>
         </LinkItem>
         <LinkItem>
-          <Link smooth to="/#delivery">
+          <Link smooth to="/#delivery" onClick={onBtnClick}>
             Доставка
           </Link>
         </LinkItem>
         <LinkItem>
-          <Link smooth to="/#aboutme">
+          <Link smooth to="/#aboutme" onClick={onBtnClick}>
             Про мене
           </Link>
         </LinkItem>
