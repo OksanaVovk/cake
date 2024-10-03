@@ -87,7 +87,7 @@ export const BasketModal = () => {
                 number={prod.number}
                 piece={prod.piece}
                 price={prod.price}
-                weight={prod.weight}
+                amount={prod.amount}
                 unit={prod.unit}
                 sum={prod.sum}
               />

@@ -22,8 +22,7 @@ export const BasketItem = ({
   number,
   price,
   sum,
-  piece,
-  weight,
+  amount,
   unit,
   id,
 }) => {
@@ -49,7 +48,7 @@ export const BasketItem = ({
         <ItemsName>{name}</ItemsName>
         <TextBox>
           <ItemsText>{unit === 'кг' ? 'Вага:' : `Кількість:`}</ItemsText>
-          <ItemsText>{unit === 'кг' ? weight + ` кг` : piece}</ItemsText>
+          <ItemsText>{unit === 'кг' ? amount + ` кг` : amount}</ItemsText>
         </TextBox>
         <TextBox>
           <ItemsText>

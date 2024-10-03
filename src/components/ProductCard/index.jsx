@@ -1,7 +1,9 @@
 import { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { selectors } from '../../redux/selectors';
+// import { useCallback } from 'react';
+import { useDispatch } from 'react-redux';
+// import { selectors } from '../../redux/selectors';
 import { addProduct } from '../../redux/basketSlice';
+// import { toggleBasketDate } from '../../redux/productsSlice';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 import {
@@ -27,6 +29,7 @@ import {
 export const ProductCard = ({
   name,
   price,
+  piece,
   unit,
   weight,
   number,
@@ -35,12 +38,26 @@ export const ProductCard = ({
   category,
   id,
 }) => {
-  const basketProd = useSelector(selectors.selectBasketProdukts);
-  const prod = basketProd.find(pr => pr.id === id);
+  // const basketProd = useSelector(selectors.selectBasketProdukts);
+  // const getInitialState = useCallback(() => {
+  //   const prod = basketProd.find(pr => pr.id === id);
+  //   if (prod === undefined) {
+  //     return '1';
+  //   } else if (prod.unit !== 'шт') {
+  //     return '1';
+  //   } else {
+  //     return prod.piece;
+  //   }
+  //   // do something!
+  // }, [id, basketProd]);
+
   const [weightProduct, setWeightProdact] = useState('1');
-  const [pieceProduct, setPieceProduct] = useState(
-    prod && prod.unit === 'шт' ? prod.piece : '1'
-  );
+  const [pieceProduct, setPieceProduct] = useState('1');
+
+  // useEffect(() => {
+  //   setPieceProduct(getInitialState());
+  //   setWeightProdact(getInitialState());
+  // }, [getInitialState]);
 
   const dispatch = useDispatch();
   const reset = () => {
@@ -69,7 +86,7 @@ export const ProductCard = ({
         dispatch(
           addProduct({
             name: name,
-            weight: Number(weightProduct),
+            amount: Number(weightProduct),
             sum: Number(weightProduct) * price,
             id: id,
             src: picture1x,
@@ -78,11 +95,12 @@ export const ProductCard = ({
             unit: unit,
           })
         );
+        // dispatch(toggleBasketDate({ id: id, basketNumber: weightProduct }));
       } else {
         dispatch(
           addProduct({
             name: name,
-            piece: Number(pieceProduct),
+            amount: Number(pieceProduct),
             sum: Number(pieceProduct) * price,
             id: id,
             src: picture1x,
@@ -92,6 +110,7 @@ export const ProductCard = ({
             number: number,
           })
         );
+        // dispatch(toggleBasketDate({ id: id, basketNumber: pieceProduct }));
       }
       Notify.success('Товар додано до корзини');
     } catch {

@@ -6,11 +6,11 @@ import { RandomDiv, Title, CardList } from './Random.styled';
 
 export const Random = ({ _id }) => {
   const data = useSelector(selectors.selectProductsBase);
+
   const randomData = [];
 
   for (let i = 0; i < 4; i += 1) {
     let randomItem = data[Math.floor(Math.random() * data.length)];
-
     !randomData.includes(randomItem) && randomItem.id !== _id
       ? randomData.push(randomItem)
       : (i -= 1);
@@ -20,18 +20,18 @@ export const Random = ({ _id }) => {
     <RandomDiv>
       <Title>Також можете спробувати:</Title>
       <CardList>
-        {randomData.map(image => (
+        {randomData.map(prod => (
           <CatalogItem
             className="randomItem"
-            id={image.id}
-            key={image.id}
-            picture1x={image.picture1x}
-            picture2x={image.picture2x}
-            category={image.category}
-            name={image.name}
-            number={image.number}
-            price={image.price}
-            unit={image.unit}
+            id={prod.id}
+            key={prod.id}
+            picture1x={prod.picture1x}
+            picture2x={prod.picture2x}
+            category={prod.category}
+            name={prod.name}
+            number={prod.number}
+            price={prod.price}
+            unit={prod.unit}
           />
         ))}
       </CardList>
