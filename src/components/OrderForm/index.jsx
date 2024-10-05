@@ -5,6 +5,8 @@ import { toggleOrder } from '../../redux/modalSlice';
 import { selectors } from '../../redux/selectors';
 import { clearBasketState } from '../../redux/basketSlice';
 import { useNavigate } from 'react-router-dom';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { orderSchema } from '../../components/utils/schemas';
@@ -42,8 +44,10 @@ const formDataInitialState = {
   pay: 'cash',
   comment: '',
 };
+
 export const OrderForm = () => {
   const [formData, setFormData] = useState(formDataInitialState);
+  const [startDate, setStartDate] = useState(new Date());
   const [error, setError] = useState([]);
   const navigate = useNavigate();
 
@@ -137,6 +141,12 @@ export const OrderForm = () => {
                 <ErrorText className="error">{er.message[0]}</ErrorText>
               )
           )}
+          <DatePicker
+            showIcon
+            selected={startDate}
+            onChange={date => setStartDate(date)}
+          />
+
           <Input
             id="date"
             type="text"
