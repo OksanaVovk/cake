@@ -5,8 +5,8 @@ import { toggleOrder } from '../../redux/modalSlice';
 import { selectors } from '../../redux/selectors';
 import { clearBasketState } from '../../redux/basketSlice';
 import { useNavigate } from 'react-router-dom';
-import DatePicker from 'react-datepicker';
-import 'react-datepicker/dist/react-datepicker.css';
+// import DatePicker from 'react-datepicker';
+// import 'react-datepicker/dist/react-datepicker.css';
 
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { orderSchema } from '../../components/utils/schemas';
@@ -29,6 +29,8 @@ import {
   ResultBox,
   ButtonOrder,
   ErrorText,
+  InputDate,
+  InputDescDate,
 } from './OrderForm.styled';
 
 const formDataInitialState = {
@@ -44,6 +46,8 @@ const formDataInitialState = {
   pay: 'cash',
   comment: '',
 };
+const cutoff = new Date().toJSON().slice(0, 10);
+console.log(cutoff);
 
 export const OrderForm = () => {
   const [formData, setFormData] = useState(formDataInitialState);
@@ -62,6 +66,7 @@ export const OrderForm = () => {
 
   const reset = () => {
     setFormData(formDataInitialState);
+    setStartDate(new Date());
   };
 
   const handleSubmit = async event => {
@@ -70,6 +75,7 @@ export const OrderForm = () => {
       let validForm = await orderSchema.isValid(formData);
       if (validForm) {
         try {
+          console.log(event);
           sentEmail(event);
           setError([]);
           dispatch(clearBasketState());
@@ -141,16 +147,22 @@ export const OrderForm = () => {
                 <ErrorText className="error">{er.message[0]}</ErrorText>
               )
           )}
-          <DatePicker
-            showIcon
-            selected={startDate}
-            onChange={date => setStartDate(date)}
+          <InputDate
+            className="dateInput"
+            type="text"
+            name="datePhone"
+            format="dd-MM-yyyy"
+            value={startDate}
+            onChange={(value, event) => {
+              setStartDate(value);
+            }}
           />
-
-          <Input
+          <InputDescDate
+            aria-label="Date"
             id="date"
             type="text"
             name="date"
+            min={cutoff}
             required
             onChange={handleChange}
             value={formData.date}

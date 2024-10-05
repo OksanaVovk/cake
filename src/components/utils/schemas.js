@@ -37,10 +37,8 @@ export const orderSchema = yup.object().shape({
       'Номер телефону має мати наступний вигляд: +380 ХХ ХХХХХХХ'
     ),
   email: yup.string().email('Не валідне значення емейлу'),
-  date: yup
-    .date()
-    .required()
-    .min(cutoff, 'Дата не може бути раніше, ніж сьогодні'),
+  datePhone: yup.string(),
+  // date: yup.date().min(cutoff, 'Дата не може бути раніше, ніж сьогодні'),
   city: yup.string(),
   street: yup.string(),
   house: yup.string(),

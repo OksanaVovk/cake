@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { Button } from 'components/Button';
+import { DateInput } from 'rsuite';
 
 export const OrderFormLargeText = styled('p')`
   font-family: Montserrat, sans-serif;
@@ -253,5 +254,55 @@ export const ErrorText = styled('p')`
 
     font-size: 18px;
     line-height: 23.4px;
+  }
+`;
+
+export const InputDate = styled(DateInput)`
+  width: 355px;
+  height: 60px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 300;
+  text-align: left;
+  font-size: 18px;
+  color: ${p => p.theme.mainColors.brown};
+  padding: 19px 24px;
+  border: 0;
+  border-radius: 10px;
+  background-color: ${p => p.theme.mainColors.beige};
+  display: none;
+
+  @media screen and (min-width: 1440px) {
+    display: none;
+  }
+`;
+
+export const InputDescDate = styled('input')`
+  width: 355px;
+  height: 60px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 300;
+  text-align: left;
+  font-size: 18px;
+  padding: 19px 24px;
+  display: block;
+  color: ${p => p.theme.mainColors.brown};
+  border: 0;
+  border-radius: 10px;
+  background-color: ${p => p.theme.mainColors.beige};
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 1440px) {
+    display: block;
+    width: 499px;
+    height: 60px;
+    padding: 19px 30px;
+    font-family: Montserrat, sans-serif;
+    font-weight: 300;
+    text-align: left;
+    font-size: 18px;
+    color: ${p => p.theme.mainColors.brown};
+    border: 0;
+    border-radius: 10px;
+    background-color: ${p => p.theme.mainColors.beige};
   }
 `;
