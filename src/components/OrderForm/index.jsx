@@ -139,13 +139,13 @@ export const OrderForm = () => {
           )}
           <Input
             id="date"
-            type="date"
+            type="text"
             name="date"
             required
             onChange={handleChange}
             value={formData.date}
-            // onFocus={e => (e.target.type = 'date')}
-            // onBlur={e => (e.target.type = 'text')}
+            onFocus={e => (e.target.type = 'date')}
+            onBlur={e => (e.target.type = 'text')}
             placeholder="Дата доставки*"
           />
           {error.map(
