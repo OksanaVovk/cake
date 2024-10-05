@@ -20,6 +20,7 @@ export const Button = ({
   sh,
   shHov,
   hoverCange,
+  onClick,
 }) => (
   <StyledButton
     className={className}
@@ -35,6 +36,7 @@ export const Button = ({
     bgHover={color}
     shadowHover={shHov}
     hoverCange={hoverCange}
+    onClick={onClick}
   >
     {text}
   </StyledButton>
