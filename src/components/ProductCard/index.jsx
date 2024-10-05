@@ -18,7 +18,7 @@ import {
   LabelDiv2,
   PriceDiv,
   PriceLittleDiv,
-  Prise,
+  Priсe,
   SumDiv,
   Sum,
   Input,
@@ -127,8 +127,7 @@ export const ProductCard = ({
               {unit === 'кг' ? `Ціна за кілограм` : `Ціна за ${number} шт`}
             </LabelDiv2>
             <PriceLittleDiv>
-              <Prise id="price" disabled name="pieces" value={price} />
-              <p>грн</p>
+              <Priсe>{price} грн </Priсe>
             </PriceLittleDiv>
           </PriceDiv>
 

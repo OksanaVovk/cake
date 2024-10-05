@@ -201,8 +201,7 @@ export const PriceLittleDiv = styled('div')`
     height: 60px;
   }
 `;
-export const Prise = styled('input')`
-width: 45px;
+export const Priсe = styled('p')`
 font-size: 20px;
 background-color: transparent;
 border: 0;
