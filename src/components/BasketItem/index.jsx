@@ -30,7 +30,6 @@ export const BasketItem = ({
 
   const onBtnClick = id => {
     try {
-      console.log(id);
       dispatch(deleteProduct(id));
       Notify.success('Товар видалено з корзини');
     } catch {

@@ -62,7 +62,6 @@ export const OrderForm = () => {
 
   const handleSubmit = async event => {
     event.preventDefault();
-    console.log(formData);
     try {
       let validForm = await orderSchema.isValid(formData);
       if (validForm) {

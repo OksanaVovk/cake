@@ -21,14 +21,6 @@ const productsSlice = createSlice({
         product => product.category === action.payload
       );
     },
-    // toggleBasketDate(state, action) {
-    //   return state.productsBase.map(product => {
-    //     if (product.id !== action.payload.id) {
-    //       return product;
-    //     }
-    //     return { ...product, basket: action.payload.basketNumber };
-    //   });
-    // },
   },
 });
 

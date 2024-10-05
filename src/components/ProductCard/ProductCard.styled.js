@@ -48,8 +48,25 @@ export const Title = styled('h2')`
     position: absolute;
     top: 0;
     left: 533px;
+    text-align: left;
     font-size: 42px;
     line-height: 51.19px;
+    margin-bottom: 0;
+  }
+`;
+
+export const InfText = styled('p')`
+  font-family: Montserrat, sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21.94px;
+  text-align: left;
+  color: ${p => p.theme.mainColors.brown};
+  margin-bottom: 30px;
+  @media screen and (min-width: 1440px) {
+    position: absolute;
+    top: 120px;
+    left: 533px;
     margin-bottom: 0;
   }
 `;

@@ -17,7 +17,6 @@ export const Logo = () => {
             srcSet={`${logoGrann_1x} 1x, ${logoGrann_2x} 2x`}
             media="(min-width: 1440px)"
           />
-
           <source
             srcSet={`${logoGrannMob_1x} 1x, ${logoGrannMob_2x} 2x`}
             media="(min-width: 375px)"

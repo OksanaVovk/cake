@@ -1,4 +1,5 @@
 import { LogoBig } from 'components/Logo';
+
 import { SocialNetworksFooter } from 'components/SocialNetworks';
 import {
   FooterBox,
@@ -8,6 +9,7 @@ import {
   LogoBox,
   NavBox,
   FooterBoxP,
+  TextLink,
 } from './Footer.styled';
 
 export const Footer = () => {
@@ -17,7 +19,9 @@ export const Footer = () => {
         <TextBox1 className="boxfooter" id="contacts">
           <Text>с. Хотів, вул. Партизанська </Text>
           <Text>Email: grannstady@gmail.com</Text>
-          <p>Tel: +38(050)7777777</p>
+          <TextLink to="tel:+380507777777" target="_blank">
+            Tel: +38(050)7777777
+          </TextLink>
         </TextBox1>
         <LogoBox>
           <LogoBig />

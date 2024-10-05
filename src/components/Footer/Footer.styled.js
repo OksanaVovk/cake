@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { Link } from 'react-router-dom';
 
 export const FooterBox = styled('div')`
   width: 100vw;
@@ -35,6 +36,17 @@ export const TextBox = styled('div')`
     left: 1090px;
     text-align: left;
     margin-bottom: 0;
+  }
+`;
+
+export const TextLink = styled(Link)`
+  font-family: Montserrat, sans-serif;
+  font-weight: 300;
+  text-align: center;
+  font-size: 18px;
+  color: ${p => p.theme.mainColors.grey};
+  @media screen and (min-width: 1440px) {
+    text-align: left;
   }
 `;
 

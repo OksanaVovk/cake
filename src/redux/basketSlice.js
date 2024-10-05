@@ -12,7 +12,6 @@ const basketSlice = createSlice({
       const index = state.basketProducts.findIndex(
         product => product.id === action.payload.id
       );
-      console.log(index);
       if (action.payload.unit === 'шт' && index !== -1) {
         state.basketProducts.splice(index, 1);
         state.basketProducts.push(action.payload);
@@ -25,7 +24,6 @@ const basketSlice = createSlice({
       const index = state.basketProducts.findIndex(
         product => product.id === action.payload
       );
-      console.log(index);
       state.basketProducts.splice(index, 1);
     },
     clearBasketState(state, ___) {

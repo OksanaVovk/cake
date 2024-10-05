@@ -24,7 +24,6 @@ import {
 
 export const BasketModal = () => {
   const basketData = useSelector(selectors.selectBasketProdukts);
-  console.log(basketData);
   const totalPr = basketData.reduce((total, prod) => {
     return total + prod.sum;
   }, 0);

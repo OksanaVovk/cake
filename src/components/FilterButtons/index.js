@@ -15,12 +15,6 @@ export const FilterButtons = () => {
       buttons[i].classList.remove('active');
     }
     document.querySelector(`[name="${filterWord}"]`).classList.add('active');
-
-    // return () => {
-    //   document
-    //     .querySelector(`[name="${filterWord}"]`)
-    //     .classList.remove('active');
-    // };
   }, [filterWord]);
 
   const onBtnClick = event => {

@@ -11,6 +11,25 @@ export const BasketSvg = styled.svg`
   }
 `;
 
+export const BasketDiv = styled('button')`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`;
+
+export const BasketText = styled('p')`
+  font-family: Montserrat OrderFormBoldText;
+  font-weight: 800;
+  text-align: left;
+  font-size: 20px;
+  line-height: 21.6px;
+  color: ${p => p.theme.mainColors.accent};
+  @media screen and (min-width: 1440px) {
+    font-size: 35px;
+    line-height: 37.8px;
+  }
+`;
+
 export const ItemsName = styled('h2')`
   font-family: Montserrat, sans-serif;
   font-weight: 300;

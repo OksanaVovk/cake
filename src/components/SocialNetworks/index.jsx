@@ -15,17 +15,17 @@ import {
 export const SocialNetworks = () => {
   return (
     <NetworksBox>
-      <Link>
+      <Link to="https://web.telegram.org" target="_blank">
         <TelegramSvg>
           <use href={sprite + '#icon-Telegram'}></use>
         </TelegramSvg>
       </Link>
-      <Link>
+      <Link to="https://www.facebook.com/" target="_blank">
         <FacebookSvg>
           <use href={sprite + '#icon-Facebook'}></use>
         </FacebookSvg>
       </Link>
-      <Link>
+      <Link to="https://www.instagram.com/" target="_blank">
         <InstagramSvg>
           <use href={sprite + '#icon-Instagram'}></use>
         </InstagramSvg>
@@ -37,17 +37,17 @@ export const SocialNetworks = () => {
 export const SocialNetworksFooter = () => {
   return (
     <NetworksBoxFooter>
-      <LinkF>
+      <LinkF to="https://www.instagram.com/" target="_blank">
         <InstagramFSvg>
           <use href={sprite + '#icon-Instagram'}></use>
         </InstagramFSvg>
       </LinkF>
-      <LinkF>
+      <LinkF to="https://web.telegram.org" target="_blank">
         <TelegramFSvg>
           <use href={sprite + '#icon-Telegram'}></use>
         </TelegramFSvg>
       </LinkF>
-      <LinkF>
+      <LinkF to="https://www.viber.com/" target="_blank">
         <ViberSvg>
           <use href={sprite + '#icon-viber'}></use>
         </ViberSvg>

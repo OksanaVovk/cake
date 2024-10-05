@@ -1,9 +1,7 @@
-import { useState } from 'react';
-// import { useCallback } from 'react';
-import { useDispatch } from 'react-redux';
-// import { selectors } from '../../redux/selectors';
+import { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectors } from '../../redux/selectors';
 import { addProduct } from '../../redux/basketSlice';
-// import { toggleBasketDate } from '../../redux/productsSlice';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 import {
@@ -24,46 +22,42 @@ import {
   SumDiv,
   Sum,
   Input,
+  InfText,
 } from './ProductCard.styled';
 
 export const ProductCard = ({
   name,
   price,
-  piece,
   unit,
-  weight,
   number,
   picture1x,
   picture2x,
   category,
   id,
 }) => {
-  // const basketProd = useSelector(selectors.selectBasketProdukts);
-  // const getInitialState = useCallback(() => {
-  //   const prod = basketProd.find(pr => pr.id === id);
-  //   if (prod === undefined) {
-  //     return '1';
-  //   } else if (prod.unit !== 'шт') {
-  //     return '1';
-  //   } else {
-  //     return prod.piece;
-  //   }
-  //   // do something!
-  // }, [id, basketProd]);
-
   const [weightProduct, setWeightProdact] = useState('1');
+  const [orderCake, setOrderCake] = useState(false);
   const [pieceProduct, setPieceProduct] = useState('1');
 
-  // useEffect(() => {
-  //   setPieceProduct(getInitialState());
-  //   setWeightProdact(getInitialState());
-  // }, [getInitialState]);
+  const basketProd = useSelector(selectors.selectBasketProdukts);
+
+  useEffect(() => {
+    const prod = basketProd.find(pr => pr.id === id);
+
+    if (prod === undefined) {
+      setWeightProdact('1');
+      setPieceProduct('1');
+      setOrderCake(false);
+    } else if (prod.unit !== 'шт') {
+      setWeightProdact('1');
+      setOrderCake(true);
+    } else {
+      setPieceProduct(prod.amount);
+      setOrderCake(false);
+    }
+  }, [basketProd, id]);
 
   const dispatch = useDispatch();
-  const reset = () => {
-    setWeightProdact('1');
-    setPieceProduct('1');
-  };
 
   const handleInputChange = event => {
     const { name, value } = event.currentTarget;
@@ -95,7 +89,6 @@ export const ProductCard = ({
             unit: unit,
           })
         );
-        // dispatch(toggleBasketDate({ id: id, basketNumber: weightProduct }));
       } else {
         dispatch(
           addProduct({
@@ -110,20 +103,23 @@ export const ProductCard = ({
             number: number,
           })
         );
-        // dispatch(toggleBasketDate({ id: id, basketNumber: pieceProduct }));
       }
       Notify.success('Товар додано до корзини');
     } catch {
       console.log(Error);
       Notify.warning('Виникла помилка при додаванні товару в корзину');
     }
-    reset();
   };
 
   return (
     <GeneralDiv>
       <ProductCardDiv>
         <Title>{name}</Title>
+        {orderCake && (
+          <InfText>
+            Ви уже замовили цей торт, якщо бажаєте, можете замовити ще
+          </InfText>
+        )}
         <Img src={picture1x} alt={category} srcSet={`${picture2x} 2x`} />
         <Form onSubmit={handelSubmit}>
           <PriceDiv>
@@ -168,6 +164,7 @@ export const ProductCard = ({
               />
             </PieceDiv>
           )}
+
           <SumDiv>
             <Sum>
               {unit === 'кг'
