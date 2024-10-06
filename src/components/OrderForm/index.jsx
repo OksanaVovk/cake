@@ -7,10 +7,6 @@ import { clearBasketState } from '../../redux/basketSlice';
 import { useNavigate } from 'react-router-dom';
 
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
-// import {
-//   orderSchemaDesct,
-//   orderSchemaMob,
-// } from '../../components/utils/schemas';
 import { orderSchema } from '../../components/utils/schemas';
 import {
   OrderFormLargeText,
@@ -31,8 +27,7 @@ import {
   ResultBox,
   ButtonOrder,
   ErrorText,
-  // InputDate,
-  // InputDescDate,
+  ErrorTextDate,
   InputDatePicker,
 } from './OrderForm.styled';
 
@@ -52,8 +47,8 @@ const formDataInitialState = {
 
 export const OrderForm = () => {
   const [formData, setFormData] = useState(formDataInitialState);
-  // const [startDate, setStartDate] = useState();
   const [startDatePicker, setStartDatePiker] = useState(new Date());
+  let date;
 
   const [error, setError] = useState([]);
   const navigate = useNavigate();
@@ -65,9 +60,6 @@ export const OrderForm = () => {
     return total + prod.sum;
   }, 0);
   totalPr === 0 && navigate('/catalog', { replace: true });
-  // const mds = window.matchMedia('(min-width: 1439px)');
-  // const mds2 = window.matchMedia('(max-width: 1440px)');
-
   const handleChange = event => {
     const { name, value } = event.target;
 
@@ -77,24 +69,24 @@ export const OrderForm = () => {
     });
   };
 
-  const handleDateChange = (value, name) => {
+  const handleDateChange = value => {
     setStartDatePiker(value);
-    console.log(name);
+    date = value;
+    setFormData({
+      ...formData,
+      date,
+    });
   };
 
   const reset = () => {
     setFormData(formDataInitialState);
-    // setStartDatePiker(new Date());
+    setStartDatePiker(new Date());
   };
 
   const handleSubmit = async event => {
     event.preventDefault();
-    console.log(formData);
     try {
       let validForm = await orderSchema.isValid(formData);
-      // let validForm = mds.matches
-      //   ? await orderSchemaDesct.isValid(formData)
-      //   : await orderSchemaMob.isValid(formData);
       if (validForm) {
         try {
           sentEmail(event);
@@ -111,16 +103,8 @@ export const OrderForm = () => {
         await orderSchema.validate(formData, {
           abortEarly: false,
         });
-        // mds.matches
-        //   ? await orderSchemaDesct.validate(formData, {
-        //       abortEarly: false,
-        //     })
-        //   : await orderSchemaDesct.validate(formData, {
-        //       abortEarly: false,
-        //     });
       }
     } catch (err) {
-      console.log(err);
       const errorAr = err.inner.reduce((newAr, item) => {
         newAr.push({ name: item.params.path, message: item.errors });
         return newAr;
@@ -171,48 +155,18 @@ export const OrderForm = () => {
               )
           )}
 
-          {/* {mds.matches && (
-            <>
-              <InputDescDate
-                id="date"
-                type="text"
-                name="date"
-                required
-                onChange={handleChange}
-                value={formData.date}
-                onFocus={e => (e.target.type = 'date')}
-                onBlur={e => (e.target.type = 'text')}
-                placeholder="Дата доставки*"
-              />
-              {error.map(
-                er =>
-                  er.name === 'date' && (
-                    <ErrorText className="error">{er.message[0]}</ErrorText>
-                  )
-              )}
-            </>
-          )} */}
-          {/* {mds2.matches && (
-            <>
-              <InputDate
-                className="dateInput"
-                type="text"
-                name="datePhone"
-                format="dd-MM-yyyy"
-                value={startDate}
-                onChange={(value, event) => {
-                  setStartDate(value);
-                }}
-              />
-            </>
-          )} */}
           <InputDatePicker
             className="datePiker"
             name="date"
-            format="dd-MM-yyyy"
             value={startDatePicker}
             onChange={handleDateChange}
           />
+          {error.map(
+            er =>
+              er.name === 'date' && (
+                <ErrorTextDate className="error">{er.message[0]}</ErrorTextDate>
+              )
+          )}
         </ContactBox>
         <RadioDiv>
           <OrderFormLargeText>Спосіб доставки:</OrderFormLargeText>

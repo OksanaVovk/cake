@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
 import { Button } from 'components/Button';
-import { DateInput } from 'rsuite';
 import DatePicker from 'react-date-picker';
 import 'react-date-picker/dist/DatePicker.css';
 import 'react-calendar/dist/Calendar.css';
@@ -260,40 +259,19 @@ export const ErrorText = styled('p')`
   }
 `;
 
-export const InputDate = styled(DateInput)`
-  width: 355px;
-  height: 60px;
+export const ErrorTextDate = styled('p')`
   font-family: Montserrat, sans-serif;
   font-weight: 300;
   text-align: left;
-  font-size: 18px;
-  color: ${p => p.theme.mainColors.brown};
-  padding: 19px 24px;
-  border: 0;
-  border-radius: 10px;
-  background-color: ${p => p.theme.mainColors.beige};
-
+  font-size: 16px;
+  line-height: 20.8px;
+  color: red;
+  margin-top: 5px;
   @media screen and (min-width: 1440px) {
-    display: none;
-  }
-`;
+    width: 393px;
 
-export const InputDescDate = styled('input')`
-  display: none;
-
-  @media screen and (min-width: 1440px) {
-    display: block;
-    width: 499px;
-    height: 60px;
-    padding: 19px 30px;
-    font-family: Montserrat, sans-serif;
-    font-weight: 300;
-    text-align: left;
     font-size: 18px;
-    color: ${p => p.theme.mainColors.brown};
-    border: 0;
-    border-radius: 10px;
-    background-color: ${p => p.theme.mainColors.beige};
+    line-height: 23.4px;
   }
 `;
 
@@ -309,7 +287,6 @@ export const InputDatePicker = styled(DatePicker)`
   border: 0;
   border-radius: 10px;
   background-color: ${p => p.theme.mainColors.beige};
-  margin-top: 24px;
 
   .react-date-picker__wrapper {
     border: none;
@@ -323,11 +300,3 @@ export const InputDatePicker = styled(DatePicker)`
     padding: 19px 30px;
   }
 `;
-
-//  class='react-date-picker__inputGroup'
-//     class='react-date-picker__inputGroup__leadingZero'
-//     class='react-date-picker__inputGroup__input react-date-picker__inputGroup__day react-date-picker__inputGroup__input--hasLeadingZero'
-//     class='react-date-picker__inputGroup__divider'
-//     class='react-date-picker__inputGroup__input react-date-picker__inputGroup__month'
-//     class='react-date-picker__inputGroup__divider'
-//     class='react-date-picker__inputGroup__input react-date-picker__inputGroup__year'
