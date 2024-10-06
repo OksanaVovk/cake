@@ -7,10 +7,11 @@ import { clearBasketState } from '../../redux/basketSlice';
 import { useNavigate } from 'react-router-dom';
 
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
-import {
-  orderSchemaDesct,
-  orderSchemaMob,
-} from '../../components/utils/schemas';
+// import {
+//   orderSchemaDesct,
+//   orderSchemaMob,
+// } from '../../components/utils/schemas';
+import { orderSchema } from '../../components/utils/schemas';
 import {
   OrderFormLargeText,
   OrderFormLargeText1,
@@ -30,8 +31,9 @@ import {
   ResultBox,
   ButtonOrder,
   ErrorText,
-  InputDate,
-  InputDescDate,
+  // InputDate,
+  // InputDescDate,
+  InputDatePicker,
 } from './OrderForm.styled';
 
 const formDataInitialState = {
@@ -50,7 +52,9 @@ const formDataInitialState = {
 
 export const OrderForm = () => {
   const [formData, setFormData] = useState(formDataInitialState);
-  const [startDate, setStartDate] = useState();
+  // const [startDate, setStartDate] = useState();
+  const [startDatePicker, setStartDatePiker] = useState(new Date());
+
   const [error, setError] = useState([]);
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -61,8 +65,8 @@ export const OrderForm = () => {
     return total + prod.sum;
   }, 0);
   totalPr === 0 && navigate('/catalog', { replace: true });
-  const mds = window.matchMedia('(min-width: 1439px)');
-  const mds2 = window.matchMedia('(max-width: 1440px)');
+  // const mds = window.matchMedia('(min-width: 1439px)');
+  // const mds2 = window.matchMedia('(max-width: 1440px)');
 
   const handleChange = event => {
     const { name, value } = event.target;
@@ -73,27 +77,26 @@ export const OrderForm = () => {
     });
   };
 
-  const reset = () => {
-    setFormData(formDataInitialState);
-    setStartDate(new Date());
+  const handleDateChange = (value, name) => {
+    setStartDatePiker(value);
+    console.log(name);
   };
 
-  // const handleSubmit = event => {
-  //   event.preventDefault();
-  //   console.log(event);
-  //   setError(error);
-  // };
+  const reset = () => {
+    setFormData(formDataInitialState);
+    // setStartDatePiker(new Date());
+  };
 
   const handleSubmit = async event => {
     event.preventDefault();
+    console.log(formData);
     try {
-      let validForm = mds.matches
-        ? await orderSchemaDesct.isValid(formData)
-        : await orderSchemaMob.isValid(formData);
-      console.log(validForm);
+      let validForm = await orderSchema.isValid(formData);
+      // let validForm = mds.matches
+      //   ? await orderSchemaDesct.isValid(formData)
+      //   : await orderSchemaMob.isValid(formData);
       if (validForm) {
         try {
-          console.log(event);
           sentEmail(event);
           setError([]);
           dispatch(clearBasketState());
@@ -105,13 +108,16 @@ export const OrderForm = () => {
           );
         }
       } else {
-        mds.matches
-          ? await orderSchemaDesct.validate(formData, {
-              abortEarly: false,
-            })
-          : await orderSchemaDesct.validate(formData, {
-              abortEarly: false,
-            });
+        await orderSchema.validate(formData, {
+          abortEarly: false,
+        });
+        // mds.matches
+        //   ? await orderSchemaDesct.validate(formData, {
+        //       abortEarly: false,
+        //     })
+        //   : await orderSchemaDesct.validate(formData, {
+        //       abortEarly: false,
+        //     });
       }
     } catch (err) {
       console.log(err);
@@ -165,7 +171,7 @@ export const OrderForm = () => {
               )
           )}
 
-          {mds.matches && (
+          {/* {mds.matches && (
             <>
               <InputDescDate
                 id="date"
@@ -185,8 +191,8 @@ export const OrderForm = () => {
                   )
               )}
             </>
-          )}
-          {mds2.matches && (
+          )} */}
+          {/* {mds2.matches && (
             <>
               <InputDate
                 className="dateInput"
@@ -199,7 +205,14 @@ export const OrderForm = () => {
                 }}
               />
             </>
-          )}
+          )} */}
+          <InputDatePicker
+            className="datePiker"
+            name="date"
+            format="dd-MM-yyyy"
+            value={startDatePicker}
+            onChange={handleDateChange}
+          />
         </ContactBox>
         <RadioDiv>
           <OrderFormLargeText>Спосіб доставки:</OrderFormLargeText>
