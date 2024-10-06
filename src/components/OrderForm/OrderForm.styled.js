@@ -1,6 +1,9 @@
 import styled from '@emotion/styled';
 import { Button } from 'components/Button';
 import { DateInput } from 'rsuite';
+// import DatePicker from 'react-date-picker';
+// import 'react-date-picker/dist/DatePicker.css';
+// import 'react-calendar/dist/Calendar.css';
 
 export const OrderFormLargeText = styled('p')`
   font-family: Montserrat, sans-serif;
@@ -269,7 +272,6 @@ export const InputDate = styled(DateInput)`
   border: 0;
   border-radius: 10px;
   background-color: ${p => p.theme.mainColors.beige};
-  display: none;
 
   @media screen and (min-width: 1440px) {
     display: none;
@@ -277,19 +279,20 @@ export const InputDate = styled(DateInput)`
 `;
 
 export const InputDescDate = styled('input')`
-  width: 355px;
-  height: 60px;
-  font-family: Montserrat, sans-serif;
-  font-weight: 300;
-  text-align: left;
-  font-size: 18px;
-  padding: 19px 24px;
-  display: block;
-  color: ${p => p.theme.mainColors.brown};
-  border: 0;
-  border-radius: 10px;
-  background-color: ${p => p.theme.mainColors.beige};
-  margin-bottom: 30px;
+  // width: 355px;
+  // height: 60px;
+  // font-family: Montserrat, sans-serif;
+  // font-weight: 300;
+  // text-align: left;
+  // font-size: 18px;
+  // padding: 19px 24px;
+  // display: block;
+  // color: ${p => p.theme.mainColors.brown};
+  // border: 0;
+  // border-radius: 10px;
+  // background-color: ${p => p.theme.mainColors.beige};
+  // margin-bottom: 30px;
+  display: none;
 
   @media screen and (min-width: 1440px) {
     display: block;

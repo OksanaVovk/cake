@@ -7,6 +7,8 @@
     "@emotion/babel-plugin": "^11.12.0",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
+    "@mui/material": "^6.1.2",
+    "@mui/styled-engine-sc": "^6.1.2",
     "@mui/x-date-pickers": "^7.19.0",
     "@redux-devtools/extension": "^3.3.0",
     "@reduxjs/toolkit": "^2.2.7",
@@ -34,6 +36,7 @@
     "redux": "^5.0.1",
     "redux-persist": "^6.0.0",
     "rsuite": "^5.71.0",
+    "styled-components": "^6.1.13",
     "web-vitals": "^2.1.3",
     "yup": "^1.4.0"
   },
