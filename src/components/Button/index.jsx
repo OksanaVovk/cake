@@ -21,6 +21,7 @@ export const Button = ({
   shHov,
   hoverCange,
   onClick,
+  ref,
 }) => (
   <StyledButton
     className={className}
@@ -37,6 +38,7 @@ export const Button = ({
     shadowHover={shHov}
     hoverCange={hoverCange}
     onClick={onClick}
+    ref={ref}
   >
     {text}
   </StyledButton>

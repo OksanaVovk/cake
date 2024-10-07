@@ -295,6 +295,7 @@ export const InputDatePicker = styled(DatePicker)`
   .react-date-picker__clear-button {
     display: none;
   }
+
   @media screen and (min-width: 1440px) {
     width: 499px;
     padding: 19px 30px;

@@ -74,40 +74,43 @@ export const ProductCard = ({
   };
   const handelSubmit = event => {
     event.preventDefault();
-
-    try {
-      if (unit === 'кг') {
-        dispatch(
-          addProduct({
-            name: name,
-            amount: Number(weightProduct),
-            sum: Number(weightProduct) * price,
-            id: id,
-            src: picture1x,
-            srcSet: picture2x,
-            price: price,
-            unit: unit,
-          })
-        );
-      } else {
-        dispatch(
-          addProduct({
-            name: name,
-            amount: Number(pieceProduct),
-            sum: Number(pieceProduct) * price,
-            id: id,
-            src: picture1x,
-            srcSet: picture2x,
-            price: price,
-            unit: unit,
-            number: number,
-          })
-        );
+    if (Number(pieceProduct) * price === 0) {
+      Notify.warning('Кількість товару не може бути менше 1');
+    } else {
+      try {
+        if (unit === 'кг') {
+          dispatch(
+            addProduct({
+              name: name,
+              amount: Number(weightProduct),
+              sum: Number(weightProduct) * price,
+              id: id,
+              src: picture1x,
+              srcSet: picture2x,
+              price: price,
+              unit: unit,
+            })
+          );
+        } else {
+          dispatch(
+            addProduct({
+              name: name,
+              amount: Number(pieceProduct),
+              sum: Number(pieceProduct) * price,
+              id: id,
+              src: picture1x,
+              srcSet: picture2x,
+              price: price,
+              unit: unit,
+              number: number,
+            })
+          );
+        }
+        Notify.success('Товар додано до корзини');
+      } catch {
+        console.log(Error);
+        Notify.warning('Виникла помилка при додаванні товару в корзину');
       }
-      Notify.success('Товар додано до корзини');
-    } catch {
-      console.log(Error);
-      Notify.warning('Виникла помилка при додаванні товару в корзину');
     }
   };
 
