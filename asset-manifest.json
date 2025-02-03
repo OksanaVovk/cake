@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/cake/static/css/main.07ec8bcb.css",
-    "main.js": "/cake/static/js/main.8d3c020d.js",
+    "main.js": "/cake/static/js/main.5e00bab8.js",
     "static/js/733.d0fb3cb8.chunk.js": "/cake/static/js/733.d0fb3cb8.chunk.js",
     "static/js/724.a8ce29bc.chunk.js": "/cake/static/js/724.a8ce29bc.chunk.js",
     "static/js/227.2435720e.chunk.js": "/cake/static/js/227.2435720e.chunk.js",
@@ -89,7 +89,7 @@
     "static/media/logoGrannMob_1x.webp": "/cake/static/media/logoGrannMob_1x.6f85f1400ec86a910c19.webp",
     "index.html": "/cake/index.html",
     "main.07ec8bcb.css.map": "/cake/static/css/main.07ec8bcb.css.map",
-    "main.8d3c020d.js.map": "/cake/static/js/main.8d3c020d.js.map",
+    "main.5e00bab8.js.map": "/cake/static/js/main.5e00bab8.js.map",
     "733.d0fb3cb8.chunk.js.map": "/cake/static/js/733.d0fb3cb8.chunk.js.map",
     "724.a8ce29bc.chunk.js.map": "/cake/static/js/724.a8ce29bc.chunk.js.map",
     "227.2435720e.chunk.js.map": "/cake/static/js/227.2435720e.chunk.js.map",
@@ -100,6 +100,6 @@
   },
   "entrypoints": [
     "static/css/main.07ec8bcb.css",
-    "static/js/main.8d3c020d.js"
+    "static/js/main.5e00bab8.js"
   ]
 }
