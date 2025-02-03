@@ -5,7 +5,13 @@ import secondFon2x from '../../images/2fon2x.webp';
 import mFon1x from '../../images/mFon1x.webp';
 import mFon2x from '../../images/mFon2x.webp';
 
-import { BackgroundStyled, Img1, Img2, Img3 } from './MainBackground.styled';
+import {
+  BackgroundStyled,
+  Img1,
+  Img2,
+  Img3,
+  Img3Box,
+} from './MainBackground.styled';
 
 export const MainBackgroundImage = () => {
   return (
@@ -23,12 +29,14 @@ export const MainBackgroundImage = () => {
           srcSet={`${secondFon2x} 2x`}
           media="(min-width: 1440px)"
         />
-        <Img3
-          alt="im"
-          src={mFon1x}
-          srcSet={`${mFon2x} 2x`}
-          media="(min-width: 375px)"
-        />
+        <Img3Box>
+          <Img3
+            alt="im"
+            src={mFon1x}
+            srcSet={`${mFon2x} 2x`}
+            media="(min-width: 375px)"
+          />
+        </Img3Box>
       </div>
     </BackgroundStyled>
   );

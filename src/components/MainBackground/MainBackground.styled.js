@@ -4,7 +4,6 @@ export const BackgroundStyled = styled.div`
   width: 100%;
   overflow: hidden;
   pointer-events: none;
-
   @media screen and (min-width: 1440px) {
     position: absolute;
     top: 0;
@@ -41,12 +40,18 @@ export const Img2 = styled.img`
 `;
 
 export const Img3 = styled.img`
+  min-width: 100%;
+  display: block;
+`;
+
+export const Img3Box = styled.div`
   position: absolute;
   left: 0;
   top: 1730px;
   z-index: -1;
-  min-width: 100%;
-  display: block;
+  height: 5000px;
+  width: 100%;
+  overflow: hidden;
   @media screen and (min-width: 1440px) {
     display: none;
   }
