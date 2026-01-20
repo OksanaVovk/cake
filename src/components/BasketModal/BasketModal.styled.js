@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { StyledButton } from 'components/Button/Button.styled';
 export const ModalWindow = styled.div`
-  overflow-y: scroll;
+  overflow-y: auto;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -17,7 +17,8 @@ export const ModalWindow = styled.div`
     opacity: 1;
     width: 1236px;
     height: 800px;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transition:
+      transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
       opaсity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 `;
@@ -116,7 +117,9 @@ export const Text = styled('p')`
 `;
 
 export const TextBold = styled('p')`
-  font-family: Montserrat Bold, sans-serif;
+  font-family:
+    Montserrat Bold,
+    sans-serif;
   font-weight: 800;
   text-align: left;
   font-size: 16px;
@@ -161,7 +164,9 @@ export const EmptyBox = styled('div')`
 `;
 
 export const TextBoldEmpty = styled('p')`
-  font-family: Montserrat Bold, sans-serif;
+  font-family:
+    Montserrat Bold,
+    sans-serif;
   font-weight: 800;
   font-size: 30px;
   line-height: 32.4px;
